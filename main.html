@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta property="og:title" content="InstantOrder - Get whatever you want on demand with no hassle, through SMS" />
+        <meta property="og:description" content="Send text message to this 'InstantOrder' phone number, and they'll order you food, book plane tickets, deliver flowers, and pretty much do anything else that you want." />
+        <title>InstantOrder</title>
+        <link rel="icon" href="/pictures/hat.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/scripts/lettering.js"></script>
+        <script src="/scripts/textillate.js"></script>
+        <script async src='//naytev.global.ssl.fastly.net/js/embed/54ebb3b9e4b017955b56cd45.js'></script>
+        <style>
+            #page {
+                max-width: 646px;
+                margin: 0px auto;
+                padding: 0px 40px;
+            }
+            .number {
+                font-size: 48pt;
+                color: #00cc00;
+                text-shadow: 1px 1px 0px #00aa00;
+                font-weight: bold;
+            }
+            .paragraph {
+                font-size: 17pt;
+            }
+            .logo {
+                margin-bottom: 40px;
+                font-size: 52pt;
+                font-family: 'Pacifico', cursive;
+            }
+            .footer {
+                text-align: center;
+                max-width: 646px;
+                margin: 0px auto;
+            }
+            body {
+                font-family: "open sans", sans-serif;
+                color: #333333;
+            }
+            .disclaimer {
+                font-size: 10px;
+            }
+            .disclaimer-large {
+                font-size: 13px;
+            }
+        </style>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/buttons-min.css' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='/styles/animate.css' rel='stylesheet'>
+        <script>
+
+            var Jobs = {
+                apply: function(email, note){
+                    if(!email && !note){
+                        throw(">> Please provide your email address and a short note about yourself!")
+                    }else{
+                        $.post("/jobs/apply", {
+                            email: email,
+                            note: note
+                        }, function(result){
+                            if(result.success){
+                                console.log("===> Received. Thank you.")
+                            }else{
+                                throw(">> Please provide your email address and a short note about yourself!")
+                            }
+                        })
+                    }
+                }
+            }
+
+            $(function() {
+
+               console.log("*************************");
+               console.log("Want to help build InstantOrder?");
+               console.log("Run Jobs.apply()");
+               console.log("*************************");
+
+               $(".animated").textillate({ in: { effect: 'fadeIn', delay: 20 } });
+               setTimeout(function() {
+                   $(".prompt").animate({"opacity": "1"}, 1000);
+               }, 1000);
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="page">
+            <!--<div style="background:#ffffdd;border:2px solid #ffffcc;padding:20px;">
+            <center><b>Extremely High Demand</b></center><br>
+
+            Due to extremely high, unexpected demand, access to InstantOrder has temporarily been limited.  Please fill out your email on this page to get access. InstantOrder has unexpectedly gone viral!
+            </div>-->
+
+            <br><br><center><div class="logo">InstantOrder</div></center>
+            <center><h1>Text this phone number to get whatever you want on demand with no hassle:</h1></center>
+
+
+                <center><div class="number animated"> 83489</div><br><i class="prompt" style="opacity:0;position:relative;top:-20px;">Text "<b style='color:#00cc00'>InstantOrder</b>" to this number now to get started.<br/><span class="disclaimer">Msg&data rates may apply</span></i></center>
+
+
+
+            <center><h2 style="margin-top:40px;">How It Works</h2></center>
+
+            <div class="paragraph">
+            We have trained operators standing by 24/7 to answer every one of your requests. Send us a text message, and we'll get you what you want. We'll order what you need from the appropriate service (e.g. DoorDash, Instacart, Postmates, etc.), and deal with them so you just automatically get what you want, <i>like InstantOrder</i>...
+            </div>
+
+            <center>
+                <h2 style="margin-top:40px;">Examples</h2>
+                <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder.jpg">
+                <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder2.jpg">
+                <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder3.jpg">
+                <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder4.jpg">
+            </center>
+
+            <center><h2 style="margin-top:40px;">FAQ</h2></center>
+
+            <div class="paragraph">
+            <b>Q: What kinds of things can I use InstantOrder for?</b><br><br>
+
+            Anything you want. As long as it's not illegal.  Seriously.  Just try it.<br><br>
+
+            <b>Q: How quickly will I get what I want after requesting it?</b><br><br>
+
+            As soon as possible.<br><br>
+
+            <b>Q: How much does it cost?</b><br><br>
+
+            It's completely free to chat with InstantOrder. When you order something, we'll let you know the total price so you can confirm it before you are billed. There are no hidden fees, and tip is included.
+
+            <b>Q: How do you charge me and know where to deliver, etc.?</b><br><br>
+
+            The first time you use InstantOrder, we'll ask for your credit card info, your address, etc. After that, we know who you are and everything's on autopilot.<br><br>
+
+            <b>Q: How do you guarantee that my credit card number is safe and secure?</b><br><br>
+
+            We will send you a 128-bit encrypted HTTPS link via SMS that you can click to enter your credit card number. We do not store your credit card number. All payment processing is handled by <a target="_new" href="http://www.stripe.com">Stripe</a>.<br><br>
+
+
+            <b>Q: Where is InstantOrder available?</b><br><br>
+
+            Anywhere in the UK.
+            </div>
+
+            <center><h1 style="margin-top:70px;">Text InstantOrder now to get started:</h1></center>
+
+                <center><div class="number animated"> 83489</div><br><i class="prompt" style="opacity:0;position:relative;top:-20px;">Text "<b style='color:#00cc00'>InstantOrder</b>" to this number now to get started.<br/><span class="disclaimer">Msg&data rates may apply</span></i></center>
+
+        </div>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-59983006-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+
+      <br><br>
+
+      <div style="margin-top:40px;" class="footer">
+        <span class="disclaimer-large"><i>When using the 83489 short code, reply HELP for help and STOP to cancel.</i></span><br/><br/>
+        InstantOrder is a service provided by InstantOrder, Ltd., located in London, UK.<br><br>
+
+       <a href="mailto:emailInstantOrdernow@gmail.com" style="font-size:10pt;color:#555">Email The Founders</a>
+       <span style="font-size:10pt;color:#555">|</span>
+       <a href="/jobs" style="font-size:10pt;color:#555">Work For Us</a>
+
+        | <a href="mailto:support@pluslabs.org" style="font-size:10pt;color:#555">Support / Help</a>
+         | <a href="mailto:press@pluslabs.org" style="font-size:10pt;color:#555">Press Contact</a>
+        <span style="font-size:10pt;color:#555">|</span>
+        <a href="/terms" style="font-size:10pt;color:#555">Terms of Use</a>
+        <span style="font-size:10pt;color:#555">|</span>
+        <a href="/privacy" style="font-size:10pt;color:#555">Privacy Policy</a>
+      </div>
+    </body>
+</html>
