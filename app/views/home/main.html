@@ -6,8 +6,7 @@
         <title>InstantOrder</title>
         <link rel="icon" href="/pictures/hat.png" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="/scripts/lettering.js"></script>
-        <script src="/scripts/textillate.js"></script>
+
         <script async src='//naytev.global.ssl.fastly.net/js/embed/54ebb3b9e4b017955b56cd45.js'></script>
         <style>
             #page {
@@ -48,7 +47,6 @@
         <link href='https://cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/buttons-min.css' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <link href='/styles/animate.css' rel='stylesheet'>
         <script>
 
             var Jobs = {
@@ -107,13 +105,13 @@
             We have trained operators standing by 24/7 to answer every one of your requests. Send us a text message, and we'll get you what you want. We'll order what you need from the appropriate service (e.g. DoorDash, Instacart, Postmates, etc.), and deal with them so you just automatically get what you want, <i>like InstantOrder</i>...
             </div>
 
-            <center>
+            <!-- <center>
                 <h2 style="margin-top:40px;">Examples</h2>
                 <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder.jpg">
                 <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder2.jpg">
                 <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder3.jpg">
                 <img style="margin:5px;" width="240" height="426" src="/pictures/InstantOrder4.jpg">
-            </center>
+            </center> -->
 
             <center><h2 style="margin-top:40px;">FAQ</h2></center>
 
@@ -178,14 +176,19 @@
         <a href="/privacy" style="font-size:10pt;color:#555">Privacy Policy</a>
       </div>
 
-      <form action="/charge" method="POST">
-        <script
-            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
-            data-name="Pronto Associates Ltd"
-            data-description="Register your Card With Us"
-            data-locale="auto">
+      <%= form_tag accounts_path, method: :post do %>
+        <%= text_field_tag :mobile_phone, nil, placeholder: 'Mobile Phone Number' %>
+        <script 
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
+          data-label="Register with Us"
+          data-panel-label="Register"
+          data-name="Pronto Associates Ltd"
+          data-description="2 widgets"
+          data-allow-remember-me="false"
+          data-locale="auto">
+
         </script>
-      </form>
+      <% end %>
     </body>
 </html>
