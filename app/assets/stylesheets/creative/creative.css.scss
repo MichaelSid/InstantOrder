@@ -37,12 +37,16 @@ a:focus {
 }
 
 h1,
-h2,
+h2{
+    font-family: 'ArialRoundedMTBold';
+    /*font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';*/
+}
+
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';
 }
 
 p {
@@ -79,7 +83,7 @@ aside {
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #fff;
+     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -91,7 +95,7 @@ aside {
     font-weight: 700;
     color: #f05f40;*/
     /*InstantOrder*/
-    font-family: AmericanTypewriter-Bold;
+    font-family: 'ArialRoundedMTBold';
     font-size: 26px;
     color: #f05f40;
     font-weight: 700;
@@ -159,7 +163,8 @@ aside {
     .navbar-default.affix .navbar-header .navbar-brand {
         /*font-size: 14px;*/
         /*InstantOrder*/
-        font-family: AmericanTypewriter-Bold;
+        /*font-family: AmericanTypewriter-Bold;*/
+        font-family: 'ArialRoundedMTBold';
         font-size: 26px;
         color: #f05f40;
     }
