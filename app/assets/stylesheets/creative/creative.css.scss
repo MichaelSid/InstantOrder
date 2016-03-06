@@ -86,10 +86,15 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
+    /*text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
+    color: #f05f40;*/
+    /*InstantOrder*/
+    font-family: AmericanTypewriter-Bold;
+    font-size: 26px;
     color: #f05f40;
+    font-weight: 700;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -127,9 +132,9 @@ aside {
         background-color: transparent;
     }
 
-    .navbar-default .navbar-header .navbar-brand {
+    /*.navbar-default .navbar-header .navbar-brand {
         color: rgba(255,255,255,.7);
-    }
+    }*/
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
@@ -152,7 +157,10 @@ aside {
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
+        /*font-size: 14px;*/
+        /*InstantOrder*/
+        font-family: AmericanTypewriter-Bold;
+        font-size: 26px;
         color: #f05f40;
     }
 
@@ -478,4 +486,25 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+/*InstantOrder*/
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+.carousel-control.left {
+    margin-left: -45px;
+    color: #f05f40
+}
+.carousel-control.right {margin-right: -45px;
+    color: #f05f40
+}
+.screenshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    padding-bottom:20px;
 }

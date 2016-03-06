@@ -1,12 +1,14 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+            <h2>ORDER BY TEXT - FROM 8AM UNTIL MIDNIGHT 7/7</h2>
+            <p></p>
+            <h1 style="color: #f05f40;">12345678</h1>
+            <h4>Send an SMS to this number to get started</h4>
             <hr>
-            <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
             <%= form_tag accounts_path, method: :post do %>
 			        <%= text_field_tag :mobile_phone, nil, placeholder: 'Mobile Phone Number' %>
-			        <script 
+			        <script
 			          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 			          data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
 			          data-label="Register with Us"
@@ -15,10 +17,9 @@
 			          data-description="2 widgets"
 			          data-allow-remember-me="false"
 			          data-locale="auto">
-
 			        </script>
 			      <% end %>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">REGISTER MY DETAILS</a> -->
         </div>
     </div>
 </header>
