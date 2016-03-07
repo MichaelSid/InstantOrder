@@ -18,6 +18,7 @@ class AccountsController < ApplicationController
 			  email: params[:stripeEmail]
 			)
 			@account.stripe_id = customer.id
+			@account.email = customer.email
 		else
 			flash[:alert] = 'Error'
 			return redirect_to :back		
