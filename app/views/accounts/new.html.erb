@@ -1,0 +1,22 @@
+<%= form_for @account, url: {action: 'create'}, class: 'navbar-form' do |f| %>
+  <%= f.text_field :first_name, placeholder: 'First Name'  %>
+  <br>
+  <%= f.text_field :last_name, placeholder: 'Last Name'  %>
+  <br>
+  <%= f.text_field :email, placeholder: 'Email'  %>
+  <br>
+  <%= f.text_field :company, placeholder: 'Company'  %>
+  <br>
+  <%= f.text_field :mobile_phone, placeholder: 'Mobile Phone Number'  %>
+  <br><br>
+  <p>Your Card Details:</p>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
+    data-label="Add"
+    data-panel-label="Create Account"
+    data-name="Instant Order"
+    data-allow-remember-me="false"
+    data-locale="auto">
+  </script>
+<% end %>

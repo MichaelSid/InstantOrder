@@ -6,7 +6,7 @@
             <h1 style="color: #f05f40;">12345678</h1>
             <h4>Send an SMS to this number to get started</h4>
             <hr>
-            <%= form_tag accounts_path, method: :post, class: 'navbar-form' do %>
+<!--             <%= form_tag accounts_path, method: :post, class: 'navbar-form' do %>
 			        <%= text_field_tag :mobile_phone, nil, placeholder: 'Mobile Phone Number', class: 'form-control'  %>
 			        <br><br>
 			        <script
@@ -18,8 +18,8 @@
 			          data-allow-remember-me="false"
 			          data-locale="auto">
 			        </script>
-			      <% end %>
-            <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">REGISTER MY DETAILS</a> -->
+			      <% end %> -->
+            <%= link_to 'REGISTER MY DETAILS', new_account_path, class: "btn btn-primary btn-xl page-scroll" %>
         </div>
     </div>
 </header>
