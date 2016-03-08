@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <h3 style="text-align: center;">Register my details</h1>
     <div class="col-md-4 col-md-offset-4">
       <%= form_for @account, url: {action: 'create'} do |f| %>
         <div class="form-group">
@@ -14,11 +15,11 @@
         <div class="form-group">
           <%= f.text_field :mobile_phone, placeholder: 'Mobile Phone Number', class: 'form-control' %>
         </div>
-        <p>Your Card Details:</p>
+        <p></p>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
-          data-label="Add"
+          data-label="Add Card Details Powered by Stripe"
           data-panel-label="Create Account"
           data-name="Instant Order"
           data-allow-remember-me="false"
@@ -28,3 +29,4 @@
     </div>
   </div>
 </div>
+
