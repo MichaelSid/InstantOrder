@@ -1,0 +1,48 @@
+<header id="page-top">
+    <div class="header-content">
+        <div class="container-fluid">
+            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
+<!--             Add style ect to css, need to remove p tag  -->
+                <h3 style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';">Register my details</h3>
+                <p></p>
+                <%= form_for @account, url: {action: 'create'} do |f| %>
+                  <div class="form-group">
+                    <%= f.text_field :first_name, placeholder: 'First Name', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.text_field :last_name, placeholder: 'Last Name', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.text_field :company, placeholder: 'Company', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.text_field :mobile_phone, placeholder: 'Mobile Phone Number', class: 'form-control' %>
+                  </div>
+                  <br>
+                  <div>
+                      <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
+                        data-label="Add Payment Details"
+                        data-panel-label="Create Account"
+                        data-name="Instant Order"
+                        data-allow-remember-me="false"
+                        data-locale="auto">
+                      </script>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4  col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+                    <a href="https://stripe.com/about"><img class="img-responsive" src="http://static1.squarespace.com/static/516c1d38e4b0e454d77848a3/54c90c35e4b07dcbf973a91e/54c90c6ae4b02ed0cc540b7f/1422462100339/Stripe.png"></a>
+                    </div>
+                  </div>
+                  <br>
+                  <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold'";>
+                  <!-- <input type="checkbox" required name="terms"> -->
+                  By clicking on 'Add Payment Details':<br> I agree that I read and accepted the <br><a href="https://google.com">Terms and Conditions</a></p>
+                  <!-- <p><input type="submit"></p> -->
+                <% end %>
+            </div>
+        </div>
+    </div>
+</header>

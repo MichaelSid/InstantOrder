@@ -1,35 +1,5 @@
-<%= render 'creatives/navbar' %>
-
-<div class="container">
-  <div class="row">
-    <h3 style="text-align: center;">Register my details</h1>
-    <div class="col-md-4 col-md-offset-4">
-      <%= form_for @account, url: {action: 'create'} do |f| %>
-        <div class="form-group">
-          <%= f.text_field :first_name, placeholder: 'First Name', class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.text_field :last_name, placeholder: 'Last Name', class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.text_field :company, placeholder: 'Company', class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.text_field :mobile_phone, placeholder: 'Mobile Phone Number', class: 'form-control' %>
-        </div>
-        <p></p>
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
-          data-label="Add Card Details Powered by Stripe"
-          data-panel-label="Create Account"
-          data-name="Instant Order"
-          data-allow-remember-me="false"
-          data-locale="auto">
-        </script>
-      <% end %>
-    </div>
-  </div>
-</div>
-
+<%= render 'navbar' %>
+<%= render 'header' %>
+<%= render 'creatives/contact' %>
 <%= render 'creatives/footer' %>
+
