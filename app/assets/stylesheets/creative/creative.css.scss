@@ -10,6 +10,11 @@ body {
     height: 100%;
 }
 
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
