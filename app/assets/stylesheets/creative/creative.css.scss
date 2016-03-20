@@ -10,11 +10,6 @@ body {
     height: 100%;
 }
 
-html, body {
-  width: auto !important;
-  overflow-x: hidden !important;
-}
-
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
@@ -503,10 +498,9 @@ body {
     background-image: none
 }
 .carousel-control.left {
-    margin-left: -45px;
     color: #f05f40
 }
-.carousel-control.right {margin-right: -45px;
+.carousel-control.right {
     color: #f05f40
 }
 .screenshot {
