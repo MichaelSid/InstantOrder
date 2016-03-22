@@ -64,6 +64,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.1.0)
+      actionpack (>= 3.0.0)
     mime-types (1.25.1)
     minitest (5.8.4)
     multi_json (1.11.2)
@@ -141,6 +143,7 @@ DEPENDENCIES
   frontend-generators
   jbuilder (~> 2.0)
   jquery-rails
+  meta-tags
   pg
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)

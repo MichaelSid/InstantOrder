@@ -1,6 +1,7 @@
 class AccountsController < ApplicationController
 
 	def new
+		prepare_meta_tags title: "New Instant Order Account", description: "Sign Up With Instant Order for On-Demand Office Support!"
 		@account = Account.new
 	end
 
