@@ -6,9 +6,10 @@ class ApplicationController < ActionController::Base
   before_action :prepare_meta_tags, if: "request.get?"
 
   def prepare_meta_tags(options={})
-    site_name   = "Instant Order"
-    title       = [controller_name, 'Welcome'].join(" ")
-    description = "On-Demand Support for All Your Office Needs"
+    site_name   = "Instela"
+    title       = "On-Demand Support for All Your Office Needs"
+    description = "Instela is the answer to all your most cumbersome office problems - IT
+    support, handymen, cleaning, miscellaneous tasks, and more."
     # image       = options[:image] || "your-default-image-url"
     current_url = request.url
 
