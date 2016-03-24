@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/pages/:page" => "pages#show"
+  get "/pages/:page" => "pages#show", as: :static_pages
 
 
   # Example resource route with options:
