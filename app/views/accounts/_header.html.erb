@@ -7,16 +7,16 @@
                 <p></p>
                 <%= form_for @account, url: {action: 'create'} do |f| %>
                   <div class="form-group">
-                    <%= f.text_field :first_name, placeholder: 'First Name', class: 'form-control' %>
+                    <%= f.text_field :first_name, :required => true, placeholder: 'First Name', class: 'form-control' %>
                   </div>
                   <div class="form-group">
-                    <%= f.text_field :last_name, placeholder: 'Last Name', class: 'form-control' %>
+                    <%= f.text_field :last_name, :required => true, placeholder: 'Last Name', class: 'form-control' %>
                   </div>
                   <div class="form-group">
-                    <%= f.text_field :company, placeholder: 'Company', class: 'form-control' %>
+                    <%= f.text_field :company, :required => true, placeholder: 'Company', class: 'form-control' %>
                   </div>
                   <div class="form-group">
-                    <%= f.text_field :mobile_phone, placeholder: 'Mobile Phone Number', class: 'form-control' %>
+                    <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <br>
                   <div>
