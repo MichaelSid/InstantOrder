@@ -45,6 +45,7 @@ GEM
     coffee-script-source (1.10.0)
     domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.6.0)
     frontend-generators (0.1.1)
@@ -140,6 +141,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dynamic_form
   frontend-generators
   jbuilder (~> 2.0)
   jquery-rails

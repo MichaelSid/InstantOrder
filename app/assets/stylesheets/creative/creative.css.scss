@@ -244,6 +244,14 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
+#errorExplanation > h2 {
+    display:none;
+}
+
+#errorExplanation {
+    color: black;
+}
+
 @media(min-width:768px) {
     header {
         min-height: 100%;
