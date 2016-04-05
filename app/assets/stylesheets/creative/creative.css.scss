@@ -10,6 +10,22 @@ body {
     height: 100%;
 }
 
+#video-background {
+/*  making the video fullscreen  */
+  position: absolute;
+  display: block;  
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: initial;   
+  height: auto;  
+  z-index: -1;
+  margin: 0 auto;
+  object-fit: cover;
+  padding: 0;
+}
+
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
@@ -191,12 +207,16 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: asset-data-url("creative/header.jpg");
+    //background-image: asset-data-url("creative/header.jpg");
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.accounts_header {
+    background-image: asset-data-url("creative/header.jpg");
 }
 
 header .header-content {

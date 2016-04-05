@@ -1,17 +1,36 @@
 <header id="page-top">
-    <div class="header-content">
+    <!-- <div class="header-content"> -->
         <div class"container-fluid">
             <div class="header-content-inner">
-                <h2>Make Everything Work in Your Office</h2>
-                <br>
-                <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:07454574821">07 45 45 74 821</a></h1>
-                <br>
-                <h4>Send an SMS to this number to get started</h4>
-                <h4>Available on-demand during weekdays from 8AM until 8PM</h4>
-                <hr>
-                <%= link_to 'REGISTER MY DETAILS', new_account_path, class: "btn btn-primary btn-xl page-scroll" %>
+                <section id="video-block" class="fullscreen">
+                    <!-- Adjust video height and width -->
+                    <script>
+                        var w = $(window).width(), h = $(window).height()  
+                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
+                        $(window).resize(function(){
+                        var w = $(window).width(), h = $(window).height()  
+                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
+                        })  
+                    </script>
+                    <!-- Embed Video as Background-->
+                    <div style="width:initial;" >
+                        <%= video_tag("office_video.mp4", :controls => false, :autobuffer => true, :autoplay => true, :loop => true, :id => "video-background") %>
+                    </div>
+                    <h2>Make Everything Work in Your Office</h2>
+                    <br>
+                    <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:07454574821">07 45 45 74 821</a></h1>
+                    <br>
+                    <h4>Send an SMS to this number to get started</h4>
+                    <h4>Available on-demand during weekdays from 8AM until 8PM</h4>
+                    <hr>
+                    <%= link_to 'REGISTER MY DETAILS', new_account_path, class: "btn btn-primary btn-xl page-scroll" %>
+                </section> 
+
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </header>
+
+
+
 

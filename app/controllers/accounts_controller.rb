@@ -21,8 +21,8 @@ class AccountsController < ApplicationController
 			@account.stripe_id = customer.id
 			@account.email = customer.email
 		else
-			flash[:alert] = 'Error'
-			return redirect_to :back		
+			flash[:error] = 'You need to fill il all the fields.'
+			render 'new'	
 		end
 
 		redirect_to root_path
