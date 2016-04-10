@@ -10,22 +10,6 @@ body {
     height: 100%;
 }
 
-#video-background {
-/*  making the video fullscreen  */
-  position: absolute;
-  display: block;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: initial;
-  height: auto;
-  z-index: -1;
-  margin: 0 auto;
-  object-fit: cover;
-  padding: 0;
-}
-
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
@@ -571,7 +555,28 @@ body {
     text-shadow: 0px 0px 0.5px #000;
 }
 
+/*Video*/
+#video-background {
+/*  making the video fullscreen  */
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: initial;
+  height: auto;
+  z-index: -1;
+  margin: 0 auto;
+  object-fit: cover;
+  padding: 0;
+}
 
+.overlay-texture:before{
+   background:url(
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkYGCQZGBgeM4ABYxQGi4IEwCJgwWRBcCCAHczAx4qv3vfAAAAAElFTkSuQmCC
+   ) repeat;
+}
 
 
 
