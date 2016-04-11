@@ -7,7 +7,7 @@
                 <p></p>
                 <%= form_for @account, url: {action: 'create'} do |f| %>
                   <%= f.error_messages %>
-                
+
                   <div class="form-group">
                     <%= f.text_field :first_name, :required => true, placeholder: 'First Name', class: 'form-control' %>
                   </div>

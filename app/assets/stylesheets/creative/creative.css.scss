@@ -481,7 +481,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn {
     border: 0;
-    border-radius: 300px;
+    // border-radius: 300px;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
@@ -573,13 +573,42 @@ body {
   padding: 0;
 }
 
+// Improve quality of low resolution video
 .overlay-texture:before{
    background:url(
 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkYGCQZGBgeM4ABYxQGi4IEwCJgwWRBcCCAHczAx4qv3vfAAAAAElFTkSuQmCC
    ) repeat;
 }
 
+// Remove space in video at the top of services section
+// #services {
+//     margin-top: 0;
+// }
 
+// ouline buttons
+.btn.outline {
+    background: none;
+    padding: 6px 11px;
+}
 
+.btn-primary.outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #f05f40;
+    border-color: #f05f40;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #f05f40;
+    color: #f05f40;
+    box-shadow: none;
+}
+
+#register_button {
+    margin: 7px;
+    margin-left: 0;
+}
 
 
