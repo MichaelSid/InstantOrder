@@ -559,15 +559,14 @@ body {
 /*Video*/
 #video-background {
 /*  making the video fullscreen  */
-  background-size: cover;
   position: absolute;
   display: block;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: initial;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  /*width: initial;
+  height: auto;*/
   z-index: -1;
   margin: 0 auto;
   object-fit: cover;
@@ -618,4 +617,6 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
     margin: 8px;
 }
 
-
+.layer {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+}

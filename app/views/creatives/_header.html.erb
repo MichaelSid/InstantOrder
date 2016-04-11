@@ -1,4 +1,4 @@
-<header id="page-top" style="box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);">
+<header id="page-top" class="layer">
     <!-- <div class="header-content"> -->
         <div class"container-fluid">
             <div class="header-content-inner">
@@ -13,8 +13,10 @@
                         })
                     </script>
                     <!-- Embed Video as Background-->
-                    <div style="width:initial;" class="overlay-texture">
-                        <%= video_tag("office_video.mp4", :controls => false, :autobuffer => true, :autoplay => true, :loop => true, :id => "video-background") %>
+                    <div class="container-fluid">
+                        <div style="width:initial;" class="overlay-texture">
+                            <%= video_tag("office_video.mp4", :controls => false, :autobuffer => true, :autoplay => true, :loop => true, :id => "video-background") %>
+                        </div>
                     </div>
                     <div class="container-fluid key_text">
                         <div class="container-fluid">
