@@ -14,24 +14,22 @@
                     </script>
                     <!-- Embed Video as Background-->
                     <div class="container-fluid">
-                        <div style="width:initial;" class="overlay-texture">
+                        <div class="overlay-texture">
                             <%= video_tag("office_video.mp4", :controls => false, :autobuffer => true, :autoplay => true, :loop => true, :id => "video-background") %>
                         </div>
                     </div>
                     <div class="container-fluid key_text">
-                        <div class="container-fluid">
                             <!-- <div class="row"> -->
                                 <!-- <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1"> -->
-                                    <h2>Make Everything Work in Your Office</h2>
-                                    <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:07454574821">07 45 45 74 821</a></h1>
-                                    <br>
-                                    <h4>Send an SMS to this number to get started</h4>
-                                    <h4>Available on-demand during weekdays from 8AM until 8PM</h4>
-                                    <hr>
-                                    <%= link_to 'GET STARTED - FREE SIGN UP!', new_account_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
+                        <h2>Make Everything Work in Your Office</h2>
+                        <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:07454574821">07 45 45 74 821</a></h1>
+                        <br>
+                        <h4>Send an SMS to this number to get started</h4>
+                        <h4>Available on-demand during weekdays from 8AM until 8PM</h4>
+                        <hr>
+                        <%= link_to 'GET STARTED - FREE SIGN UP!', new_account_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
                                 <!-- </div> -->
                             <!-- </div> -->
-                        </div>
                     </div>
                 </section>
 
