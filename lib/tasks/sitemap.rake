@@ -1,7 +1,7 @@
 # sitemap.rake
 #http://cookieshq.co.uk/posts/creating-a-sitemap-with-ruby-on-rails-and-upload-it-to-amazon-s3/
 
-require 'aws'
+require 'aws-sdk'
 
 namespace :sitemap do
 
