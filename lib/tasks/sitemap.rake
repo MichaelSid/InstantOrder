@@ -10,10 +10,10 @@ namespace :sitemap do
 	  puts 'Starting sitemap upload to S3...'
 	  s3 = Aws::S3::Resource.new(region:'Ireland')
 	  bucket = s3.bucket(ENV['S3_BUCKET'])
-	  Dir.entries(File.join('tmp', 'sitemaps')).each do |file_name|
+	  Dir.entries(File.join('InstantOrder', 'tmp', 'sitemaps')).each do |file_name|
 	    next if %w(. .. .DS_Store).include? file_name
 	    path = "sitemaps/#{file_name}"
-	    file = File.join('tmp', 'sitemaps', file_name)
+	    file = File.join('InstantOrder', 'tmp', 'sitemaps', file_name)
 	    object = bucket.object(path)
 	    object.upload_file(file)
 	    puts "Saved #{file_name} to S3"
