@@ -10,7 +10,7 @@ namespace :sitemap do
 	task upload_to_s3: :environment do
 	  puts 'Starting sitemap upload to S3...'
 	  # creds = Aws::Credentials.new(ENV['S3_ACCESS_KEY_ID'], ENV['S3_SECRET_ACCESS_KEY'])
-	  s3 = Aws::S3::Resource.new(region: 'us-west-2', credentials: Aws::Credentials.new(ENV['S3_ACCESS_KEY_ID'], ENV['S3_SECRET_ACCESS_KEY']))
+	  s3 = Aws::S3::Resource.new(region: 'eu-west-1', credentials: Aws::Credentials.new(ENV['S3_ACCESS_KEY_ID'], ENV['S3_SECRET_ACCESS_KEY']))
 	  puts 'line 14'
 		puts 'line 19'
 	  bucket = s3.bucket(ENV['S3_BUCKET'].to_s)
