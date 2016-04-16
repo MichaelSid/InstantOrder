@@ -573,6 +573,10 @@ body {
   padding: 0;
 }
 
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 /*Improve quality of low resolution video*/
 .overlay-texture:before{
    background:url(
