@@ -13,7 +13,7 @@ namespace :sitemap do
 	  Dir.entries(File.join(Rails.root, 'tmp', 'sitemaps')).each do |file_name|
 	    next if %w(. .. .DS_Store).include? file_name
 	    path = "sitemaps/#{file_name}"
-	    file = File.join(Rails.root, 'tmp', 'sitemaps', file_name)
+	    file = File.join('tmp', 'sitemaps', file_name)
 	    object = bucket.object(path)
 	    object.upload_file(file)
 	    puts "Saved #{file_name} to S3"
