@@ -8,7 +8,7 @@ namespace :sitemap do
 	desc 'Upload the sitemap files to S3'
 	task upload_to_s3: :environment do
 	  puts 'Starting sitemap upload to S3...'
-	  s3 = Aws::S3::Resource.new
+	  s3 = Aws::S3::Resource.new(region:'Ireland')
 	  bucket = s3.bucket(ENV['S3_BUCKET'])
 	  Dir.entries(File.join(Rails.root, 'tmp', 'sitemaps')).each do |file_name|
 	    next if %w(. .. .DS_Store).include? file_name
