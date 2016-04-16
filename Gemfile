@@ -36,7 +36,8 @@ gem 'dynamic_form'
 gem 'rails_12factor'
 
 gem 'sitemap_generator'
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
+gem 'aws-sdk', '~> 2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
