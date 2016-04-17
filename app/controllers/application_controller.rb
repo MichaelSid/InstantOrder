@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def prepare_meta_tags(options={})
     site_name   = "Instela"
     title       = "On-Demand & Onsite Support for All Your Office Needs"
-    description = "Instela will solve all your office problems - IT
+    description = "Instela will quickly solve all your office problems - IT
     Support, Handymen, Cleaning, Office Tasks & Chores, and more. Available across London."
     # image       = options[:image] || "your-default-image-url"
     current_url = request.url
