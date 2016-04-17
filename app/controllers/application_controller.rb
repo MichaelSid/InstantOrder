@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
 
   def prepare_meta_tags(options={})
     site_name   = "Instela"
-    title       = "On-Demand Support for All Your Office Needs"
-    description = "Instela is the answer to all your most cumbersome office problems - IT
-    support, handymen, cleaning, miscellaneous tasks, and more."
+    title       = "On-Demand & Onsite Support for All Your Office Needs"
+    description = "Instela will solve all your office problems - IT
+    Support, Handymen, Cleaning, Office Tasks & Chores, and more. Available across London."
     # image       = options[:image] || "your-default-image-url"
     current_url = request.url
 
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       title:       title,
       # image:       image,
       description: description,
-      keywords:    %w[office support handymen on-demand texting SMS app],
+      keywords:    %w[IT\ Services handymen Technical\ Support],
     }
 
     options.reverse_merge!(defaults)
