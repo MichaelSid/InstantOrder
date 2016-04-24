@@ -7,19 +7,11 @@ class AccountsController < ApplicationController
 
 	def create
 		logger.debug(params)
-		# get the credit card details submitted by the form or app
-		token = params[:stripeToken]
+		
 		
 		@account = Account.new(account_params)
 		if @account.save
-			# create a Customer
-			customer = Stripe::Customer.create(
-			  card: token,
-			  description: 'New Customer',
-			  email: params[:stripeEmail]
-			)
-			@account.stripe_id = customer.id
-			@account.email = customer.email
+			flash[:message] = 'Thank you for signing up! We will be in touch.'
 		else
 			flash[:error] = 'You need to fill in all the fields.'
 			return render 'new'	
@@ -45,6 +37,29 @@ class AccountsController < ApplicationController
 			#     customer: customer_id
 			# )
 	end
+
+	# def add_card_details
+	# 	@account_id = params[:account_id]
+	# 	render 'add_card_details'
+	# end
+
+	# def save_card_details
+	# 	@account = Account.find(params[:account_id])
+	# 	# get the credit card details submitted by the form or app
+ #    if @account.update_attributes(account_params)
+	# 		token = params[:stripeToken]
+	# 		# create a Customer
+	# 		customer = Stripe::Customer.create(
+	# 		  card: token,
+	# 		  description: 'New Customer',
+	# 		  email: params[:stripeEmail]
+	# 		)
+	# 		@account.stripe_id = customer.id
+	# 		@account.save
+	# 	end
+	# end
+
+
 
 	private
 

@@ -605,6 +605,12 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
     border-radius: 0;
 }
 
+.btn-primary.submit-register {
+    border: 1px solid #f05f40;
+    color: #f05f40;
+    border-radius: 0;
+}
+
 .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
     color: #fff !important;
     border-color: #f05f40;

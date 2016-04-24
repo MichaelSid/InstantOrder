@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
 <!--             Add style ect to css, need to remove p tag  -->
-                <h3 style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';">Register my details</h3>
+                <h3 style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';">Register My Details</h3>
                 <p></p>
                 <%= form_for @account, url: {action: 'create'} do |f| %>
                   <%= f.error_messages %>
@@ -18,10 +18,13 @@
                     <%= f.text_field :company, :required => true, placeholder: 'Company', class: 'form-control' %>
                   </div>
                   <div class="form-group">
+                    <%= f.text_field :email, :required => true, placeholder: 'Email', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
                     <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <br>
-                  <div>
+                  <!-- <div>
                       <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                         data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
@@ -31,20 +34,21 @@
                         data-allow-remember-me="false"
                         data-locale="auto">
                       </script>
-                  </div>
-                  <br>
-                  <div class="row">
+                  </div> -->
+                  <!-- <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
 
                     <%= link_to image_tag("accounts/outline.png", :class => 'img-responsive'), "https://stripe.com/about"%>
                     </div>
+                  </div> -->
+                  <div class="form-group">
+                    <%= f.submit 'REGISTER', class: 'page-scroll btn btn-primary btn-lg outline submit-register' %>
                   </div>
                   <br>
-                  <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';font-size: 14px;">We only charge your credit card once a service has been delivered.</p>
+                  <!-- <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';font-size: 14px;">We only charge your credit card once a service has been delivered.</p> -->
                   <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';font-size: 14px;">
                   <!-- <input type="checkbox" required name="terms"> -->
-                  By registering your details<br> you agree that you read and accepted the <br><a href="/pages/terms">Terms and Conditions</a></p>
-                  <!-- <p><input type="submit"></p> -->
+                  By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms">Terms and Conditions</a></p>
                 <% end %>
             </div>
         </div>
