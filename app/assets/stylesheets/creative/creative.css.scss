@@ -204,7 +204,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    //background-image: asset-data-url("creative/header.jpg");
+    /*background-image: asset-data-url("creative/header.jpg");*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -213,7 +213,8 @@ header {
 }
 
 .accounts_header {
-    background-image: asset-data-url("creative/header.jpg");
+    /*background-image: asset-data-url("creative/header.jpg");*/
+    background-color: #0077BE;
 }
 
 header .header-content {
@@ -560,21 +561,34 @@ body {
 /*Video*/
 #video-background {
 /*  making the video fullscreen  */
-  position: absolute;
-  display: block;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  // width: initial;
-  height: auto;
-  z-index: -1;
-  margin: 0 auto;
-  object-fit: cover;
-  padding: 0;
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: initial;
+    height: auto;
+    z-index: -1;
+    margin: 0 auto;
+    object-fit: cover;
+    padding: 0;
 }
+
+
+
+
 
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
+}
+
+::-webkit-media-controls {
+  display:none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display:none !important;
 }
 
 /*Improve quality of low resolution video*/
@@ -585,9 +599,9 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 }
 
 /*Remove space in video at the top of services section*/
-// #services {
+/*// #services {
 //  margin-top: 0;
-// }
+// }*/
 
 // ouline buttons
 .btn.outline {
