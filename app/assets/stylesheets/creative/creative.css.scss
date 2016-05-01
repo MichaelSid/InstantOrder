@@ -547,10 +547,10 @@ body {
 }
 
 /*InstantOrder Register*/
-.registration_form{
+/*.registration_form{
     background-color: white;
     border:3px solid #f05f40;
-}
+}*/
 
 .key_text {
     margin-top: 8%;
@@ -603,7 +603,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 //  margin-top: 0;
 // }*/
 
-// ouline buttons
+/*ouline buttons*/
 .btn.outline {
     background: none;
     padding: 6px 11px;
@@ -622,6 +622,12 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 .btn-primary.submit-register {
     border: 1px solid #f05f40;
     color: #f05f40;
+    border-radius: 0;
+}
+
+.btn-primary.submit-account {
+    border: 1px solid white;
+    color: white;
     border-radius: 0;
 }
 
