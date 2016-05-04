@@ -18,7 +18,8 @@ Rails.application.routes.draw do
       resources :charges
     end
   end
-
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create' 
   get "/pages/:page" => "pages#show", as: :static_pages
   get '/sitemap.xml.gz', to: redirect("https://#{ENV['S3_BUCKET']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"), as: :sitemap
 
