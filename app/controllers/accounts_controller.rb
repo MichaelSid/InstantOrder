@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
 		
 		@account = Account.new(account_params)
 		if @account.save
-			flash[:message] = 'Thank you for signing up! We will be in touch.'
+			flash[:success] = 'Thank you for signing up! We will be in touch.'
 		else
 			flash[:error] = 'You need to fill in all the fields.'
 			return render 'new'	

@@ -4,7 +4,7 @@ class MessageMailer < ActionMailer::Base
   def new_message(message)
     @message = message
     
-    mail subject: "Message from #{message.name}"
+    mail to: 'hello@instela.co', subject: "Message from #{message.name}"
   end
 
 
