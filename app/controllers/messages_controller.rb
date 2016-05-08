@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
     
     if @message.valid?
       MessageMailer.new_message(@message).deliver
+      @message.save
       flash[:success] = "Your messages has been sent."
       redirect_to root_path
     else
