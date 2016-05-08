@@ -25,23 +25,25 @@
                     <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <br>
-                  <!-- <div>
+                  <div>
                       <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_test_odiB2gb7RPRukTHJOG2XPV1s"
+                        data-key= "<%= Rails.application.secrets.stripe_publishable_key %>"
                         data-label="Add Payment Details"
                         data-panel-label="Create Account"
                         data-name="Instela"
                         data-allow-remember-me="false"
                         data-locale="auto">
                       </script>
-                  </div> -->
-                  <!-- <div class="row">
+                  </div>
+                  <br>
+                  <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
-
+                    
                     <%= link_to image_tag("accounts/outline.png", :class => 'img-responsive'), "https://stripe.com/about"%>
                     </div>
-                  </div> -->
+                    <br><br>
+                  </div>
                   <div class="form-group">
                     <%= f.submit 'REGISTER', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
                   </div>

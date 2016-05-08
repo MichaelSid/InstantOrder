@@ -7,9 +7,15 @@ class AccountsController < ApplicationController
 
 	def create
 		logger.debug(params)
-		
-		
 		@account = Account.new(account_params)
+		token = params[:stripeToken]
+		# create a Customer
+		customer = Stripe::Customer.create(
+		  card: token,
+		  description: 'New Customer',
+		  email: params[:stripeEmail]
+		)
+		@account.stripe_id = customer.id
 		if @account.save
 			flash[:success] = 'Thank you for signing up! We will be in touch.'
 		else
