@@ -1,3 +1,5 @@
+<%= render 'accounts/navbar' %>
+
 <header id="page-top" class='accounts_header'>
     <div class="header-content">
         <div class="container-fluid">
@@ -20,7 +22,6 @@
                     <%= f.text_area :content, :required => true, placeholder: 'Message', class: 'form-control' %>
                   </div>
                   <br>
- 
                   <div class="form-group">
                     <%= f.submit 'SEND', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
                   </div>
@@ -30,3 +31,6 @@
         </div>
     </div>
 </header>
+
+<%= render 'creatives/contact' %>
+<%= render 'creatives/footer' %>
