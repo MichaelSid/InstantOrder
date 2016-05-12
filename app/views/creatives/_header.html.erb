@@ -25,16 +25,18 @@
                         <h4>Send an SMS to this number to get started</h4>
                         <h4>Available on-demand during weekdays from 8AM until 8PM</h4>
                         <hr>
-                        <%= link_to 'GET STARTED', contact_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
+                        <%= link_to 'OPEN AN ACCOUNT - FREE SIGN UP', new_account_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
                     </div>
                 </section>
                 <% flash.each do |key, value| %>
                     <div class="alert alert-<%= key %>"><%= value %></div>
-                <% end %>  
+                <% end %>
             </div>
         </div>
     <!-- </div> -->
 </header>
+
+
 
 
 
