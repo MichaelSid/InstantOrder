@@ -29,6 +29,8 @@ group :development do
 	gem 'mailcatcher'
 end
 
+gem 'devise'
+
 gem 'frontend-generators'
 gem 'stripe', git: 'https://github.com/stripe/stripe-ruby'
 
