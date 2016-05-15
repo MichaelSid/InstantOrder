@@ -5,15 +5,11 @@
 <!--             Add style ect to css, need to remove p tag  -->
                 <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Sign Up</h3>
                 <p></p>
-                <%= form_for(resource, as: resource_name, validate: true, url: user_registration_path(resource_name)) do |f| %>
-                  <%= f.error_messages %>
+                <%= form_for(resource, as: resource_name, validate: true, url: account_registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
 
                   <div class="form-group">
-                    <!-- <label id="f_name">First Name</label> -->
-                    <%= f.text_field :first_name, :required => true, placeholder: 'First Name', class: 'form-control'%>
-                  </div>
-                  <div class="form-group">
-                    <%= f.text_field :last_name, :required => true, placeholder: 'Last Name', class: 'form-control' %>
+                    <%= f.text_field :full_name, :required => true, placeholder: 'Full Name', class: 'form-control'%>
                   </div>
                   <div class="form-group">
                     <%= f.text_field :company, :required => true, placeholder: 'Company', class: 'form-control' %>
@@ -45,8 +41,8 @@
                   <br>
                   <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
-
-                    <%= link_to image_tag("accounts/light_solid.png", :class => 'img-responsive'), "https://stripe.com/about"%>
+                    
+                    <%= link_to image_tag("accounts/outline.png", :class => 'img-responsive'), "https://stripe.com/about"%>
                     </div>
                     <br><br>
                   </div>
@@ -54,10 +50,10 @@
                     <%= f.submit 'REGISTER', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
                   </div> -->
                   <br>
-                  <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 15px;">We will only charge your credit card once a service has been delivered.</p>
-                  <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 15px;">
+                  <!-- <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';font-size: 14px;">We only charge your credit card once a service has been delivered.</p> -->
+                  <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 14px;">
                   <!-- <input type="checkbox" required name="terms"> -->
-                  By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms">Terms and Conditions</a>.</p>
+                  By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms">Terms and Conditions</a></p>
                 <% end %>
             </div>
         </div>

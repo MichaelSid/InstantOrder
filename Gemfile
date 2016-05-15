@@ -38,7 +38,7 @@ gem 'meta-tags'
 
 gem 'dynamic_form'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 gem 'sitemap_generator'
 gem 'aws-sdk-v1'
