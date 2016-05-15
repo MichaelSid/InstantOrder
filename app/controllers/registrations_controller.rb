@@ -1,13 +1,15 @@
-class AccountsController < ApplicationController
+class RegistrationsController < Devise::RegistrationsController
+
+  before_action :configure_permitted_parameters
+
 
 	def new
 		prepare_meta_tags title: "New Instela Account", description: "Sign Up With Instela for On-Demand Office Support!"
-		@account = Account.new
+		super
 	end
 
 	def create
-		logger.debug(params)
-		@account = Account.new(account_params)
+		resource = build_resource(sign_up_params)
 		token = params[:stripeToken]
 		# create a Customer
 		customer = Stripe::Customer.create(
@@ -15,8 +17,8 @@ class AccountsController < ApplicationController
 		  description: 'New Customer',
 		  email: params[:stripeEmail]
 		)
-		@account.stripe_id = customer.id
-		if @account.save
+		resource.stripe_id = customer.id
+		if resource.save
 			flash[:success] = 'Thank you for signing up! We will be in touch.'
 		else
 			flash[:error] = 'You need to fill in all the fields.'
@@ -66,12 +68,15 @@ class AccountsController < ApplicationController
 	# end
 
 
+	protected
 
-	private
+  def configure_permitted_parameters
+  	devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :mobile_phone, :company])
+  end
 
-	def account_params
-		params.require(:account).permit(:account, :email, :first_name, :last_name, :company, :mobile_phone)
-	end
+  private
 
-
+  def account_update_params
+    params.require(:account).permit(:full_name, :email, :password, :password_confirmation, :mobile_phone, :company)
+  end
 end

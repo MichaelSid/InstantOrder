@@ -29,6 +29,8 @@ group :development do
 	gem 'mailcatcher'
 end
 
+gem 'devise'
+
 gem 'frontend-generators'
 gem 'stripe', git: 'https://github.com/stripe/stripe-ruby'
 
@@ -36,7 +38,7 @@ gem 'meta-tags'
 
 gem 'dynamic_form'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 gem 'sitemap_generator'
 gem 'aws-sdk-v1'

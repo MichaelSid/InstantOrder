@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  devise_for :accounts, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,10 +15,9 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :accounts do
-    resources :orders do
-      resources :charges
-    end
+
+  resources :orders do
+    resources :charges
   end
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create' 
