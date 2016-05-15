@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
 <!--             Add style ect to css, need to remove p tag  -->
-                <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Sign Up</h3>
+                <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Sign up to order services</h3>
                 <p></p>
                 <%= form_for @account, url: {action: 'create'} do |f| %>
                   <%= f.error_messages %>
@@ -51,7 +51,7 @@
                   <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 15px;">We will only charge your credit card once a service has been delivered.</p>
                   <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 15px;">
                   <!-- <input type="checkbox" required name="terms"> -->
-                  By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms">Terms and Conditions</a>.</p>
+                  By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms" style="color:#eb3812; font-size:15px;">Terms and Conditions.</a></p>
                 <% end %>
             </div>
         </div>
