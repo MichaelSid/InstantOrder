@@ -1,39 +1,110 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render 'navbar' %>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<%= javascript_include_tag 'creative/registration' %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<header id="page-top" class='accounts_header'>
+    <div class="header-content">
+        <div class="container-fluid">
+            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
+<!--             Add style ect to css, need to remove p tag  -->
+                <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Edit My Account Details</h3>
+                <p></p>
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <%= devise_error_messages! %>
+                  <span class="payment-errors"></span>
+                  <!-- <input type="hidden" name='payment_token' id="payment_token"/><br/> -->
+                  <input type='hidden' name='stripe_key' value="<%= Rails.application.secrets.stripe_publishable_key %>" /><br>  
+                  <div class="form-group">
+                    <%= f.text_field :full_name, :required => true, placeholder: 'Full Name', class: 'form-control'%>
+                  </div>
+                  <div class="form-group">
+                    <%= f.text_field :company, :required => true, placeholder: 'Company', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.email_field :email, :required => true, placeholder: 'Email', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :new_password %> <i>(leave blank if you don't want to change it)</i><br />
+                    <%= f.password_field :password, placeholder: 'New Password', class: 'form-control'  %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.password_field :password_confirmation, placeholder: 'New Password Confirmation', class: 'form-control'%>
+                  </div>
+                  <br>
+                  <%= f.label :card_details %> <i>(leave blank if you don't want to change it)</i><br />
+                  <div class="form-group">
+                    <%= text_field_tag nil,nil, placeholder: 'Card Number', class: 'form-control', id: 'cardNumber' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag nil,nil, placeholder: 'CVC', class: 'form-control', id: 'CVC' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag nil,nil, placeholder: 'Expiry Month', class: 'form-control', id: 'expMonth' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag nil,nil, placeholder: 'Expiry Year', class: 'form-control', id: 'expYear' %>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
+                    <%= link_to image_tag("accounts/light_solid.png", :class => 'img-responsive'), "https://stripe.com/about"%>
+                    </div>
+                    <br><br>
+                  </div>
+                  <div class="form-group">
+                    <%= f.submit 'UPDATE', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
+                  </div>
+                  <br>
+                  <div id="stripeResponse"></div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</header>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<%= render 'creatives/contact' %>
+<%= render 'creatives/footer' %>
+
+
+
+<% if false %>
+
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <h3>Cancel my account</h3>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
+  <%= link_to "Back", :back %>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

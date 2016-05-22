@@ -26,6 +26,9 @@
                 <li>
                     <a class="page-scroll" href="/#contact">Contact</a>
                 </li>
+                <li id="register_button">
+                    <%= link_to 'SIGN OUT', destroy_account_session_path, method: :delete, class: "page-scroll btn btn-primary btn-lg outline" %>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

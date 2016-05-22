@@ -8,16 +8,23 @@ class RegistrationsController < Devise::RegistrationsController
 		super
 	end
 
+
+
 	def create
 		resource = build_resource(sign_up_params)
-		token = params[:stripeToken]
-		# create a Customer
-		customer = Stripe::Customer.create(
-		  card: token,
-		  description: 'New Customer',
-		  email: params[:stripeEmail]
-		)
-		resource.stripe_id = customer.id
+		token = params['payment_token']
+		# create a Stripe Customer
+		if token.present?
+			customer = Stripe::Customer.create(
+			  card: token,
+			  description: 'New Customer',
+			  email: params[:email]
+			)
+			resource.stripe_id = customer.id
+		else
+			flash[:error] = 'There was a problem registering your card details.'
+			return render 'new'
+		end
 		if resource.save
 			flash[:success] = 'Thank you for signing up! We will be in touch.'
 		else
@@ -46,6 +53,23 @@ class RegistrationsController < Devise::RegistrationsController
 			# )
 	end
 
+
+	def update
+		if params[:payment_token].present?
+			# replace the Customer
+			puts 'present!!!'
+			customer = Stripe::Customer.create(
+			  card: params[:payment_token],
+			  description: 'Edit Customer',
+			  email: params[:account][:email]
+			)
+			resource.stripe_id = customer.id
+			resource.save
+		end
+		super
+	end
+
+
 	# def add_card_details
 	# 	@account_id = params[:account_id]
 	# 	render 'add_card_details'
@@ -70,13 +94,18 @@ class RegistrationsController < Devise::RegistrationsController
 
 	protected
 
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
+
   def configure_permitted_parameters
-  	devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :mobile_phone, :company])
+  	devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :mobile_phone, :company, :payment_token])
   end
 
   private
 
   def account_update_params
-    params.require(:account).permit(:full_name, :email, :password, :password_confirmation, :mobile_phone, :company)
+    params.require(:account).permit(:full_name, :email, :password, :password_confirmation, :mobile_phone, :company, :payment_token)
   end
 end
