@@ -7,10 +7,8 @@ class Ability
       user ||= Account.new # guest user (not logged in)
 
       unless user.admin?
-        puts 'hello????'  
         cannot :manage, :Charge
       else
-        puts 'what'
         can :manage, :all
       end
 

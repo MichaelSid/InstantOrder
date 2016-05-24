@@ -1,0 +1,32 @@
+<%= render 'creatives/navbar' %>
+
+<header id="page-top" class='accounts_header'>
+    <div class="header-content">
+        <div class="container-fluid">
+            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
+                <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Charge a Company<br>--- Restricted Area ---<br></h3>
+                <p></p>
+                <%= form_for @charge, url: charges_path do |f| %>
+                  <%= f.error_messages %>
+                  <div class="form-group">
+                    <%= text_field_tag :company_email, nil, :required => true, placeholder: 'Company Email', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag :service_type, nil, :required => true, placeholder: 'Service Type', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= number_field_tag :duration, nil, :required => true, :step => 'any', placeholder: 'Duration', class: 'form-control' %>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <%= f.submit 'CHARGE!', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
+                  </div>
+                  <br>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</header>
+
+<%= render 'creatives/contact' %>
+<%= render 'creatives/footer' %>
