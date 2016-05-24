@@ -1,3 +1,4 @@
 class Charge < ActiveRecord::Base
-  belongs_to :order
+  belongs_to :account
+  has_one :order
 end

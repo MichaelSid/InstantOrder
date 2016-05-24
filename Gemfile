@@ -29,6 +29,8 @@ group :development do
 	gem 'mailcatcher'
 end
 
+gem 'cancancan', '~> 1.10'
+
 gem 'devise'
 
 gem 'frontend-generators'

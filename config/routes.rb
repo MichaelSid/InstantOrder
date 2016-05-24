@@ -16,9 +16,9 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
 
-  resources :orders do
-    resources :charges
-  end
+  resources :orders
+  resources :charges
+  
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create' 
   get "/pages/:page" => "pages#show", as: :static_pages

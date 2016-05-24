@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   before_action :prepare_meta_tags, if: "request.get?"
 
 
+  alias_method :current_user, :current_account
+  
+
 
   def prepare_meta_tags(options={})
     site_name   = "Instela"
@@ -29,6 +32,9 @@ class ApplicationController < ActionController::Base
     set_meta_tags options
   end
   
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
 
   def after_sign_in_path_for(resource)
     edit_account_registration_path
