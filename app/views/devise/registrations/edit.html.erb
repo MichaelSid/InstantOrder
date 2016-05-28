@@ -1,5 +1,6 @@
 <%= render 'navbar' %>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>                                
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 <%= javascript_include_tag 'creative/registration' %>
 
 
@@ -13,7 +14,7 @@
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                   <%= devise_error_messages! %>
                   <span class="payment-errors"></span>
-                  <!-- <input type="hidden" name='payment_token' id="payment_token"/><br/> -->
+                  <input type="hidden" name='payment_token' id="payment_token"/><br/>
                   <input type='hidden' name='stripe_key' value="<%= Rails.application.secrets.stripe_publishable_key %>" /><br>  
                   <div class="form-group">
                     <%= f.text_field :full_name, :required => true, placeholder: 'Full Name', class: 'form-control'%>
@@ -35,19 +36,8 @@
                     <%= f.password_field :password_confirmation, placeholder: 'New Password Confirmation', class: 'form-control'%>
                   </div>
                   <br>
-                  <%= f.label :card_details %> <i>(leave blank if you don't want to change it)</i><br />
-                  <div class="form-group">
-                    <%= text_field_tag nil,nil, placeholder: 'Card Number', class: 'form-control', id: 'cardNumber' %>
-                  </div>
-                  <div class="form-group">
-                    <%= text_field_tag nil,nil, placeholder: 'CVC', class: 'form-control', id: 'CVC' %>
-                  </div>
-                  <div class="form-group">
-                    <%= text_field_tag nil,nil, placeholder: 'Expiry Month', class: 'form-control', id: 'expMonth' %>
-                  </div>
-                  <div class="form-group">
-                    <%= text_field_tag nil,nil, placeholder: 'Expiry Year', class: 'form-control', id: 'expYear' %>
-                  </div>
+                  <button id="paymentButton" class= 'page-scroll btn btn-primary btn-lg outline'>Edit Payment Details</button>
+                  <br><br>
                   <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
                     <%= link_to image_tag("accounts/light_solid.png", :class => 'img-responsive'), "https://stripe.com/about"%>

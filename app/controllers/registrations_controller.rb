@@ -57,7 +57,6 @@ class RegistrationsController < Devise::RegistrationsController
 	def update
 		if params[:payment_token].present?
 			# replace the Customer
-			puts 'present!!!'
 			customer = Stripe::Customer.create(
 			  card: params[:payment_token],
 			  description: 'Edit Customer',

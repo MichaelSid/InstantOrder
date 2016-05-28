@@ -37,8 +37,10 @@ class ChargesController < ApplicationController
   		return 50
   	elsif service_type == 'Tasks'
   		return 20
-  	else
+  	elsif service_type == 'Cleaning'
   		return 15
+  	else
+  		raise 'Cannot recognise service type!'
   	end
   end
 
