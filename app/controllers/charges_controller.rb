@@ -10,22 +10,27 @@ class ChargesController < ApplicationController
  
   def create
   	begin
-  		@charge = Charge.new
-			@customer = Account.find_by_email(params[:company_email]).stripe_id
-	  	@charge.amount = params[:duration].to_d * determine_hourly_fee(params[:service_type]).to_d
+  		account = Account.find_by_email(params[:company_email])
+			stripe_id = account.stripe_id
+  		@charge = account.charges.new
+			@charge.service_type = params[:service_type]
+			@charge.duration = params[:duration].to_d
+			@charge.hourly_fee = determine_hourly_fee(@charge.service_type).to_d
+	  	@charge.amount = @charge.duration * @charge.hourly_fee
 	  	charge = Stripe::Charge.create(
 		    amount: (@charge.amount * 100).to_i,
 		    currency: 'gbp',
-		    customer: @customer
+		    description: 'New Charge',
+		    customer: stripe_id
 			)
 			if (charge && @charge.save)
-				ChargesMailer.send_receipt(params, @charge).deliver 
+				ChargesMailer.send_receipt(@charge).deliver 
 			end
 			flash[:alert] = 'Successful Charge!'
 			return redirect_to root_path
 		rescue Stripe::CardError => e
 			logger.error(e.message)
-			flash.now[:alert] = 'Charge failed!'
+			flash.now[:error] = e.message
 			return render 'new'
 		end 
   end

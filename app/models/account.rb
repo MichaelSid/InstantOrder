@@ -6,4 +6,7 @@ class Account < ActiveRecord::Base
 
 
 	validates_presence_of :mobile_phone, :full_name, :company, :email
+
+	has_many :charges
+	has_many :orders
 end

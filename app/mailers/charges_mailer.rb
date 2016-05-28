@@ -1,11 +1,9 @@
 class ChargesMailer < ActionMailer::Base
-  default from: "noreply@instela.co"
+  default from: "receipts@instela.co"
 
-  def send_receipt(params, charge)
-    @company_email = params[:company_email]
-    @amount = charge.amount
-    @duration = params[:duration]
-    mail to: @company_email, subject: "Receipt for order #{charge.id}"
+  def send_receipt(charge)
+    @charge = charge
+    mail to: @charge.account.email, subject: "Receipt for Order ##{charge.id}"
   end
 
 
