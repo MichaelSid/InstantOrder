@@ -4,7 +4,8 @@ class ChargesController < ApplicationController
 
 	def new
 		@charge = Charge.new
-		puts 'hello!'
+		@services = ['Tech Support', 'Handyman', 'Tasks', 'Cleaning' ]
+		@accounts = Account.all.map{ |u| u.email }
     # this will remain empty unless you need to set some instance variables to pass on
   end
  

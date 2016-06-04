@@ -9,10 +9,10 @@
                 <%= form_for @charge, url: charges_path do |f| %>
                   <%= f.error_messages %>
                   <div class="form-group">
-                    <%= text_field_tag :company_email, nil, :required => true, placeholder: 'Company Email', class: 'form-control' %>
+                    <%= select_tag(:company_email, options_for_select(@accounts), placeholder: 'Company Email', class: 'form-control') %>
                   </div>
                   <div class="form-group">
-                    <%= text_field_tag :service_type, nil, :required => true, placeholder: 'Service Type', class: 'form-control' %>
+                    <%= select_tag(:service_type, options_for_select(@services), placeholder: 'Service Type', class: 'form-control') %>
                   </div>
                   <div class="form-group">
                     <%= number_field_tag :duration, nil, :required => true, :step => 'any', placeholder: 'Duration', class: 'form-control' %>
