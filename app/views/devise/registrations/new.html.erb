@@ -1,5 +1,5 @@
 <%= render 'navbar' %>
-<script src="https://checkout.stripe.com/checkout.js"></script>                                
+<script src="https://checkout.stripe.com/checkout.js"></script>
 <script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 <%= javascript_include_tag 'creative/registration' %>
 
@@ -8,6 +8,7 @@
         <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
 <!--             Add style ect to css, need to remove p tag  -->
+                <br><br><br>
                 <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Sign Up To Order Services</h3>
                 <p></p>
                 <%= form_for(resource, as: resource_name, validate: true, url: account_registration_path(resource_name)) do |f| %>
@@ -34,10 +35,10 @@
                     <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <br>
-                  <button id="paymentButton" class= 'page-scroll btn btn-primary btn-lg outline'>Add Payment Details</button>
+                  <button id="paymentButton" class= 'page-scroll btn btn-primary outline'>Add Payment Details</button>
                   <br><br>
                   <div class="row">
-                    <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3">
+                    <div class="col-lg-4 col-lg-offset-4 col-md-2 col-md-offset-5  col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3" style="position:relative; bottom:0;">
                     <%= link_to image_tag("accounts/light_solid.png", :class => 'img-responsive'), "https://stripe.com/about"%>
                     </div>
                     <br>
@@ -46,10 +47,8 @@
                   <div class="form-group">
                     <%= f.submit 'REGISTER', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
                   </div>
-                  <br>
                   <div id="stripeResponse"></div>
-                  <!-- <p style="text-align: center; color: black; font-family: 'ArialRoundedMTBold';font-size: 14px;">We only charge your credit card once a service has been delivered.</p> -->
-                  <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 14px;">
+                  <p style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';font-size: 14px;">We only charge your credit card once a service has been delivered. <br><br>
                   <!-- <input type="checkbox" required name="terms"> -->
                   By registering your details<br> you agree that you have read and accepted the <br><a href="/pages/terms" style="color:#eb3812; font-size:15px;">Terms and Conditions.</a></p>
                 <% end %>
