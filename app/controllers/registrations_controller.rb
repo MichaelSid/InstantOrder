@@ -21,9 +21,6 @@ class RegistrationsController < Devise::RegistrationsController
 			  email: params[:email]
 			)
 			resource.stripe_id = customer.id
-		else
-			flash[:error] = 'There was a problem registering your card details.'
-			return render 'new'
 		end
 		if resource.save
 			flash[:success] = 'Thank you for signing up! We will be in touch.'
