@@ -21,18 +21,20 @@
   <script type="text/javascript">(function(d,n){var s,a,p;s=document.createElement("script");s.type="text/javascript";s.async=true;s.src=(document.location.protocol==="https:"?"https:":"http:")+"//cdn.nudgespot.com"+"/nudgespot.js";a=document.getElementsByTagName("script");p=a[a.length-1];p.parentNode.insertBefore(s,p.nextSibling);window.nudgespot=n;n.init=function(t){function f(n,m){var a=m.split('.');2==a.length&&(n=n[a[0]],m=a[1]);n[m]=function(){n.push([m].concat(Array.prototype.slice.call(arguments,0)))}}n._version=0.1;n._globals=[t];n.people=n.people||[];n.params=n.params||[];m="track register unregister identify set_config people.delete people.create people.update people.create_property people.tag people.remove_Tag".split(" ");for(var i=0;i<m.length;i++)f(n,m[i])}})(document,window.nudgespot||[]);nudgespot.init("d2b7830700b229da9a7a7d058d8271de");</script>
   
   <% if account_signed_in?  %>
+    <!-- - @email -->
     <script type="text/javascript">
-      var email = <%= current_account.email.to_json %>  ;
-      //TODO: Replace "John.doe@company.com" with current logged_in user's email address. This is required.
+      // $(document).ready(function() {
+        var email = '<%= current_account.email %>';
+        //TODO: Replace "John.doe@company.com" with current logged_in user's email address. This is required.
+        var first_name = "";
+        //TODO: Replace "John" with current logged_in user's first name. You can replace with empty string if first_name is not known.
 
-      var first_name = "";
-      //TODO: Replace "John" with current logged_in user's first name. You can replace with empty string if first_name is not known.
+        var last_name = "";
+        //TODO: Replace "Doe" with current logged_in user's last name. You can replace with empty string if last_name is not known.
 
-      var last_name = "";
-      //TODO: Replace "Doe" with current logged_in user's last name. You can replace with empty string if last_name is not known.
-
-      nudgespot.identify(email, {first_name: first_name, last_name: last_name});
-      // For advanced way of identifying users, refer to https://nudgespot.readme.io/docs/js-identify-a-user
+        nudgespot.identify(email, {first_name: first_name, last_name: last_name});
+        // For advanced way of identifying users, refer to https://nudgespot.readme.io/docs/js-identify-a-user
+      // });
     </script>
   <% end %>   
   <meta name="google-site-verification" content="MwtsBPcUFWCOhhZB8kpeTyOZJVoHCz2QP0HUaWTFGIA" />
