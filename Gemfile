@@ -46,7 +46,7 @@ gem 'sitemap_generator'
 gem 'aws-sdk-v1'
 gem 'aws-sdk', '~> 2'
 
-
+# gem "intercom-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
