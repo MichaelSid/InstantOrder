@@ -12,6 +12,12 @@
                         $('#video-block video').css({height: ''+h+'',width: ''+w+''})
                         })
                     </script>
+                    <script type="text/javascript" charset="utf-8">
+                      var openNSLauncher = function() {
+                      var launcher = document.querySelector('.nudgespot-launcher');
+                      launcher.click();
+                      }; 
+                    </script>
                     <!-- Embed Video as Background-->
                     <div class="container-fluid">
                         <div style="width:initial">
@@ -20,13 +26,13 @@
                     </div>
                     <div class="container-fluid key_text">
                         <h2>Make Everything Work in Your Office</h2>
-                        <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:+447454574821">07 45 45 74 821</a></h1>
+                        <!-- <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:+447454574821">07 45 45 74 821</a></h1> -->
                         <br>
-                        <h4>Send an SMS to this number to get started</h4>
-                        <h4>Available on-demand during weekdays from 9AM until 7PM</h4>
                         <hr>
-                        <%= link_to 'OPEN AN ACCOUNT - FREE SIGN UP', new_account_registration_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
-                    </div>
+                        <h4>Available on-demand during weekdays from 9AM until 7PM</h4>
+                        <%= link_to 'GET HELP NOW', '#', class: "btn btn-primary btn-xl page-scroll ", onclick:"event.preventDefault();openNSLauncher();"  %>
+<!--                         <%= link_to 'OPEN AN ACCOUNT - FREE SIGN UP', new_account_registration_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
+ -->                    </div>
                 </section>
                 <% flash.each do |key, value| %>
                     <div class="alert alert-<%= key %>"><%= value %></div>
