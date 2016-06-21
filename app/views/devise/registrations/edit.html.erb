@@ -27,7 +27,7 @@
                   <%= f.text_field :mobile_phone, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <div class="form-group">
-                   <%= f.label :new_password %> <i>Leave blank if you don't want to change it</i>
+                   <i>Leave blank if you don't want to change your password</i>
                    <br>
                     <%= f.password_field :password, placeholder: 'New Password', class: 'form-control'  %>
                   </div>
@@ -67,7 +67,7 @@
       <%= f.email_field :email, autofocus: true %>
     </div>
     <div class="field">
-      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.label :password %>><br />
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
     <div class="field">
