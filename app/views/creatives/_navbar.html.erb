@@ -27,10 +27,18 @@
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
                  <li>
-                     <%= link_to 'LOG IN', new_account_session_path %>
+                    <%- if account_signed_in? %>
+                        <%=link_to 'MY ACCOUNT', edit_account_registration_path %>
+                    <%- else %>
+                        <%= link_to 'LOG IN', new_account_session_path %>
+                    <% end %>
                  </li>
                 <li id="register_button">
-                    <%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline" %>
+                    <%- if account_signed_in? %>
+                        <%= link_to 'LOG OUT', destroy_account_session_path, method: :delete, class: "page-scroll btn btn-primary btn-lg outline"  %>
+                    <%- else %>
+                        <%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline" %>
+                    <% end %>
                 </li>
             </ul>
         </div>
