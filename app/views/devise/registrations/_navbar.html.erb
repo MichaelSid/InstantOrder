@@ -27,7 +27,9 @@
                     <a class="page-scroll" href="/#contact">Contact</a>
                 </li>
                 <li id="register_button">
-                    <%= link_to 'LOG OUT', destroy_account_session_path, method: :delete, class: "page-scroll btn btn-primary btn-lg outline" %>
+                    <%- if account_signed_in? %>
+                        <%= link_to 'LOG OUT', destroy_account_session_path, method: :delete, class: "page-scroll btn btn-primary btn-lg outline" %>
+                    <%- end %>
                 </li>
             </ul>
         </div>
