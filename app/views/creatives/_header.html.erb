@@ -24,17 +24,21 @@
                             <%= video_tag("https://s3-eu-west-1.amazonaws.com/instelaltd/videos/office_video.mp4", :controls => true, :autobuffer => false, :autoplay => true, :loop => true, :id => "video-background") %>
                         </div>
                     </div>
-                    <div class="container-fluid key_text">
-                        <h2>Solve Any Office Problem. Now.</h2>
-                        <br>
-                        <h4>Focus on your business and end all your office headaches. <br><br>Verified professional tech support, handymen, and cleaners available on-demand all across London.<br><br>Send us a message to get started.</h4>
-                        <!-- <h4>Send us a message to get started</h4> -->
-                        <!-- <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:+447454574821">07 45 45 74 821</a></h1> -->
-                        <!-- <hr> -->
-                        <hr>
-                        <%= link_to 'GET INSTANT HELP', '#', class: "btn btn-primary btn-xl page-scroll ", onclick:"event.preventDefault();openNSLauncher();"  %>
-<!--                         <%= link_to 'OPEN AN ACCOUNT - FREE SIGN UP', new_account_registration_path, class: "btn btn-primary btn-xl page-scroll register_button" %>
- -->                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 key_text">
+                                <h2>Solve Any Office Problem. Now.</h2>
+                                <br>
+                                <h4>Focus on your business and end all your office headaches. <br><br>Verified professional tech support, handymen, and cleaners available on-demand all across London.<br><br>Send us a message to get started.</h4>
+                                <!-- <h4>Send us a message to get started</h4> -->
+                                <!-- <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:+447454574821">07 45 45 74 821</a></h1> -->
+                                <!-- <hr> -->
+                                <hr>
+                                <%= link_to 'GET INSTANT HELP', '#', class: "btn btn-primary btn-xl page-scroll ", onclick:"event.preventDefault();openNSLauncher();"  %>
+                                <p></p>
+                            </div><
+                        </div>
+                      </div>
                 </section>
                 <% flash.each do |key, value| %>
                     <div class="alert alert-<%= key %>"><%= value %></div>

@@ -550,9 +550,14 @@ body {
 /*InstantOrder Register*/
 
 .key_text {
+    color: black;
     margin-top: 8%;
     font-weight:900;
-    text-shadow: 0px 0px 0.5px #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
 }
 
 /*Video*/
