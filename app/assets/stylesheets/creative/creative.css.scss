@@ -8,6 +8,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+
 }
 
 body {
@@ -38,7 +39,8 @@ a:focus {
 
 h1,
 h2{
-    font-family: ArialRoundedMTBold, "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
+    /*font-family: ArialRoundedMTBold, "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/
     /*font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';*/
 }
 
@@ -46,11 +48,95 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';
+font-family: "Open Sans", sans-serif;
+    /*font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';*/
 }
 
+
+/*min-width: 620px){.hero__title{font-size:2.5em;}
+min-width: 778px){.hero__title{font-size:3em}
+}@media only screen and (max-width: 778px){.hero__title{line-height:1.1;}}
+.max-width-3{max-width:48rem}
+.mx-auto,.content{
+margin-left:auto;margin-right:auto}
+.mb1{margin-bottom:0.5rem}*/
+
+@media(min-width:768px) {
+.tagline {
+font-size: 40px; /* 2.5rem;*/
+line-height:1.1;
+/*line-height:1.3; 1.1*/
+text-transform:uppercase;
+letter-spacing: 0.1rem;
+font-weight:700;
+max-width:65rem;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:0.5rem;
+margin-top: -5px;
+font-family: "Open Sans", sans-serif;
+}
+
+#tag2 {
+    display:    inline-block; 
+    /*max-width: 80%;*/
+    max-width: 600px;
+
+    font-size: 20px;
+    /*font-size: 1.76vw; 1.9rem;*/
+    font-weight: 300;
+    line-height: 1.33;
+    max-width:55rem;
+
+    letter-spacing: .1rem;
+    font-family: "Open Sans", sans-serif;
+    /*font-style: normal;
+    font-variant: normal;*/
+    margin-top: -50px;
+}
+
+}
+
+@media(max-width:768px) {
+.tagline {
+font-size: 35px; /* 2.5rem;*/
+line-height:1.1;
+/*line-height:1.3; 1.1*/
+text-transform:uppercase;
+letter-spacing: 0.1rem;
+font-weight:700;
+max-width:65rem;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:0.5rem;
+margin-top: -5px;
+font-family: "Open Sans", sans-serif;
+}
+
+#tag2 {
+    display:    inline-block; 
+    /*max-width: 80%;*/
+    max-width: 600px;
+
+    font-size: 16px;
+    /*font-size: 1.76vw; 1.9rem;*/
+    font-weight: 300;
+    line-height: 1.33;
+    max-width:55rem;
+
+    letter-spacing: .1rem;
+    font-family: "Open Sans", sans-serif;
+    /*font-style: normal;
+    font-variant: normal;*/
+    margin-top: -30px;
+}
+
+}
+
+
 p {
-    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 5px;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -95,8 +181,9 @@ aside {
     font-weight: 700;
     color: #f05f40;*/
     /*InstantOrder*/
+
     font-family: 'ArialRoundedMTBold';
-    font-size: 26px;
+    /*font-size: 26px;*/
     color: #f05f40;
     font-weight: 700;
     text-shadow: 0px 0px 0.2px white;
@@ -135,17 +222,19 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
+        /*border-color: rgba(255,255,255,.3);*/
         background-color: transparent;
         /*text-shadow: 0px 0px 0.2px white;*/
     }
 
+    /* instela logo-name*/
     .navbar-default .navbar-header .navbar-brand {
         font-family: 'ArialRoundedMTBold';
-        font-size: 26px;
-        color: #f05f40;
+        font-size: 40px; /* was 26*/
+        color: #FFFFFF; /*#f05f40;*/
         font-weight: 700;
         text-shadow: 0px 0px 0.1px #000;
+            margin: 0px 0 0px 20px;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -164,9 +253,12 @@ aside {
         color: #f05f40;;
     }
 
+    /* control nav bar once scroll*/
     .navbar-default.affix {
         border-color: rgba(34,34,34,.05);
-        background-color: #fff;
+        /*background-color: #fff;*/
+        background:rgba(255,255,255,0.85); /* last number controls transparency*/
+
         /*text-shadow: 0px 0px 0.2px white;*/
     }
 
@@ -550,14 +642,15 @@ body {
 /*InstantOrder Register*/
 
 .key_text {
-    color: black;
+    color: white;
     margin-top: 8%;
     font-weight:900;
     box-sizing: border-box;
     overflow: hidden;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    /*background: rgba(255,255,255,0.9);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);*/
     text-align: center;
+    /*text-shadow: white 0.1em 0.1em 0.2em    text-shadow: 2px 2px 4px #FFFFFF; #000000;*/
 }
 
 /*Video*/
