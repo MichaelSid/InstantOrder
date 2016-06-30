@@ -4,14 +4,6 @@
             <div class="header-content-inner">
                 <section id="video-block" class="fullscreen">
                     <!-- Adjust video height and width -->
-                    <script>
-                        var w = $(window).width(), h = $(window).height()
-                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
-                        $(window).resize(function(){
-                        var w = $(window).width(), h = $(window).height()
-                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
-                        })
-                    </script>
                     <script type="text/javascript" charset="utf-8">
                       var openNSLauncher = function() {
                       var launcher = document.querySelector('.nudgespot-launcher');
@@ -21,24 +13,42 @@
                     <!-- Embed Video as Background-->
                     <div class="container-fluid">
                         <div style="width:initial">
-                            <%= video_tag("https://s3-eu-west-1.amazonaws.com/instelaltd/videos/office_video.mp4", :controls => true, :autobuffer => false, :autoplay => true, :loop => true, :id => "video-background") %>
+                            <%= video_tag("https://s3-eu-west-1.amazonaws.com/instelaltd/videos/office_video.mp4", :poster => "movie-snapshot-frame1.png", :controls => true, :autobuffer => false, :autoplay => true, :loop => true, :id => "video-background") %>
                         </div>
                     </div>
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 key_text">
-                                <h2>Solve Any Office Problem. Now.</h2>
                                 <br>
-                                <h4>Focus on your business and end all your office headaches. <br><br>Verified professional tech support, handymen, and cleaners available on-demand all across London.<br><br>Send us a message to get started.</h4>
+                                <p class="tagline">We Solve Any office problem. Instantly<span style="color: #f05f40"></span></p>
+                                <!-- <p class="tagline">We fix <span style="color: #f05f40">we'll fix it</span></p>
+                                <p class="tagline">If it's broken, <span style="color: #f05f40">we'll fix it</span></p>
+                                <p class="tagline">Fix it this <span style="color: #f05f40">Instant</span></p>
+                                <p class="tagline">Your <span style="color: #f05f40">Instant</span> office team</p>
+                                <p class="tagline">Your <span style="color: #f05f40">Instant</span> office fix</p>
+                                <p class="tagline">Make it work this <span style="color: #f05f40">Instant</span></p>
+                                <p class="tagline"><span style="color: #f05f40">Instant</span> office solutions</p>
+                                <p class="tagline">Problems solved in an  <span style="color: #f05f40">Instant</span></p> -->
+                                </br>
+                                <br>
+                                <p id="tag2">Verified professional tech support, handymen and cleaners available on-demand all across London<br></p><!-- <br>Send us a message to get started</h4> -->
                                 <!-- <h4>Send us a message to get started</h4> -->
                                 <!-- <h1 style="color: #f05f40;"><a style="text-decoration: none;" href="sms:+447454574821">07 45 45 74 821</a></h1> -->
                                 <!-- <hr> -->
-                                <hr>
+                                <br><br><br><br><br>
                                 <%= link_to 'GET INSTANT HELP', '#', class: "btn btn-primary btn-xl page-scroll ", onclick:"event.preventDefault();openNSLauncher();"  %>
                                 <p></p>
                             </div>
                         </div>
                       </div>
+                      <script>
+                        var w = $(window).width(), h = $(window).height()
+                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
+                        $(window).resize(function(){
+                        var w = $(window).width(), h = $(window).height()
+                        $('#video-block video').css({height: ''+h+'',width: ''+w+''})
+                        })
+                    </script>
                 </section>
                 <% flash.each do |key, value| %>
                     <div class="alert alert-<%= key %>"><%= value %></div>
