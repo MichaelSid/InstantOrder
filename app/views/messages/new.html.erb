@@ -4,8 +4,8 @@
     <div class="header-content">
         <div class="container-fluid">
             <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
-                <h3 style="text-align: center; color: white; font-family: 'ArialRoundedMTBold';">Get in touch and let us know how we can help</h3>
-                <p></p>
+                <h3 style="text-align: center; color: white;">Get in touch and let us know how we can help</h3>
+                <p></p><br></br>
                 <%= form_for @message, url: contact_path do |f| %>
                   <%= f.error_messages %>
 
@@ -19,7 +19,7 @@
                     <%= f.text_field :mobile, :required => true, placeholder: 'Mobile Phone Number', class: 'form-control' %>
                   </div>
                   <div class="form-group">
-                    <%= f.text_area :content, :required => true, placeholder: 'Message', class: 'form-control' %>
+                    <%= f.text_area :content, :required => true, placeholder: 'Message',rows: "7", class: 'form-control' %>
                   </div>
                   <br>
                   <div class="form-group">

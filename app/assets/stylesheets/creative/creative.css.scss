@@ -12,7 +12,8 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+font-family: "Open Sans", sans-serif;
+    /*font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;*/
 }
 
 hr {
@@ -25,8 +26,9 @@ hr.light {
     border-color: #fff;
 }
 
+
 a {
-    color: #f05f40;
+    color: #f05f40; 
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -40,6 +42,8 @@ a:focus {
 h1,
 h2{
     font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-variant: normal;
     /*font-family: ArialRoundedMTBold, "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/
     /*font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';*/
 }
@@ -62,6 +66,7 @@ margin-left:auto;margin-right:auto}
 .mb1{margin-bottom:0.5rem}*/
 
 @media(min-width:768px) {
+
 .tagline {
 font-size: 40px; /* 2.5rem;*/
 line-height:1.1;
@@ -84,7 +89,7 @@ font-family: "Open Sans", sans-serif;
 
     font-size: 20px;
     /*font-size: 1.76vw; 1.9rem;*/
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.33;
     max-width:55rem;
 
@@ -120,7 +125,7 @@ font-family: "Open Sans", sans-serif;
 
     font-size: 16px;
     /*font-size: 1.76vw; 1.9rem;*/
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.33;
     max-width:55rem;
 
@@ -175,15 +180,10 @@ aside {
     transition: all .35s;
 }
 
-.navbar-default .navbar-header .navbar-brand {
-    /*text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-weight: 700;
-    color: #f05f40;*/
-    /*InstantOrder*/
 
+.navbar-default .navbar-header .navbar-brand {
+    
     font-family: 'ArialRoundedMTBold';
-    /*font-size: 26px;*/
     color: #f05f40;
     font-weight: 700;
     text-shadow: 0px 0px 0.2px white;
@@ -220,9 +220,13 @@ aside {
     background-color: transparent;
 }
 
+
 @media(min-width:768px) {
+
+    
     .navbar-default {
         /*border-color: rgba(255,255,255,.3);*/
+        border-color: rgba(255,255,255,0.00); /* make it 100% transparent line at top*/
         background-color: transparent;
         /*text-shadow: 0px 0px 0.2px white;*/
     }
@@ -248,10 +252,33 @@ aside {
         color: #fff;
     }
 
+   
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
         color: #f05f40;;
     }
+
+    aa {
+    color: #f05f40;
+    }
+
+    aa:hover, aa:focus:hover {
+
+    color: #eb3812;
+
+    }
+
+    /* change colour of navbar text to black for white background pages eg terms */
+     .navbar-default .nav aa,
+    .navbar-default .nav aa:focus {
+        color: black;
+    }
+
+    .navbar-default .nav > li>a>aa:hover,
+    .navbar-default .nav>li>a>aa:focus:hover {
+        color: #f05f40;
+    }
+
 
     /* control nav bar once scroll*/
     .navbar-default.affix {
@@ -262,7 +289,8 @@ aside {
         /*text-shadow: 0px 0px 0.2px white;*/
     }
 
-    .navbar-default.affix .navbar-header .navbar-brand {
+   /* colour of navbar once scrolled*/
+    .navbar-default.affix .navbar-header .navbar-brand{
         /*font-size: 14px;*/
         /*InstantOrder*/
         /*font-family: AmericanTypewriter-Bold;*/
@@ -453,6 +481,7 @@ header .header-content .header-content-inner p {
 .call-to-action h2 {
     margin: 0 auto 20px;
 }
+
 
 .text-primary {
     color: #f05f40;

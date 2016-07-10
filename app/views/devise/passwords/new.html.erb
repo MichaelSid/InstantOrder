@@ -1,16 +1,38 @@
-<h2>Forgot your password?</h2>
+<%= render 'navbar' %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+<header id="page-top" class='accounts_header'>
+    <div class="header-content">
+        <div class="container-fluid">
+            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <h3 style="text-align: center; color: white; font-weight: 700; font-size: 1.875em;">Forgot your password?</h3><br></br>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+ 				 <%= devise_error_messages! %>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+ 				 <div class="field">
+    				
+    				<%= f.email_field :email, placeholder: 'Your email address', autofocus: true %>
+ 				</div>
+ 				<br></br>
+ 				
+ 				<div class="actions", style="color: black;">
+   			 	<%= f.submit "Send me reset password instructions"  %>
+  				</div>
 
-<%= render "devise/shared/links" %>
+  				<br></br>
+  				
+
+				<% end %>
+
+			</div>
+		</div>
+	</div>
+	</header>
+	
+
+<%= render 'creatives/contact' %>
+<%= render 'creatives/footer' %>
+
+
+
+
