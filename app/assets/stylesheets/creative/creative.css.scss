@@ -770,5 +770,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 
 .layer {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.45);
+    overflow: hidden; /* fixes background not covering entire movie in chrome resize*/
+
 }
 
