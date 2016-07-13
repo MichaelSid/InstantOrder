@@ -40,9 +40,9 @@ class ChargesController < ApplicationController
   	if service_type == 'Tech Support'
   		return 70
   	elsif service_type == 'Handyman'
-  		return 50
+  		return 55
   	elsif service_type == 'Tasks'
-  		return 20
+  		return 25
   	elsif service_type == 'Cleaning'
   		return 15
   	else
