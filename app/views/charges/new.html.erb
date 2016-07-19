@@ -17,6 +17,9 @@
                   <div class="form-group">
                     <%= number_field_tag :duration, nil, :required => true, :step => 'any', placeholder: 'Duration', class: 'form-control' %>
                   </div>
+                  <div class="form-group">
+                    <%= number_field_tag :materials_total_cost, 0, :required => true, :step => 'any', placeholder: 'Materials Cost', class: 'form-control' %>
+                  </div>
                   <br>
                   <div class="form-group">
                     <%= f.submit 'CHARGE!', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
