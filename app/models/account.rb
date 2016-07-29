@@ -5,7 +5,7 @@ class Account < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-	validates_presence_of :mobile_phone, :full_name, :company, :email
+	validates_presence_of :mobile_phone, :full_name, :company, :email, :address_l1, :postcode
 
 	has_many :charges
 	has_many :orders

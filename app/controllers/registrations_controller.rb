@@ -96,12 +96,12 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def configure_permitted_parameters
-  	devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :mobile_phone, :company, :payment_token])
+  	devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :mobile_phone, :company, :postcode, :address_l1, :address_l2, :payment_token])
   end
 
   private
 
   def account_update_params
-    params.require(:account).permit(:full_name, :email, :password, :password_confirmation, :mobile_phone, :company, :payment_token)
+    params.require(:account).permit(:full_name, :email, :address_l1, :postcode, :password, :password_confirmation, :mobile_phone, :company, :payment_token)
   end
 end
