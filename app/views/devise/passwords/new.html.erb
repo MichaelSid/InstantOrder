@@ -1,38 +1,48 @@
 <%= render 'navbar' %>
 
-<header id="page-top" class='accounts_header'>
-    <div class="header-content">
-        <div class="container-fluid">
-            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                <h3 style="text-align: center; color: white; font-weight: 700; font-size: 1.875em;">Forgot your password?</h3><br></br>
 
-                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
- 				 <%= devise_error_messages! %>
+<body> <!-- style="background-color: #e8ecf0;"> -->
+  <br><br><br><br>
+  <div style="text-align:center;"> 
+  <h2>Forgot Your Password?</h2>
+</div>
+    <div class="login-form">
 
- 				 <div class="field">
-    				
-    				<%= f.email_field :email, placeholder: 'Your email address', autofocus: true %>
- 				</div>
- 				<br></br>
- 				
- 				<div class="actions", style="color: black;">
-   			 	<%= f.submit "Send me reset password instructions"  %>
-  				</div>
+      <div class="mbot30" style="text-align: center;font-weight: 300;">
+      <p>Enter your email address below and we'll send you an email with further instructions.</p>
+    </div>
 
-  				<br></br>
-  				
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+         <%= devise_error_messages! %>
 
-				<% end %>
+      
+      
 
-			</div>
-		</div>
-	</div>
-	</header>
+      <div class="form-group"> <!-- <div class="field"> -->
+        <%= f.email_field :email, placeholder: 'Email', autofocus: true,  class: 'form-control' %>
+        <i class="fa fa-user" style="display:inline-block;"></i>
+      </div>
+       
+      <div class="actions", style="color: black;">
+          <%= f.submit "Reset Password", class: 'log-btn btn-primary  ' %>
+          </div>
+
+      
+
+
+      <% end %>
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
 	
-
-<%= render 'creatives/contact' %>
-<%= render 'creatives/footer' %>
-
 
 
 

@@ -163,9 +163,13 @@ Log In Page:
   border-radius: 4px;
 }
 
-.form-control:focus, .form-control:focus + .fa {
+.form-control:focus + .fa {
   border-color: #10CE88;
   color: #10CE88;
+}
+.form-control:focus, .form-control:focus + .fa {
+  border-color: #10CE88;
+  /*color: #10CE88;*/
 }
 
 .form-group .fa {
