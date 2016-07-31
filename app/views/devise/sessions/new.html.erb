@@ -1,43 +1,51 @@
-
 <%= render 'navbar' %>
 
 
-<header id="page-top" class='accounts_header'>
-    <div class="header-content">
-        <div class="container-fluid">
-            <div class="col-lg-4 col-lg-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 registration_form">
-                <h3 style="text-align: center; color: white;">Sign In</h3>
-                <p></p>
-                <%= form_for(resource, as: resource_name, url: account_session_path) do |f| %>
-                  <%= devise_error_messages! %>
+<body> <!-- style="background-color: #e8ecf0;"> -->
+  <br><br><br><br>
+    <div class="login-form">
+      <%= form_for(resource, as: resource_name, url: account_session_path) do |f| %>
+      <%= devise_error_messages! %>
 
-                  <div class="form-group">
-                    <%= f.email_field :email, :required => true, placeholder: 'Email', class: 'form-control' %>
-                  </div>
-                  <div class="form-group">
-                    <%= f.password_field :password, :required => '', placeholder: 'Password', class: 'form-control'  %>
-                  </div>              
-                  <br>
-                  <% if devise_mapping.rememberable? -%>
-                    <div class="field">
-                      <%= f.check_box :remember_me %>
-                      <%= f.label :remember_me %>
-                    </div>
-                  <% end -%>
-                  <br>
-                  <div class="form-group">
-                    <%= f.submit 'LOG IN', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>
-                  </div>
-                  <br>
-                  <%= render "devise/shared/links" %>
-                <% end %>
-                <% flash.each do |key, value| %>
-                  <div class="alert alert-<%= key %>"><%= value %></div>
-                <% end %>
-            </div>
-        </div>
+  
+
+      <div class="form-group">
+        <%= f.email_field :email, :required => true, placeholder: 'Email', class: 'form-control' %>
+        <i class="fa fa-user" style="display:inline-block;"></i>
+      </div>
+       
+      <div class="form-group log-status">
+        <%= f.password_field :password, :required => '', placeholder: 'Password', class: 'form-control'  %>
+        <i class="fa fa-lock "></i>
+      </div>
+
+     <!--  <span class="alert">Invalid email or password</span> -->
+     <%= link_to "Forgot your password?", new_password_path(resource_name), class: "link" %>
+            
+        
+      <%= f.submit 'LOG IN', class: 'log-btn btn-primary  ' %>
+        
+
+      <% if devise_mapping.rememberable? -%>
+        <div class=" field remember-me" style="text-align: center; ">
+          <%= f.check_box :remember_me %>
+          <label for="remember_me">
+            <div style="font-weight: 500;">Remember me?</div>
+          </label>
+         </div>
+      <% end -%>
+
+        <div style="text-align: center; ">
+          <a class="link"> <%= link_to "Don't have an account? Sign up", new_registration_path(resource_name) %> </a>
+         </div>
+        
+
+
+      <% end %>
     </div>
-</header>
 
-<%= render 'creatives/contact' %>
-<%= render 'creatives/footer' %>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="/assets/login-page.js"></script>
+
+</body>
