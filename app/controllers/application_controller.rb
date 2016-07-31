@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
 
   def prepare_meta_tags(options={})
-    site_name   = "Instela - On-Demand & Onsite Office Support in London"
+    site_name   = "Instela"
     title       = "From Data Recovery to Carpet Cleaning, We Cover All Your Office Needs"
     description = "Instela will quickly solve all your office problems - IT
     Support, Handymen, Cleaning, Office Tasks & Chores, and more. Available across London."
