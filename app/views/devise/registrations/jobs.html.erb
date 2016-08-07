@@ -1,0 +1,182 @@
+<%= render 'navbar' %>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<%= javascript_include_tag 'creative/registration' %>
+
+
+
+<body>
+
+</br></br></br></br></br> </br>
+<h1 style="text-align: center;">Your Account</h1>
+<br>
+<div class="container-small">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <span class="payment-errors"></span>
+  <input type="hidden" name='payment_token' id="payment_token"/><br/>
+  <input type='hidden' name='stripe_key' value="<%= Rails.application.secrets.stripe_publishable_key %>"/> 
+  <input type='hidden' name='stripe_key' value="<%= Rails.application.secrets.stripe_publishable_key %>" /><br>
+
+  <div class="box-regist user-account-section">
+    
+
+    <div class="title-regist">
+      <div class="titleline-regist"><h3>Account Details</h3></div>
+    </div>
+  
+    <div class="innerbox-regist">
+      <div class="row-fluid form-row row">
+        <div class="col-xs-6">
+          <label class="label-pre">Full Name</label>
+          <div class="form-group">
+            <%= f.text_field :full_name, :required => true, class: 'form-control'%>
+          </div>
+
+          </div>
+        <div class="col-xs-6">
+          <label class="label-pre">Company</label>
+          <div class="form-group">
+            <%= f.text_field :company, :required => true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid form-row row">
+        <div class="col-xs-12">
+          <label  class="label-pre">Email</label>
+          <div class="form-group">
+            <%= f.email_field :email, :required => true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-regist user-account-section">
+    <div class="title-regist">
+      <div class="titleline-regist"><h3>Office Address</h3></div>
+    </div>
+    <div class="innerbox-regist">
+      <div class="row-fluid form-row row">
+        <div class="col-xs-6">
+          <label class="label-pre">Address Line #1</label>
+          <div class="form-group">
+            <%= f.text_field :address_l1, :required => true, class: 'form-control'%>
+          </div>
+                        <!-- <input type="text" name="first_name" id="first_name" class="validate-both ng-pristine ng-untouched ng-valid ng-valid-required ng-valid-maxlength" maxlength="128" ng-model="ctrl.user.first_name" required=""> -->
+        </div>
+        <div class="col-xs-6">
+          <label class="label-pre">Address Line #2</label>
+          <div class="form-group">
+            <%= f.text_field :address_l2, class: 'form-control'%>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid form-row row">
+        <div class="col-xs-6">
+          <label class="label-pre">Post Code</label>
+          <div class="form-group">
+            <%= f.text_field :postcode, :required => true, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <label class="label-pre">Phone</label>
+          <div class="form-group">
+            <%= f.text_field :mobile_phone, :required => true, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="box-regist user-account-section">
+    <div class="title-regist">
+      <div class="titleline-regist"><h3>Payment Details</h3></div>
+    </div>
+    <div class="innerbox-regist">
+      <div class="row-fluid form-row row">
+        <div class="col-xs-12" align="center">
+          <button id="paymentButton" class= 'page-scroll btn btn-primary outline' style='border-color: black; color: black; font-weight: 500;'>Edit Card Details</button>
+        </div>             
+      </div>
+      <div classs="mtop30">
+        <div class="card-form-security mtop30"> <i class="fa fa-2x fa-lock wow bounceIn lock" style="color: #3abc77;"></i><span class="security-text">Your details are securely stored with our payment processing partner using bank-grade encryption.</span>
+        </div>
+      </div>
+      <br></br>    
+    </div>
+  </div>
+
+
+  <div class="box-regist user-account-section">
+    <div class="title-regist">
+      <div class="titleline-regist"><h3>Update Password</h3></div>
+    </div>
+
+    <div classs="mtop30">
+      <div class="mtop30" align="center"> Leave blank if you don't want to change your password
+        </div>
+      </div>
+    
+    <div class="innerbox-regist">
+      <div class="row-fluid form-row row">
+        <div class="col-xs-6 mbot30">
+          <label class="label-pre">New Password</label>
+          <div class="form-group">
+            <%= f.password_field :password, class: 'form-control'  %>
+          </div>
+        </div>
+        <div class="col-xs-6 mbot30">
+          <label class="label-pre">Password Confirmation</label>
+          <div class="form-group">
+            <%= f.password_field :password_confirmation, class: 'form-control'%>
+          </div>
+        </div>
+
+        <div align="center">
+          <%= f.submit 'SAVE CHANGES', class: 'page-scroll btn btn-primary btn-lg outline submit-account', style: 'border-color: black; color: black; font-weight: 500;' %>
+        </div>
+        <div id="stripeResponse"></div>
+        
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+</body>
+
+
+
+<%= render 'creatives/footer' %>
+
+<% if false %>
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
+  <% end %>
+  <h3>Cancel my account</h3>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <%= link_to "Back", :back %>
+<% end %>
