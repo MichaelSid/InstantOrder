@@ -18,7 +18,10 @@ class ChargesController < ApplicationController
 			@charge.duration = params[:duration].to_d
 			@charge.hourly_fee = determine_hourly_fee(@charge.service_type).to_d
 			@charge.materials_total_cost = params[:materials_total_cost]
-	  	@charge.amount = (@charge.duration * @charge.hourly_fee) + @charge.materials_total_cost
+
+			@charge.discount = params[:discount]
+
+	  	@charge.amount = (@charge.duration * @charge.hourly_fee)*((100-@charge.discount)/100) + @charge.materials_total_cost
 	  	charge = Stripe::Charge.create(
 		    amount: (@charge.amount * 100).to_i,
 		    currency: 'gbp',
