@@ -1,0 +1,67 @@
+<%= javascript_include_tag 'creative/orders' %>
+
+<%= render 'navbar' %>
+
+<body style="background: #e8ecf0;">
+
+    <div class="page-header" style="height: auto;">
+    <div class="page-header-inner vc-outer">
+        <div class="vc-inner text-centered">
+            <br>
+            <h2 style="color: white; font-size: 5.0rem;">Order History</h2>
+            <br>
+            <ul class="user--account-mobile-actions">
+                <li>
+                    <a class="btn-account btn-account-small" href="/accounts/edit">Account</a>
+                </li>
+                <li>
+                    <form method="post" class="ng-pristine ng-valid">
+                       <%= link_to 'LOG OUT', destroy_account_session_path, method: :delete, class: "btn-account btn-account-small" %>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div class="mbot30">
+	<div class="container-medium">
+		<div class="box">
+
+				<%  @orders.each do |i| %>
+                <%= link_to order_id_path(i) do %>
+                <ul class="no-ui user--history-list results-list">
+				<li>
+                            
+
+ 					<span class="list-item-inner">
+                   	    <span class="history-col-status status-delivered">
+                                <%= @orders.find_by_id(i).service_type %>
+                        </span>
+                        <span class="history-col-details ">
+                            <span class="history-restaurant">
+                                <%= @orders.find_by_id(i).duration %> hours
+                            </span>
+                        </span>
+                        <span class="history-col-date">
+                            <%= @orders.find_by_id(i).created_at.to_time.strftime('%A %d %B %Y') %>
+                        </span>
+                        <span class="history-col-amount">
+                            <span class="history-amount">
+                                <%= number_to_currency(@orders.find_by_id(i).amount, :unit=>'£') %>
+                            </span>
+                        </span>
+
+                    </span>
+                    
+                    </li></ul>
+                    <% end %>
+                <% end %>
+                <!-- </ul> -->
+        </div>
+        </div>
+        </div>
+

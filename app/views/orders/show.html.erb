@@ -1,0 +1,132 @@
+<%= render 'creatives/navbar' %>
+
+
+<body style="background-color: #f6f6f6;">
+	<div class="page-header">
+
+		<div class="page-header-nav">
+            <div class="container">
+                <a href="/history" class="muted-link pull-left"><i></i> < Back To Order History</a>
+            </div>
+        </div>
+
+	</div>
+
+	<div class="container-small">
+		<div class="box order-invoice">
+            <div class="invoice-target">
+                        instela.co
+            </div>
+            <div class="invoice-meta invoice-date-service row">
+            	<div class="invoice-left col-lg-6 col-sm-6 col-xs-6">
+                    Handyman Services
+                </div>
+                <div class="invoice-right col-lg-6 col-sm-6 col-xs-6">
+                    <%= @order.created_at.strftime('%d %B %Y') %>
+                </div>
+            </div>
+
+            <div class="invoice-meta">
+            	<div class="invoice-center invoice-amount">
+            		<%= number_to_currency(@order.amount, :unit=>'£') %>
+                </div>
+            	<div class="invoice-center invoice-id">
+                    Order #<%= @order.id %>
+                </div>
+            </div>
+
+            <div class="invoice-meta invoice-date-service">
+            	<div class="invoice-center">
+                    Thanks for using instela
+                </div>
+            </div>
+
+            <div class="invoice-address">
+            	<div class="row">
+	            	<div class="col-lg-6 col-sm-6 col-xs-6">
+	                    <br><span class="invoice-client"><%= @order.account.company %></span>
+						<br><%= @order.account.address_l1 %>
+						<br><%= @order.account.address_l2 %>
+						<br><%= @order.account.postcode %>
+	                </div>
+	            </div>
+            </div>
+
+            <div class="invoice-service-price">
+            	<div class="row">
+	            	<div class="invoice-left col-lg-6 col-sm-6 col-xs-6">
+            			<%= @order.service_type %>
+            		</div>
+            		<div class="invoice-right col-lg-6 col-sm-6 col-xs-6">
+            			<%= number_to_currency(@order.hourly_fee, :unit=>'£') %>/hour
+            		</div>
+            	</div>
+            </div>
+
+            <div class="invoice-price">
+            	<div class="row">
+	            	<div class="col-lg-4 col-sm-4 col-xs-4">
+            		</div>
+            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			x <%= @order.duration %> hours
+            		</div>
+            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			<% pre_tot = @order.duration*@order.hourly_fee %>
+            			<%= number_to_currency(pre_tot, :unit=>'£') %>
+            		</div>
+            	</div>
+            </div>
+
+
+            <% unless @order.discount.nil? || @order.discount == 0 %>
+            <div class="invoice-price">
+            	<div class="row">
+            		<div class="col-lg-4 col-sm-4 col-xs-4">
+            		</div>
+	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			Discount <%= @order.discount %>%
+            		</div>
+            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			<% disc = (@order.discount/100)*@order.duration*@order.hourly_fee %>
+            			- <%= number_to_currency(disc, :unit=>'£') %>
+            		</div>
+            	</div>
+            </div>
+            <% end %>
+
+            <% unless @order.materials_total_cost.nil? || @order.materials_total_cost == 0 %>
+            <div class="invoice-price">
+            	<div class="row">
+            		<div class="col-lg-4 col-sm-4 col-xs-4">
+            		</div>
+	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			Materials
+            		</div>
+            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			<%= number_to_currency(@order.materials_total_cost, :unit=>'£') %>
+            		</div>
+            	</div>
+            </div>
+            <% end %>
+
+            <div class="invoice-total">
+            	<div class="row">
+	            	<div class="col-lg-4 col-sm-4 col-xs-4">	
+            		</div>
+	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			Total
+            		</div>
+            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+            			<%= number_to_currency(@order.amount, :unit=>'£') %>
+            		</div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%= render 'creatives/footer' %>
+
+
+
+

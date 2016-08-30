@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( creative/manifest.js creative/manifest.css creative/registration.js)
+Rails.application.config.assets.precompile += %w( creative/manifest.js creative/manifest.css creative/registration.js creative/orders.js)

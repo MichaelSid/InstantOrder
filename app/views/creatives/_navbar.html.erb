@@ -1,54 +1,95 @@
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-1x fa-magic wow bounceIn" ></i>Instela</a> <!-- style="colour: #FFFFFF" -->
 
-                      <!--   <%= image_tag "instela-5-2-colors-Converted.ico", class: "fa", alt: "" %>
-                                        <img class="fa fa-1x wow bounceIn"  src="/assets/instela-5-2-colors-Converted.ico"> -->
 
+        <!-- Title -->
+        <div class="navbar-header pull-left">
+        <a class="navbar-brand page-scroll" href="/"><i class="fa fa-1x fa-magic wow bounceIn"></i> instela</a>
         </div>
+        
+        <!-- <div class="navbar-header pull-left">
+            <a class="navbar-brand page-scroll " href="/#page-top">
+            <img src="", class="navbar-inst-logo wow bounceIn", alt: ""></img>
+            </a>
+        </div> -->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#services">Our services</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#howitworks">How it works</a>
-                </li>
-                <!-- <li>
-                    <a class="page-scroll" href="#examples">Examples</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li> -->
-                 <li>
-                    <%- if account_signed_in? %>
-                        <%=link_to 'MY ACCOUNT', edit_account_registration_path %>
-                    <%- else %>
-                        <%= link_to 'LOG IN', new_account_session_path %>
-                    <% end %>
-                 </li>
-                <li id="register_button">
-                    <%- if account_signed_in? %>
-                        <%= link_to 'LOG OUT', destroy_account_session_path, method: :delete, class: "page-scroll btn btn-primary btn-lg outline"  %>
-                    <%- else %>
-                        <%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline" %>
-                    <% end %>
+        <%- if account_signed_in? %>
+            <% account = Account.find_by_id(current_account.id) %>
+        <!-- 'Sticky' (non-collapsing) right-side menu item(s) -->
+
+      
+        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"> -->
+
+
+        <div class="navbar-header pull-right">
+
+            <ul class="collapse navbar-collapse nav navbar-nav">
+                <li><a class="page-scroll" href="/#services">Our services</a></li>
+                <li><a class="page-scroll" href="/#howitworks">How it works</a></li>
+            </ul>
+
+            <ul class="nav pull-left navbar-nav">
+
+            <!-- This works well for static text, like a username -->
+            <!-- <li class="navbar-text pull-left">User Name</li> -->
+            <!-- Add any additional bootstrap header items.  This is a drop-down from an icon -->
+                <li class="dropdown pull-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-user" style="padding-right: 3px;"></span>   <%= account.full_name %>
+                        <span class="glyphicon glyphicon-menu-down" style="padding-left: 3px;"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><%=link_to 'Order History', orders_all_path %></li>
+                        <li><%=link_to 'Account', edit_account_registration_path %></li> 
+                        <li><%= link_to 'Log Out', destroy_account_session_path, method: :delete  %></li>
+                    </ul>
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
+        
+        <% else %>
+            <div class="navbar-header">
+              <!-- Required bootstrap placeholder for the collapsed menu -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand page-scroll " href="/#page-top">
+                    Instela <img src="", class="navbar-inst-logo wow bounceIn", alt: ""></img>
+                </a> -->
+
+            </div>
+        <% end %>
+        <%- if account_signed_in? == false %>
+
+            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right"> -->
+
+            <!-- The Collapsing items            navbar-left or navbar-right -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <!--                      pull-right keeps the drop-down in line -->
+                <ul class="nav navbar-nav pull-left">
+
+                <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"> -->
+              
+                    <li><a class="page-scroll" href="/#services">Our services</a></li>
+                    <li><a class="page-scroll" href="/#howitworks">How it works</a></li>
+                    <li><%= link_to 'LOG IN', new_account_session_path %></li>
+                    <li id="register_button"><%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline" %></li>
+                </ul>
+            </div>
+
+             <!-- Additional navbar items -->
+            <!-- <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1"> -->
+            <!--                      pull-right keeps the drop-down in line -->
+                <!-- <ul class="nav navbar-nav pull-right"> -->
+                
+        <% end %>
     </div>
-    <!-- /.container-fluid -->
 </nav>
 
 

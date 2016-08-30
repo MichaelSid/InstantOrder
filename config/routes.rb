@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show", as: :static_pages
   get '/sitemap.xml.gz', to: redirect("https://#{ENV['S3_BUCKET']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"), as: :sitemap
 
+  get '/history', to: 'orders#history', as: 'orders_all'
+  get 'history/:id', to: 'orders#show', as: 'order_id'
+
 
   # Example resource route with options:
   #   resources :products do

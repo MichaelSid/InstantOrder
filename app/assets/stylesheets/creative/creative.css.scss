@@ -12,6 +12,22 @@ body {
 }
 
 
+ .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: white;
+}
+
+
+.navbar-default .navbar-nav {
+    padding-right: 40px;
+}
+
+.dropdown-menu > li > a:hover {
+
+    color: #f05f40;
+}
+
+
 /* *********** SIGN UP PAGE
 ************* ************* 
 */
@@ -47,7 +63,7 @@ body {
     display: block;
     text-align: left;
     padding: 20px 30px;
-    border-bottom: 1px solid #e8ecf0
+    border-bottom: 1px solid #e8ecf0;
 }
 
 .box-regist {
@@ -97,13 +113,6 @@ margin-top: 8px;
 
 }
 
-.logo-testimonial {
-    max-height: 100px;
-    margin-top: 40px;
-    margin-right: auto;
-    margin-bottom: 25px;
-    margin-left: auto;
-}
 
 .mtop30 {
     margin-top: 30px;
@@ -112,6 +121,354 @@ margin-top: 8px;
 .mbot30 {
     margin-bottom: 30px;
 }
+
+/* **************
+Order Page
+**************** */
+
+.page-header {
+    position: relative;
+    background-color: #121c25;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 230px;
+    padding: 90px 0 30px 0;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.page-header-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+
+.page-header-nav .muted-link {
+    display: block;
+    margin: 0;
+    /* padding: 0; */
+    position: relative;
+    z-index: 90;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    line-height: 1em;
+    font-weight: 400;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    text-decoration:none; 
+}
+
+.page-header-nav .muted-link:hover {
+    color: #f05f40;
+}
+
+
+.order-invoice  {
+     z-index: 1;
+    margin-top: 30px;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.order-invoice .invoice-target {
+    display: block;
+    background: #f05f40;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-size: 4.5rem;
+
+}
+
+.order-invoice .invoice-meta {
+    padding: 30px 30px 0px 30px;
+}
+
+.order-invoice .invoice-date-service {
+    font-size: 1.8rem;
+    line-height: 2.5em;
+    color: #6b7781;    
+}
+
+.order-invoice .invoice-amount {
+    font-size: 3.0rem;
+    line-height: 2.0em;
+    font-weight: 600;
+}
+
+.order-invoice .invoice-id {
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+
+.order-invoice .invoice-center {
+    text-align: center;
+}
+
+.order-invoice .invoice-right {
+    text-align: right;
+}
+
+.order-invoice .invoice-left {
+    text-align: left;
+}
+
+
+.order-invoice .invoice-address {
+    padding: 0px 30px 20px 30px; 
+    border-bottom: 1px solid #e8ecf0;
+    font-size: 1.4rem;
+}
+
+.order-invoice .invoice-client {
+    font-weight: 600;
+}
+
+
+.order-invoice .invoice-service-price {
+    padding: 20px 30px 0px 30px;
+    font-size: 1.5rem;
+    line-height: 2.5em;
+    font-weight: 600;
+}
+
+.order-invoice .invoice-upper {
+    text-transform: uppercase;
+}
+
+
+.order-invoice .invoice-price {
+    padding: 5px 30px 0px 30px;
+    color: #6b7781;
+    font-size: 1.5rem;
+    line-height: 1.3em;
+}
+
+.order-invoice .invoice-total {
+    padding: 10px 30px 30px 30px;
+    border-bottom: 1px solid #e8ecf0;
+    font-size: 2.5rem;
+    line-height: 2.1em;
+
+
+}
+
+
+/* **************
+Order History Page
+************* */
+
+.text-centered {
+    text-align: center;
+}
+
+.vc-outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.vc-inner {
+    display: table-cell;
+    /* vertical-align: middle; */
+    max-width: 100%;
+}
+
+.user--account-mobile-actions {
+    display: block;
+    padding: 0;
+}
+
+.user--account-mobile-actions li {
+    display: inline-block;
+}
+
+.user--account-mobile-actions li .btn-account {
+    min-width: 140px;
+}
+
+.btn-account.btn-account-small {
+    padding: 0 0px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.btn-account {
+    background: none;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+    text-align: center;
+    vertical-align: top;
+    appearance: none;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    -webkit-transition: all 0.075s linear;
+    -moz-transition: all 0.075s linear;
+    transition: all 0.075s linear;
+    text-decoration: none;
+}
+
+
+.btn-account:hover {
+    background: none;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+    text-align: center;
+    vertical-align: top;
+    appearance: none;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    border: 1px solid #f05f40;
+    color: #f05f40;
+    outline: none;
+    -webkit-transition: all 0.075s linear;
+    -moz-transition: all 0.075s linear;
+    transition: all 0.075s linear;
+    text-decoration: none;
+}
+
+
+.container-medium {
+    display: block;
+    position: relative;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background: #FFF;
+    border-top: 3px solid #f05f40;
+    position: relative;
+}
+
+ul.user--history-list li .list-item-inner {
+    margin: 25px 70px 60px 50px;
+}
+
+
+ul.results-list li .list-item-inner {
+    display: block;
+    position: relative;
+    /*margin: 10px 20px;*/
+}
+
+ul.results-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.results-list li {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: -1px;
+    border-style: solid;
+    border-color: #e8ecf0;
+    border-width: 1px 0px;
+}
+
+
+ul.user--history-list li .history-col-status.status-delivered, ul.user--history-list li .history-col-status.status-almost_ready, ul.user--history-list li .history-col-status.status-accepted {
+    color: #f4876f;
+}
+
+ul.user--history-list li .history-col-status {
+    width: 23%;
+}
+
+ul.user--history-list li [class^="history-col-"] {
+    float: left;
+    line-height: 1em;
+}
+
+ul.user--history-list li .history-col-details {
+    width: 23%;
+}
+ul.user--history-list li [class^="history-col-"] {
+    float: left;
+    line-height: 1em;
+}
+
+ul.user--history-list li .history-restaurant {
+    display: block;
+    clear: both;
+    color: #000;
+}
+
+
+ul.user--history-list li .history-col-date {
+    color: #acb4bc;
+    width: 31%;
+}
+
+ul.user--history-list li .history-col-amount {
+    width: 23%;
+    text-align: right;
+}
+
+ul.user--history-list li .history-col-icon {
+    position: absolute;
+    verticle-align: middle;
+    right: -35px;
+    font-size: 38px;
+}
+
+ul.user--history-list li .history-amount {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    float: right;
+    text-align: center;
+    color: #56616b;
+    font-weight: 600;
+}
+
+ul.user--history-list:hover {
+    background-color:  #fdeae6;
+}
+
+
 
 
 /* ************
@@ -284,7 +641,7 @@ END OF Log In Page:
 
     font-size: 19px;
     border: none;
-    text-align: center;
+    text-align: left;
 
     margin-top: 0px;
     margin-right: 40px;
@@ -311,13 +668,55 @@ END OF Log In Page:
     margin-bottom: 15px;
 
     padding-top: 0px;
-    padding-right: 50px;
+    padding-right: 65px;
     padding-bottom: 0px;
     padding-left: 20px;
 }
 .name-testimonial strong {
     display: block;
 }
+
+
+
+@media(min-width:992px) {
+
+.logo-testimonial {
+    max-height: 100px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: 65px;
+    text-align: left;
+    width: 205%;
+}
+}
+
+@media(min-width:768px) {
+
+.logo-testimonial {
+    max-height: 100px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: 65px;
+    text-align: left;
+    width: 25%;
+}
+}
+
+@media(max-width:768px) {
+.logo-testimonial {
+    max-height: 100px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: 65px;
+    text-align: left;
+    width: 40%;
+}
+}
+
+
 
 body {
 font-family: "Open Sans", sans-serif;
@@ -549,6 +948,35 @@ aside {
             margin: 0px 0 0px 20px;
     }
 
+    .navbar-default .navbar-inst-logo {
+    background: url(/assets/instela-white.png) no-repeat 0 -170px;
+        background-size: 250px;
+        background-position: 0 0;
+        background-color: transparent;
+        width: 250px;
+        height: 75px;
+        margin: 10px 0 10px -6px;
+    }
+
+
+    .navbar-default.affix .navbar-inst-logo {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 150px;
+        background-position: 0 0;
+        width: 150px;
+        height: 45px;
+        margin: -13px 0 10px -6px;
+    }
+
+    .navbar-default .navbar-header .navbar-brand .logo-size {
+        max-width: 350px;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand .logo-size {
+        max-width: 150px;
+    }
+
+
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
         color: #f05f40;
@@ -606,6 +1034,7 @@ aside {
         font-size: 26px;
         color: #f05f40;
         text-shadow: 0px 0px 0.2px white;
+        max-width: 150px
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
