@@ -498,6 +498,23 @@ ul.user--history-list:hover {
 Log In Page: 
 ********** */
 
+.login-background {
+/* #705cfd*/
+    /* $instela-hover f05f40  f4876f*/
+/* #40d1f0 #4079f0 */
+
+    /*#c49b95 #ca968f*/
+    background: #999797;
+    /*background: linear-gradient(180deg,$instela-orange, $instela-hover);*/
+    /*background: linear-gradient(105deg,#fd816f, #fec5bd);*/
+    /*background: linear-gradient(180deg,$instela-hover, $instela-orange,  #f4876f);*/
+    /*background: linear-gradient(105deg,#2d6c99,#69c0d3);*/
+    /*background-color: #121c25;*/
+   /*background-color: $instela-orange;*/
+
+
+}
+
 .remember-me{
     
     padding-top: 20px;
@@ -512,7 +529,7 @@ Log In Page:
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     padding: 40px 30px;
-    background: #eee;
+    background: #fff8f7;
     position: absolute;
     left: 50%;
     top: 50%;
