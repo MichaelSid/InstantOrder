@@ -1019,7 +1019,6 @@ aside {
     }
 
 
-
 /*colour buttons nav bar right*/
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
@@ -1510,6 +1509,12 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 .btn-primary.outline {
     border: 1px solid #fff;
     color: #fff;
+    border-radius: 0;
+}
+
+.btn-primary-light.outline:hover {
+    border: 1px solid #fff;
+    color: black;
     border-radius: 0;
 }
 

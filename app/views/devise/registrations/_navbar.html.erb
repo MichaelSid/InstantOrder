@@ -70,6 +70,7 @@
             <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right"> -->
 
+         <div class="navbar-header pull-right">
             <!-- The Collapsing items            navbar-left or navbar-right -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <!--                      pull-right keeps the drop-down in line -->
@@ -77,13 +78,17 @@
 
                 <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right"> -->
+
+
               
-                    <li><a class="page-scroll" href="/#services">Our services</a></li>
-                    <li><a class="page-scroll" href="/#howitworks">How it works</a></li>
-                    <li><%= link_to 'LOG IN', new_account_session_path %></li>
-                    <li id="register_button"><%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline" %></li>
+                    <li><a class="page-scroll navbar-light" href="/#services">Our services</a></li>
+                    <li><a class="page-scroll navbar-light" href="/#howitworks">How it works</a></li>
+                    <li><%= link_to 'LOG IN', new_account_session_path, class: "navbar-light" %></li>
+                    <li id="register_button"><%= link_to 'SIGN UP', new_account_registration_path, class: "page-scroll btn btn-primary btn-lg outline navbar-light" %></li>
                 </ul>
             </div>
+            </div>
+
 
              <!-- Additional navbar items -->
             <!-- <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1"> -->

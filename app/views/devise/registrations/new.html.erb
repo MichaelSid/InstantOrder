@@ -7,9 +7,6 @@
 <body style="background: #e8ecf0;">
     <!-- <div class="page-header"><h2 style="text-align: center; color: white; font-size: 5.0rem;">Order History</h2></div> -->
 
-    
-
-
   <div class="page-header" style="height: auto;">
     <div class="page-header-inner vc-outer">
         <div class="vc-inner text-centered">
@@ -27,22 +24,9 @@
   </div>
 
 
+<div class="mbot30">
 <!-- container-small before  -->
-<div class="container-medium">
-
-
-<script src="https://checkout.stripe.com/checkout.js"></script>
-<script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-<%= javascript_include_tag 'creative/registration' %>
-
-
-<!-- <body style="background-color: #e8ecf0;">
- --><body>
-
-</br></br></br></br></br> </br>
-<h1 style="text-align: center;">Create An Account</h1>
-<br>
-<div class="container-small">
+<div class="container-medium", style="margin-top: 40px;">
   <%= form_for(resource, as: resource_name, validate: true, url: account_registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   <span class="payment-errors"></span>
@@ -51,6 +35,7 @@
 
   <div class="box-regist user-account-section">
     
+
     <div class="title-regist">
       <div class="titleline-regist"><h3>Account Details</h3></div>
     </div>
@@ -174,6 +159,7 @@
     </div>
     <% end %>
   </div>
+</div>
 </div>
 
 </body>
