@@ -5,7 +5,7 @@
        <!--  <a class="navbar-brand page-scroll" href="/"><aa><i class="fa fa-1x fa-magic wow bounceIn"></i> Instela</aa></a>  -->
 
         <div class="navbar-header pull-left">
-        <a class="navbar-brand page-scroll" href="/"><i class="fa fa-1x fa-magic wow bounceIn"></i> instela</a>
+        <a class="navbar-brand navbar-light page-scroll" href="/"><i class="fa fa-1x fa-magic wow bounceIn"></i> instela</a>
         </div>
 
         <!-- Title -->
@@ -27,7 +27,7 @@
         <div class="navbar-header pull-right">
 
             <ul class="collapse navbar-collapse nav navbar-nav">
-                <li><a class="page-scroll" href="/contact">Contact Us</a></li>
+                <li><a class="page-scroll navbar-light" href="/contact">Contact Us</a></li>
             </ul>
 
             <ul class="nav pull-left navbar-nav">
@@ -35,11 +35,11 @@
             <!-- This works well for static text, like a username -->
             <!-- <li class="navbar-text pull-left">User Name</li> -->
             <!-- Add any additional bootstrap header items.  This is a drop-down from an icon -->
-                <li class="dropdown pull-right">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <li class="dropdown pull-right navbar-light">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><light>
                         <span class="glyphicon glyphicon-user" style="padding-right: 3px;"></span>   <%= account.full_name %>
                         <span class="glyphicon glyphicon-menu-down" style="padding-left: 3px;"></span>
-                    </a>
+                    <light></a>
                     <ul class="dropdown-menu">
                         <li><%=link_to 'Order History', orders_all_path %></li>
                         <li><%=link_to 'Account', edit_account_registration_path %></li> 

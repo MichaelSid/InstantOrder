@@ -4,11 +4,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+$instela-orange: #fd705c;
+$instela-hover: #fc442a;
+$instela-light: #ffe7e4;
+
+/* Original: #f05f40 #eb3812 */
+/* new #fd705c  #fc442a  #ffe7e4*/
+
+
 html,
 body {
     width: 100%;
     height: 100%;
 
+}
+
+
+w:hover,
+w:focus {
+    color: white;
 }
 
 
@@ -24,7 +39,7 @@ body {
 
 .dropdown-menu > li > a:hover {
 
-    color: #f05f40;
+    color: $instela-orange;
 }
 
 
@@ -71,7 +86,7 @@ body {
     border-top: 3px solid #04bab1;
     border-top-width: 3px;
     border-top-style: solid;
-    border-top-color: #f05f40; 
+    border-top-color: $instela-orange; 
     position: relative;
 }
 
@@ -126,10 +141,17 @@ margin-top: 8px;
 Order Page
 **************** */
 
+/* $instela-hover f05f40  f4876f*/
+/* #40d1f0 #4079f0 */
+
 .page-header {
     position: relative;
+    /*background: linear-gradient(180deg,$instela-hover, $instela-orange,  #f4876f);*/
     /*background: linear-gradient(105deg,#2d6c99,#69c0d3);*/
-    background-color: #121c25;
+    /*background-color: #121c25;*/
+   /*background-color: $instela-orange;*/
+   background-color: #fd705c;
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,12 +181,12 @@ Order Page
     line-height: 1em;
     font-weight: 400;
     font-weight: 300;
-    color: rgba(255,255,255,0.6);
+    color: white;
     text-decoration:none; 
 }
 
 .page-header-nav .muted-link:hover {
-    color: #f05f40;
+    color: $instela-light;
 }
 
 
@@ -188,7 +210,7 @@ Order Page
 
 .order-invoice .invoice-target {
     display: block;
-    background: #f05f40;
+    background: $instela-orange;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -357,8 +379,8 @@ Order History Page
     appearance: none;
     -webkit-appearance: none;
     text-transform: uppercase;
-    border: 1px solid #f05f40;
-    color: #f05f40;
+    border: 1px solid $instela-light;
+    color: $instela-light;
     outline: none;
     -webkit-transition: all 0.075s linear;
     -moz-transition: all 0.075s linear;
@@ -377,7 +399,7 @@ Order History Page
 
 .box {
     background: #FFF;
-    border-top: 3px solid #f05f40;
+    border-top: 3px solid $instela-orange;
     position: relative;
 }
 
@@ -726,7 +748,7 @@ font-family: "Open Sans", sans-serif;
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: $instela-orange;
     border-width: 3px;
 }
 
@@ -736,15 +758,23 @@ hr.light {
 
 
 a {
-    color: #f05f40; 
+    color: $instela-orange; 
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
-a:hover,
-a:focus {
-    color: #eb3812;
+a:hover, a:focus {
+    color: $instela-hover;
+}
+
+
+aa {
+    color: $instela-orange;
+}
+
+aa:hover, aa:focus:hover {
+    color: $instela-hover;
 }
 
 h1,
@@ -855,7 +885,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: $instela-orange;
 }
 
 .bg-dark {
@@ -892,14 +922,14 @@ aside {
 .navbar-default .navbar-header .navbar-brand {
     
     font-family: 'ArialRoundedMTBold';
-    color: #f05f40;
+    color: $instela-orange;
     font-weight: 700;
     text-shadow: 0px 0px 0.2px white;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #f05f40;
+    color: $instela-orange;
     text-shadow: 0px 0px 0.2px white;
 }
 
@@ -914,12 +944,12 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: $instela-orange;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: $instela-orange!important;
     background-color: transparent;
 }
 
@@ -943,7 +973,7 @@ aside {
     .navbar-default .navbar-header .navbar-brand {
         font-family: 'ArialRoundedMTBold';
         font-size: 40px; /* was 26*/
-        color: #FFFFFF; /*#f05f40;*/
+        color: #FFFFFF; /*$instela-orange;*/
         font-weight: 700;
         text-shadow: 0px 0px 0.1px #000;
             margin: 0px 0 0px 20px;
@@ -980,8 +1010,15 @@ aside {
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #f05f40;
+        color: $instela-orange;
     }
+
+    .navbar-default .navbar-header  .navbar-light:hover,
+    .navbar-default .navbar-header  .navbar-light:focus {
+        color: $instela-light;
+    }
+
+
 
 /*colour buttons nav bar right*/
     .navbar-default .nav > li>a,
@@ -992,18 +1029,20 @@ aside {
    
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #f05f40;;
+        color: $instela-orange;;
     }
 
-    aa {
-    color: #f05f40;
+    .navbar-default .nav > li> a > light:hover,
+    .navbar-default .nav > li> a > light:focus,
+    .navbar-default .nav > li> a:hover > light {
+        color: $instela-light;
+    }
+    .navbar-default.affix .nav > li> a > light:hover,
+    .navbar-default.affix .nav > li> a > light:focus,
+    .navbar-default.affix .nav > li> a:hover > light {
+        color: $instela-orange;
     }
 
-    aa:hover, aa:focus:hover {
-
-    color: #eb3812;
-
-    }
 
     /* change colour of navbar text to black for white background pages eg terms */
      .navbar-default .nav aa,
@@ -1013,7 +1052,7 @@ aside {
 
     .navbar-default .nav > li>a>aa:hover,
     .navbar-default .nav>li>a>aa:focus:hover {
-        color: #f05f40;
+        color: $instela-orange;
     }
 
 
@@ -1033,14 +1072,14 @@ aside {
         /*font-family: AmericanTypewriter-Bold;*/
         font-family: 'ArialRoundedMTBold';
         font-size: 26px;
-        color: #f05f40;
+        color: $instela-orange;
         text-shadow: 0px 0px 0.2px white;
         max-width: 150px
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: $instela-hover;
         /*text-shadow: 0px 0px 0.1px #000;*/
     }
 
@@ -1051,7 +1090,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: $instela-orange;
         /*text-shadow: 0px 0px 0.1px #000;*/
     }
 }
@@ -1222,7 +1261,7 @@ header .header-content .header-content-inner p {
 
 
 .text-primary {
-    color: #f05f40;
+    color: $instela-orange;
 }
 
 .no-gutter > [class*=col-] {
@@ -1289,9 +1328,9 @@ fieldset[disabled] .btn-default.active {
 
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: $instela-orange;
     color: #fff;
-    background-color: #f05f40;
+    background-color: $instela-orange;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -1332,12 +1371,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: $instela-orange;
+    background-color: $instela-orange;
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: $instela-orange;
     background-color: #fff;
 }
 
@@ -1384,10 +1423,10 @@ body {
     background-image: none
 }
 .carousel-control.left {
-    color: #f05f40
+    color: $instela-orange
 }
 .carousel-control.right {
-    color: #f05f40
+    color: $instela-orange
 }
 .screenshot {
     display: block;
@@ -1479,8 +1518,8 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 }
 
 .btn-primary.submit-register {
-    border: 1px solid #f05f40;
-    color: #f05f40;
+    border: 1px solid $instela-orange;
+    color: $instela-orange;
     border-radius: 0;
 }
 
@@ -1492,13 +1531,13 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2
 
 .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
     color: #fff !important;
-    border-color: #f05f40;
-    background-color: #f05f40 !important;
+    border-color: $instela-orange;
+    background-color: $instela-orange !important;
 }
 .btn-primary.outline:active, .btn-primary.outline.active {
-    border-color: #f05f40;
+    border-color: $instela-orange;
     color: #fff !important;
-    background-color: #f05f40 !important;
+    background-color: $instela-orange !important;
     box-shadow: none;
 }
 
