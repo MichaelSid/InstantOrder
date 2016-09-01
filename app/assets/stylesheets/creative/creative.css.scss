@@ -896,6 +896,56 @@ font-family: "Open Sans", sans-serif;
 }
 
 
+
+
+
+    .navbar-default .navbar-inst-logo {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 250px;  /* 150px; */
+        background-position: 0 0;
+        width: 250px;   /* 150px; */
+        height: 180px;   /* 45px */
+        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
+    }
+
+
+   
+
+
+    .navbar-default.affix .navbar-inst-logo {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 250px;  /* 150px; */
+        background-position: 0 0;
+        width: 250px;   /* 150px; */
+        height: 180px;   /* 45px */
+        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
+    }
+
+
+
+
+        /* swap around for privacy/terms page */
+    .navbar-default .navbar-inst-pages {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 400px;  /* 250px; */
+        background-position: 0 0;
+        background-color: transparent;
+        width: 400px;       /* 250px; */
+        height: 250px;       /* 75px; */
+        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
+    }
+
+
+
+    .navbar-default.affix .navbar-inst-pages {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 250px;  /* 150px; */
+        background-position: 0 0;
+        width: 250px;   /* 150px; */
+        height: 180px;   /* 45px */
+        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
+    }
+
 p {
     font-family: "Open Sans", sans-serif;
     margin-bottom: 5px;
@@ -978,6 +1028,11 @@ aside {
 }
 
 
+
+
+
+
+
 @media(min-width:768px) {
 
     
@@ -1007,7 +1062,7 @@ aside {
         background-color: transparent;
         width: 400px;       /* 250px; */
         height: 250px;       /* 75px; */
-        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
+        margin: -150px 0 10px -43px;   /* 10px 0 10px -6px; */
     }
 
     .navbar-default .navbar-inst-logo:hover {
@@ -1017,7 +1072,7 @@ aside {
         background-color: transparent;
         width: 400px;       /* 250px; */
         height: 250px;       /* 75px; */
-        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
+        margin: -150px 0 10px -43px;   /* 10px 0 10px -6px; */
     }
 
 
