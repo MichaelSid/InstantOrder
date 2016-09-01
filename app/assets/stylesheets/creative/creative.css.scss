@@ -998,25 +998,66 @@ aside {
             margin: 0px 0 0px 20px;
     }
 
+
+
     .navbar-default .navbar-inst-logo {
     background: url(/assets/instela-white.png) no-repeat 0 -170px;
-        background-size: 250px;
+        background-size: 400px;  /* 250px; */
         background-position: 0 0;
         background-color: transparent;
-        width: 250px;
-        height: 75px;
-        margin: 10px 0 10px -6px;
+        width: 400px;       /* 250px; */
+        height: 250px;       /* 75px; */
+        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
+    }
+
+    .navbar-default .navbar-inst-logo:hover {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 400px;  /* 250px; */
+        background-position: 0 0;
+        background-color: transparent;
+        width: 400px;       /* 250px; */
+        height: 250px;       /* 75px; */
+        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
     }
 
 
     .navbar-default.affix .navbar-inst-logo {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
-        background-size: 150px;
+        background-size: 250px;  /* 150px; */
         background-position: 0 0;
-        width: 150px;
-        height: 45px;
-        margin: -13px 0 10px -6px;
+        width: 250px;   /* 150px; */
+        height: 180px;   /* 45px */
+        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
     }
+
+
+
+
+        /* swap around for privacy/terms page */
+    .navbar-default .navbar-inst-pages {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 400px;  /* 250px; */
+        background-position: 0 0;
+        background-color: transparent;
+        width: 400px;       /* 250px; */
+        height: 250px;       /* 75px; */
+        margin: -150px 0 10px -30px;   /* 10px 0 10px -6px; */
+    }
+
+
+
+    .navbar-default.affix .navbar-inst-pages {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 250px;  /* 150px; */
+        background-position: 0 0;
+        width: 250px;   /* 150px; */
+        height: 180px;   /* 45px */
+        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
+    }
+
+    
+
+
 
     .navbar-default .navbar-header .navbar-brand .logo-size {
         max-width: 350px;
