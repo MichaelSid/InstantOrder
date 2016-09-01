@@ -8,6 +8,7 @@
 $instela-orange: #fd705c;
 $instela-hover: #fc442a;
 $instela-light: #ffe7e4;
+$instela-blue: #7f98b1;
 
 /* Original: #f05f40 #eb3812 */
 /* new #fd705c  #fc442a  #ffe7e4*/
@@ -83,10 +84,10 @@ w:focus {
 
 .box-regist {
     background: #FFF;
-    border-top: 3px solid #04bab1;
+    border-top: 3px solid;
     border-top-width: 3px;
     border-top-style: solid;
-    border-top-color: $instela-orange; 
+    border-top-color: $instela-blue; 
     position: relative;
 }
 
@@ -399,7 +400,7 @@ Order History Page
 
 .box {
     background: #FFF;
-    border-top: 3px solid $instela-orange;
+    border-top: 3px solid $instela-blue;
     position: relative;
 }
 
@@ -502,9 +503,10 @@ Log In Page:
 /* #705cfd*/
     /* $instela-hover f05f40  f4876f*/
 /* #40d1f0 #4079f0 */
+/* grey: #999797  #c0bfbf */
 
     /*#c49b95 #ca968f*/
-    background: #999797;
+    background: #7f98b1;
     /*background: linear-gradient(180deg,$instela-orange, $instela-hover);*/
     /*background: linear-gradient(105deg,#fd816f, #fec5bd);*/
     /*background: linear-gradient(180deg,$instela-hover, $instela-orange,  #f4876f);*/
@@ -529,7 +531,7 @@ Log In Page:
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     padding: 40px 30px;
-    background: #fff8f7;
+    background: #fafafa;
     position: absolute;
     left: 50%;
     top: 50%;

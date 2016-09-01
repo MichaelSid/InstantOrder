@@ -1,15 +1,24 @@
 <%= render 'navbar' %>
 
-<body>
+<body style="background: #e8ecf0;"> <!-- #7f98b1  #e8ecf0-->
 
-</br></br></br></br></br> 
-<h2 style="text-align: center;">Get in touch and let us know how we can help</h2>
+<div class="page-header" style="height: auto; background: #7f98b1;">
+    <div class="page-header-inner vc-outer">
+        <div class="vc-inner text-centered">
+            <br><br>
+            <h2 style="color: white; font-size: 3.5rem;">Get in touch and let us know how we can help</h2>
+            <br>
+        </div>
+      </div>
+  </div>
+
 <br>
-<div class="container-small">
+<div class="container-medium"> <!-- small -->
   <%= form_for @message, url: contact_path do |f| %>
                   <%= f.error_messages %>
   
-  <div class="box-regist user-account-section">
+  <div class="box-regist user-account-section" style="border-top: #fd705c; border-top-width: 3px;
+    border-top-style: solid">
     
     <!-- <div class="title-regist">
       <div class="titleline-regist"><h3>Account Details</h3></div>
