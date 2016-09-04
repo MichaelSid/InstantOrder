@@ -532,16 +532,23 @@ Log In Page:
     -webkit-border-radius: 4px;
     padding: 40px 30px;
     background: #fafafa;
-    position: absolute;
     left: 50%;
     top: 50%;
     width: 400px;
-    margin-left: -200px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    /*position: absolute;*/
+    /* margin-left: -200px; */
+
+    position: relative;
+    margin: 250px 0px 0px -200px;
 
 
+}
+
+.user-account-section {
+    margin: 0 0 5px 0;
 }
 
 .form-group {
@@ -1143,16 +1150,27 @@ aside {
    
 
 
-    .navbar-default.affix .navbar-inst-logo {
+    .navbar-default.affix .navbar-inst-logo  {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
-        background-size: 250px;  /* 150px; */
+        background-size: 220px;  
         background-position: 0 0;
-        width: 250px;   /* 150px; */
-        height: 180px;   /* 45px */
-        margin: -108px 0 10px -30px;   /*  -13px 0 10px -6px */
+        width: 250px;   
+        height: 180px;  
+        margin: -92px 0 10px -20px;
     }
 
 
+    .navbar-default.affix .navbar-inst-logo:hover {
+    background: url(/assets/instela-orange.png) no-repeat 0 -170px;
+        background-size: 220px;  /* 250px; */
+        background-position: 0 0;
+        width: 250px;   
+        height: 180px;   
+        margin: -92px 0 10px -20px;   /* -108px 0 10px -30px; */
+    }
+
+
+   
 
 
 

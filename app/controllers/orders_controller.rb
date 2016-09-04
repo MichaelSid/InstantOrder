@@ -20,10 +20,11 @@ class OrdersController < ApplicationController
       respond_to do |format|
         format.html
       format.pdf do
-        render pdf: "instela-invoice-##{@order.id}",
+        @pdf = render_to_string pdf: "instela-invoice-##{@order.id}",
                template: "orders/show.pdf.erb",
                :page_height => '9.05in', :page_width => '6in',
                locals: {:order => @order}
+        send_data(@pdf, :filename => "instela-invoice-##{@order.id}",  :type=>"application/pdf")
 
         end
       end
