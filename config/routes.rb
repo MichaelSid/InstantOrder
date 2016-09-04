@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get '/history', to: 'orders#history', as: 'orders_all'
   get 'history/:id', to: 'orders#show', as: 'order_id'
-
+  get 'pdf/:id', to: 'orders#pdf', as: 'order_pdf'
 
   # Example resource route with options:
   #   resources :products do

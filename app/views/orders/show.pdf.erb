@@ -1,38 +1,25 @@
-<%= render 'navbar' %>
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= stylesheet_link_tag wicked_pdf_asset_base64("creative/manifest.css") %>
+    <%= javascript_include_tag wicked_pdf_asset_base64("creative/manifest.js") %>
+  </head>
 
 
-<body style="background-color: #f6f6f6;">
-	<div class="page-header" style="background: #7f98b1;">
 
-		<div class="page-header-nav">
-            <div class="container">
-                <a href="/history" class="muted-link pull-left"><i></i> < Back To Order History</a>
-            </div>
-        </div>
-
-        <div class="page-header-nav">
-            <div class="container">
-                <a><%= link_to 'Download Invoice >', order_id_path(@order, format: :pdf),  class: "muted-link pull-right" %>
-                </a>
-            </div>
-        </div>
-
-       
-
-	</div>
-
+<body style="background-color: white;">
 	<div class="container-small">
-
-
 		<div class="box order-invoice" style="border-top: #fd705c;">
             <div class="invoice-target" style="width=200px;">
                         <!-- instela.co -->
-                        <img src="/assets/instela-white-small.png" style="width: 250px;">
+                        instela.co
+                       <!--  <img src="instela-white-small.png" style="width: 250px;"> -->
                       
             </div>
             <div class="invoice-meta invoice-date-service row">
             	<div class="invoice-left col-lg-6 col-sm-6 col-xs-6">
-                    <% job_service = @order.service_type %>
+                     <% job_service = @order.service_type %>
                     <% if @order.service_type == 'Handyman' %>
                         <% job_service = "Handyman Services" %>
                     <% end %>
@@ -138,11 +125,17 @@
             		</div>
             	</div>
             </div>
+            
+            <br>
+            <div class="invoice-meta invoice-date-service">
+                <div class="invoice-center">
+                    <h6>Instela Ltd, 563 Chiswick High Rd, London W4 3AY</h6>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
-<%= render 'creatives/footer' %>
+</html>
 
 
 

@@ -31,7 +31,7 @@
 	<div class="container-medium">
 		<div class="box">
 
-				<%  @orders.each do |i| %>
+				<%  @orders.reverse.each do |i| %>
                 <%= link_to order_id_path(i) do %>
                 <ul class="no-ui user--history-list results-list">
 				<li>
