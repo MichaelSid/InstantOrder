@@ -6,18 +6,13 @@
 
 		<div class="page-header-nav">
             <div class="container">
-                <a href="/history" class="muted-link pull-left"><i></i> < Back To Order History</a>
+                <a href="/history" class="order-mobile order-mobile-small muted-link invoice-left"><i></i> < Back To Order History</a>
+
+                <a><%= link_to 'Download Invoice >', order_id_path(@order, format: :pdf),  class: "order-mobile order-mobile-small muted-link invoice-right" %></a>
+
             </div>
         </div>
-
-        <div class="page-header-nav">
-            <div class="container">
-                <a><%= link_to 'Download Invoice >', order_id_path(@order, format: :pdf),  class: "muted-link pull-right" %>
-                </a>
-            </div>
-        </div>
-
-       
+      
 
 	</div>
 
