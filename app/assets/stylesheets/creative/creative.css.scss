@@ -13,6 +13,18 @@ $instela-blue: #7f98b1;
 /* Original: #f05f40 #eb3812 */
 /* new #fd705c  #fc442a  #ffe7e4*/
 
+.parallax-window {
+    min-height: 370px;
+    background: transparent;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 0px) { 
+
+    .parallax-window {
+    min-height: 0px;
+    }
+
+}
 
 html,
 body {
