@@ -13,6 +13,17 @@ $instela-blue: #7f98b1;
 /* Original: #f05f40 #eb3812 */
 /* new #fd705c  #fc442a  #ffe7e4*/
 
+
+
+.ipad {
+    display: inline-block;
+    position: relative;
+    left: 230px;
+    top: 160px;
+    
+}
+
+
 .parallax-window {
     min-height: 370px;
     background: transparent;
@@ -366,11 +377,9 @@ Order Page MOBILE:
     /* ******** Download/Back button mobile only: */
     
 
-    .container {
-        display: block;
-        padding: 0;
+    .row-right {
+        margin-right: 0px !important;
     }
-
 
 
     .container .btn-account {
