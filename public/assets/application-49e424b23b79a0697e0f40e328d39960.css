@@ -9,9 +9,38 @@ Copyright (c) 2015 Daniel Eden
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+/* rbg: (253,112,92) */
 /* Original: #f05f40 #eb3812 */
 /* new #fd705c  #fc442a  #ffe7e4*/
 /* line 19, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+.contact_background {
+  background: rgba(0, 0, 0, 0.35);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  top: 50px;
+  line-height: 1.3;
+}
+
+/* line 31, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+.contact-Thinweight {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 576px) {
+  /* line 38, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  .contact_background {
+    background: rgba(0, 0, 0, 0.38);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    top: 50px;
+    line-height: 1.7;
+  }
+}
+/* line 49, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .ipad {
   display: inline-block;
   position: relative;
@@ -19,43 +48,49 @@ Copyright (c) 2015 Daniel Eden
   top: 160px;
 }
 
-/* line 28, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 59, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .parallax-window {
-  min-height: 370px;
+  min-height: 320px;
   background: transparent;
 }
 
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 35, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 66, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .parallax-window {
-    min-height: 0px;
+    display: none;
   }
 }
-/* line 42, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 73, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+.parallax-contact {
+  min-height: 380px;
+  background: transparent;
+}
+
+/* line 83, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 html,
 body {
   width: 100%;
   height: 100%;
 }
 
-/* line 50, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 91, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 w:hover,
 w:focus {
   color: white;
 }
 
-/* line 55, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 96, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-nav > .open > a:focus {
   background-color: transparent;
   color: white;
 }
 
-/* line 61, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 102, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-nav {
   padding-right: 40px;
 }
 
-/* line 65, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 106, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .dropdown-menu > li > a:hover {
   color: #fd705c;
 }
@@ -63,7 +98,7 @@ w:focus {
 /* *********** SIGN UP PAGE
 ************* ************* 
 */
-/* line 75, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 116, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .label-pre {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -74,7 +109,7 @@ w:focus {
   color: #6b7781;
 }
 
-/* line 84, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 125, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .container-small {
   display: block;
   position: relative;
@@ -83,18 +118,18 @@ w:focus {
   margin-right: auto;
 }
 
-/* line 93, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 134, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .user-account-section {
   margin: 0 0 5px 0;
 }
 
-/* line 97, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 138, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .titleline-regist {
   display: block;
   text-align: center;
 }
 
-/* line 102, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 143, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .title-regist {
   display: block;
   text-align: left;
@@ -102,7 +137,7 @@ w:focus {
   border-bottom: 1px solid #e8ecf0;
 }
 
-/* line 109, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 150, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .box-regist {
   background: #FFF;
   border-top: 3px solid;
@@ -112,25 +147,25 @@ w:focus {
   position: relative;
 }
 
-/* line 118, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 159, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .innerbox-regist {
   padding: 30px;
 }
 
-/* line 122, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 163, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .row-fluid {
   display: block;
   margin-left: -20px;
 }
 
-/* line 127, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 168, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-row {
   margin-left: -10px;
   margin-bottom: 15px;
   display: block;
 }
 
-/* line 133, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 174, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .card-form-security {
   display: block;
   margin: 0px auto 0 auto;
@@ -140,7 +175,7 @@ w:focus {
   border-color: #3abc77;
 }
 
-/* line 142, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 183, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .security-text {
   display: block;
   margin-left: 40px;
@@ -148,18 +183,18 @@ w:focus {
   color: #3abc77;
 }
 
-/* line 149, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 190, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .lock {
   float: left;
   margin-top: 8px;
 }
 
-/* line 157, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 198, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .mtop30 {
   margin-top: 30px;
 }
 
-/* line 161, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 202, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .mbot30 {
   margin-bottom: 30px;
 }
@@ -169,7 +204,7 @@ Order Page
 **************** */
 /* $instela-hover f05f40  f4876f*/
 /* #40d1f0 #4079f0 */
-/* line 172, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 213, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .page-header {
   position: relative;
   /*background: linear-gradient(180deg,$instela-hover, $instela-orange,  #f4876f);*/
@@ -186,7 +221,7 @@ Order Page
   margin-top: 0;
 }
 
-/* line 189, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 230, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .page-header-nav {
   position: absolute;
   bottom: 0;
@@ -195,7 +230,7 @@ Order Page
   padding: 0 0 10px 0;
 }
 
-/* line 197, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 238, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .page-header-nav .muted-link {
   display: block;
   margin: 0;
@@ -212,12 +247,12 @@ Order Page
   text-decoration: none;
 }
 
-/* line 213, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 254, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .page-header-nav .muted-link:hover {
   color: #ffe7e4;
 }
 
-/* line 218, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 259, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice {
   z-index: 1;
   margin-top: 30px;
@@ -236,7 +271,7 @@ Order Page
   animation-duration: 1s;
 }
 
-/* line 236, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 277, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-target {
   display: block;
   background: #fd705c;
@@ -248,60 +283,60 @@ Order Page
   font-size: 4.5rem;
 }
 
-/* line 248, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 289, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-meta {
   padding: 30px 30px 0px 30px;
 }
 
-/* line 252, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 293, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-date-service {
   font-size: 1.8rem;
   line-height: 2.5em;
   color: #6b7781;
 }
 
-/* line 258, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 299, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-amount {
   font-size: 3.0rem;
   line-height: 2.0em;
   font-weight: 600;
 }
 
-/* line 264, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 305, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-id {
   font-size: 2.5rem;
   line-height: 1.5em;
   font-weight: 500;
 }
 
-/* line 271, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 312, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-center {
   text-align: center;
 }
 
-/* line 275, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 316, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-right {
   text-align: right;
 }
 
-/* line 279, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 320, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-left {
   text-align: left;
 }
 
-/* line 284, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 325, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-address {
   padding: 0px 30px 20px 30px;
   border-bottom: 1px solid #e8ecf0;
   font-size: 1.4rem;
 }
 
-/* line 290, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 331, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-client {
   font-weight: 600;
 }
 
-/* line 295, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 336, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-service-price {
   padding: 20px 30px 0px 30px;
   font-size: 1.5rem;
@@ -309,12 +344,12 @@ Order Page
   font-weight: 600;
 }
 
-/* line 302, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 343, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-upper {
   text-transform: uppercase;
 }
 
-/* line 307, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 348, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-price {
   padding: 5px 30px 0px 30px;
   color: #6b7781;
@@ -322,7 +357,7 @@ Order Page
   line-height: 1.3em;
 }
 
-/* line 314, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 355, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .order-invoice .invoice-total {
   padding: 10px 30px 30px 30px;
   border-bottom: 1px solid #e8ecf0;
@@ -331,12 +366,12 @@ Order Page
 }
 
 @media only screen and (max-width: 7670px) and (min-width: 768px) {
-  /* line 326, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 367, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .invoice-left {
     float: left;
   }
 
-  /* line 329, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 370, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .invoice-right {
     float: right;
   }
@@ -345,19 +380,19 @@ Order Page
 Order Page MOBILE:
 **************** */
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 342, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 383, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .invoice-left {
     display: inline-block;
     text-align: center;
   }
 
-  /* line 348, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 389, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .invoice-right {
     display: inline-block;
     text-align: center;
   }
 
-  /* line 355, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 396, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .page-header {
     /*height: auto;*/
     padding: 70px 10px 20px 10px;
@@ -366,43 +401,43 @@ Order Page MOBILE:
   /*.page-header-nav {
       display: none;
   }*/
-  /* line 364, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 405, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container {
     max-width: none;
   }
 
-  /* line 368, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 409, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container-small {
     max-width: 100%;
   }
 
-  /* line 372, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 413, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .order-invoice {
     margin-top: -21px;
   }
 
   /* ******** Download/Back button mobile only: */
-  /* line 381, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 422, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .row-right {
     margin-right: 0px !important;
   }
 
-  /* line 386, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 427, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container .btn-account {
     min-width: 140px;
   }
 
-  /* line 390, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 431, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container .a {
     display: inline-block;
   }
 
-  /* line 394, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 435, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container .a .order-mobile {
     display: inline-block;
   }
 
-  /* line 398, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 439, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container .order-mobile.order-mobile-small {
     padding: 0 0px;
     padding-right: 10px;
@@ -414,7 +449,7 @@ Order Page MOBILE:
     margin-bottom: 10px;
   }
 
-  /* line 409, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 450, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .container .order-mobile {
     background: none;
     display: inline-block;
@@ -444,7 +479,7 @@ Order Page MOBILE:
     text-decoration: none;
   }
 
-  /* line 438, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 479, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .order-mobile:hover {
     background: none;
     display: inline-block;
@@ -474,7 +509,7 @@ Order Page MOBILE:
     text-decoration: none;
   }
 
-  /* line 466, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 507, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .page-header-nav {
     text-align: center;
     width: 100%;
@@ -484,12 +519,12 @@ Order Page MOBILE:
 /* **************
 Order History Page
 ************* */
-/* line 478, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 519, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .text-centered {
   text-align: center;
 }
 
-/* line 482, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 523, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .vc-outer {
   display: table;
   height: 100%;
@@ -497,30 +532,30 @@ Order History Page
   vertical-align: middle;
 }
 
-/* line 489, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 530, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .vc-inner {
   display: table-cell;
   /* vertical-align: middle; */
   max-width: 100%;
 }
 
-/* line 495, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 536, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .user--account-mobile-actions {
   display: block;
   padding: 0;
 }
 
-/* line 500, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 541, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .user--account-mobile-actions li {
   display: inline-block;
 }
 
-/* line 504, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 545, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .user--account-mobile-actions li .btn-account {
   min-width: 140px;
 }
 
-/* line 508, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 549, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-account.btn-account-small {
   padding: 0 0px;
   height: 40px;
@@ -528,7 +563,7 @@ Order History Page
   margin-left: 10px;
 }
 
-/* line 515, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 556, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-account {
   background: none;
   display: inline-block;
@@ -553,7 +588,7 @@ Order History Page
   text-decoration: none;
 }
 
-/* line 541, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 582, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-account:hover {
   background: none;
   display: inline-block;
@@ -578,7 +613,7 @@ Order History Page
   text-decoration: none;
 }
 
-/* line 567, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 608, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .container-medium {
   display: block;
   position: relative;
@@ -587,26 +622,26 @@ Order History Page
   margin-right: auto;
 }
 
-/* line 575, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 616, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .box {
   background: #FFF;
   border-top: 3px solid #7f98b1;
   position: relative;
 }
 
-/* line 581, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 622, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .list-item-inner {
   margin: 25px 70px 60px 50px;
 }
 
-/* line 586, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 627, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.results-list li .list-item-inner {
   display: block;
   position: relative;
   /*margin: 10px 20px;*/
 }
 
-/* line 592, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 633, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.results-list {
   list-style-type: none;
   margin: 0;
@@ -614,7 +649,7 @@ ul.results-list {
   overflow: hidden;
 }
 
-/* line 599, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 640, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.results-list li {
   display: block;
   position: relative;
@@ -625,53 +660,53 @@ ul.results-list li {
   border-width: 1px 0px;
 }
 
-/* line 610, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 651, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-status.status-delivered, ul.user--history-list li .history-col-status.status-almost_ready, ul.user--history-list li .history-col-status.status-accepted {
   color: #f4876f;
 }
 
-/* line 614, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 655, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-status {
   width: 23%;
 }
 
-/* line 618, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 659, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li [class^="history-col-"] {
   float: left;
   line-height: 1em;
 }
 
-/* line 623, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 664, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-details {
   width: 23%;
 }
 
-/* line 626, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 667, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li [class^="history-col-"] {
   float: left;
   line-height: 1em;
 }
 
-/* line 631, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 672, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-restaurant {
   display: block;
   clear: both;
   color: #000;
 }
 
-/* line 638, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 679, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-date {
   color: #acb4bc;
   width: 31%;
 }
 
-/* line 643, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 684, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-amount {
   width: 23%;
   text-align: right;
 }
 
-/* line 648, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 689, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-col-icon {
   position: absolute;
   verticle-align: middle;
@@ -679,7 +714,7 @@ ul.user--history-list li .history-col-icon {
   font-size: 38px;
 }
 
-/* line 655, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 696, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list li .history-amount {
   display: block;
   font-size: 1.5rem;
@@ -690,7 +725,7 @@ ul.user--history-list li .history-amount {
   font-weight: 600;
 }
 
-/* line 665, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 706, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ul.user--history-list:hover {
   background-color: #fdeae6;
   text-decoration: underline;
@@ -701,29 +736,29 @@ ul.user--history-list:hover {
 Order History Page MOBILE:
 ************* */
 @media only screen and (max-width: 767px) and (min-width: 0px) {
-  /* line 678, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 719, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   ul.user--history-list li .list-item-inner:hover {
     text-decoration: none;
   }
 
-  /* line 683, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 724, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   ul.user--history-list li .list-item-inner {
     margin: 15px 35px 15px 15px;
   }
 
-  /* line 687, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 728, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   ul.user--history-list li .history-col-status, ul.user--history-list li .history-col-date {
     font-size: 1.4rem;
   }
 
-  /* line 691, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 732, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   ul.user--history-list li [class^="history-col-"] {
     width: 100%;
     float: none;
     line-height: 1.3em;
   }
 
-  /* line 696, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 737, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   ul.user--history-list li .history-amount {
     margin-top: -18px;
   }
@@ -731,7 +766,7 @@ Order History Page MOBILE:
 /* ************
 Log In Page: 
 ********** */
-/* line 708, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 749, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .login-background {
   /* #705cfd*/
   /* $instela-hover f05f40  f4876f*/
@@ -747,7 +782,7 @@ Log In Page:
   /*background-color: $instela-orange;*/
 }
 
-/* line 726, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 767, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .remember-me {
   padding-top: 20px;
   padding-right: 0px;
@@ -755,7 +790,7 @@ Log In Page:
   padding-left: 0px;
 }
 
-/* line 734, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 775, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .login-form {
   margin: auto;
   -moz-border-radius: 4px;
@@ -774,18 +809,18 @@ Log In Page:
   margin: 250px 0px 0px -200px;
 }
 
-/* line 756, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 797, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .user-account-section {
   margin: 0 0 5px 0;
 }
 
-/* line 760, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 801, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-group {
   position: relative;
   margin-bottom: 15px;
 }
 
-/* line 765, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 806, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-control {
   width: 100%;
   height: 50px;
@@ -799,19 +834,19 @@ Log In Page:
   border-radius: 4px;
 }
 
-/* line 778, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 819, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-control:focus + .fa {
   border-color: #10CE88;
   color: #10CE88;
 }
 
-/* line 782, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 823, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-control:focus, .form-control:focus + .fa {
   border-color: #10CE88;
   /*color: #10CE88;*/
 }
 
-/* line 787, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 828, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .form-group .fa {
   position: absolute;
   right: 15px;
@@ -819,20 +854,20 @@ Log In Page:
   color: #999;
 }
 
-/* line 794, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 835, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .log-status.wrong-entry {
   -moz-animation: wrong-log 0.3s;
   -webkit-animation: wrong-log 0.3s;
   animation: wrong-log 0.3s;
 }
 
-/* line 800, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 841, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .log-status.wrong-entry .form-control, .wrong-entry .form-control + .fa {
   border-color: #ed1c24;
   color: #ed1c24;
 }
 
-/* line 805, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 846, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .log-btn {
   background: #0AC986;
   dispaly: inline-block;
@@ -847,7 +882,7 @@ Log In Page:
   border-radius: 4px;
 }
 
-/* line 819, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 860, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .link {
   text-decoration: none;
   color: #C6C6C6;
@@ -856,13 +891,13 @@ Log In Page:
   margin-bottom: 15px;
 }
 
-/* line 826, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 867, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .link:hover {
   text-decoration: underline;
   color: #8C918F;
 }
 
-/* line 831, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 872, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .msg {
   /*padding: 16px 60px 5px 30px;
   margin-bottom: 30px;
@@ -881,7 +916,7 @@ Log In Page:
   padding-bttom: 60px;
 }
 
-/* line 850, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 891, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .alert {
   display: none;
   font-size: 12px;
@@ -890,51 +925,51 @@ Log In Page:
 }
 
 @-moz-keyframes wrong-log {
-  /* line 858, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 899, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   0%, 100% {
     left: 0px;
   }
 
-  /* line 861, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 902, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   20% , 60% {
     left: 15px;
   }
 
-  /* line 864, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 905, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   40% , 80% {
     left: -15px;
   }
 }
 
 @-webkit-keyframes wrong-log {
-  /* line 869, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 910, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   0%, 100% {
     left: 0px;
   }
 
-  /* line 872, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 913, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   20% , 60% {
     left: 15px;
   }
 
-  /* line 875, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 916, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   40% , 80% {
     left: -15px;
   }
 }
 
 @keyframes wrong-log {
-  /* line 880, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 921, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   0%, 100% {
     left: 0px;
   }
 
-  /* line 883, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 924, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   20% , 60% {
     left: 15px;
   }
 
-  /* line 886, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 927, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   40% , 80% {
     left: -15px;
   }
@@ -943,7 +978,7 @@ Log In Page:
 /* ************
 END OF Log In Page: 
 ********** */
-/* line 895, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 936, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .testimonial {
   font-size: 19px;
   border: none;
@@ -959,7 +994,7 @@ END OF Log In Page:
   color: #525354;
 }
 
-/* line 917, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 958, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .name-testimonial {
   text-align: right;
   font-size: 16px;
@@ -972,13 +1007,13 @@ END OF Log In Page:
   padding-left: 20px;
 }
 
-/* line 930, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 971, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .name-testimonial strong {
   display: block;
 }
 
 @media (min-width: 992px) {
-  /* line 938, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 979, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .logo-testimonial {
     max-height: 100px;
     margin-top: 40px;
@@ -990,7 +1025,7 @@ END OF Log In Page:
   }
 }
 @media (min-width: 768px) {
-  /* line 951, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 992, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .logo-testimonial {
     max-height: 100px;
     margin-top: 40px;
@@ -1002,7 +1037,7 @@ END OF Log In Page:
   }
 }
 @media (max-width: 768px) {
-  /* line 963, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1004, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .logo-testimonial {
     max-height: 100px;
     margin-top: 40px;
@@ -1013,25 +1048,25 @@ END OF Log In Page:
     width: 40%;
   }
 }
-/* line 976, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1017, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 body {
   font-family: "Open Sans", sans-serif;
   /*font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;*/
 }
 
-/* line 981, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1022, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 hr {
   max-width: 50px;
   border-color: #fd705c;
   border-width: 3px;
 }
 
-/* line 987, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1028, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 hr.light {
   border-color: #fff;
 }
 
-/* line 992, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1033, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 a {
   color: #fd705c;
   -webkit-transition: all .35s;
@@ -1039,22 +1074,22 @@ a {
   transition: all .35s;
 }
 
-/* line 999, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1040, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 a:hover, a:focus {
   color: #fc442a;
 }
 
-/* line 1004, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1045, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 aa {
   color: #fd705c;
 }
 
-/* line 1008, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1049, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 aa:hover, aa:focus:hover {
   color: #fc442a;
 }
 
-/* line 1013, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1054, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 h1,
 h2 {
   font-family: "Open Sans", sans-serif;
@@ -1064,7 +1099,7 @@ h2 {
   /*font-family: 'Open Sans','Helvetica Neue','ArialRoundedMTBold';*/
 }
 
-/* line 1024, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1065, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 h3,
 h4,
 h5,
@@ -1081,7 +1116,7 @@ min-width: 778px){.hero__title{font-size:3em}
 margin-left:auto;margin-right:auto}
 .mb1{margin-bottom:0.5rem}*/
 @media (min-width: 768px) {
-  /* line 1040, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1081, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .tagline {
     font-size: 40px;
     /* 2.5rem;*/
@@ -1098,7 +1133,7 @@ margin-left:auto;margin-right:auto}
     font-family: "Open Sans", sans-serif;
   }
 
-  /* line 1055, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1096, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   #tag2 {
     display: inline-block;
     /*max-width: 80%;*/
@@ -1116,7 +1151,7 @@ margin-left:auto;margin-right:auto}
   }
 }
 @media (max-width: 768px) {
-  /* line 1076, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1117, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .tagline {
     font-size: 35px;
     /* 2.5rem;*/
@@ -1133,7 +1168,7 @@ margin-left:auto;margin-right:auto}
     font-family: "Open Sans", sans-serif;
   }
 
-  /* line 1091, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1132, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   #tag2 {
     display: inline-block;
     /*max-width: 80%;*/
@@ -1150,7 +1185,7 @@ margin-left:auto;margin-right:auto}
     margin-top: -30px;
   }
 }
-/* line 1115, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1156, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-inst-logo {
   background: url(/assets/instela-orange.png);
   backgtound: no-repeat 0 -170px;
@@ -1165,12 +1200,12 @@ margin-left:auto;margin-right:auto}
   /*  -13px 0 10px -6px */
 }
 
-/* line 1126, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1167, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .logo-width-screensize {
   width: 170px;
 }
 
-/* line 1132, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1173, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default.affix .navbar-inst-logo {
   background: url(/assets/instela-orange.png) no-repeat 0 -170px;
   background-size: 220px;
@@ -1185,7 +1220,7 @@ margin-left:auto;margin-right:auto}
 }
 
 /* swap around for privacy/terms page */
-/* line 1145, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1186, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-inst-pages {
   background: url(/assets/instela-orange.png) no-repeat 0 -170px;
   background-size: 400px;
@@ -1200,7 +1235,7 @@ margin-left:auto;margin-right:auto}
   /* 10px 0 10px -6px; */
 }
 
-/* line 1157, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1198, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default.affix .navbar-inst-pages {
   background: url(/assets/instela-orange.png) no-repeat 0 -170px;
   background-size: 250px;
@@ -1214,7 +1249,7 @@ margin-left:auto;margin-right:auto}
   /*  -13px 0 10px -6px */
 }
 
-/* line 1166, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1207, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 5px;
@@ -1222,38 +1257,38 @@ p {
   line-height: 1.5;
 }
 
-/* line 1173, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1214, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .bg-primary {
   background-color: #fd705c;
 }
 
-/* line 1177, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1218, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .bg-dark {
   color: #fff;
   background-color: #222;
 }
 
-/* line 1182, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1223, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 1186, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1227, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 section {
   padding: 100px 0;
 }
 
-/* line 1190, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1231, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 aside {
   padding: 50px 0;
 }
 
-/* line 1194, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1235, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .no-padding {
   padding-bottom: 0;
 }
 
-/* line 1198, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1239, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default {
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -1263,7 +1298,7 @@ aside {
   transition: all .35s;
 }
 
-/* line 1208, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1249, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-header .navbar-brand {
   font-family: 'ArialRoundedMTBold';
   color: #fd705c;
@@ -1271,14 +1306,14 @@ aside {
   text-shadow: 0px 0px 0.2px white;
 }
 
-/* line 1217, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1258, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: #fd705c;
   text-shadow: 0px 0px 0.2px white;
 }
 
-/* line 1223, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1264, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus {
   text-transform: uppercase;
@@ -1288,27 +1323,27 @@ aside {
   color: #222;
 }
 
-/* line 1232, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1273, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
   color: #fd705c;
 }
 
-/* line 1237, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1278, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
   color: #fd705c !important;
   background-color: transparent;
 }
 
-/* line 1243, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1284, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
 
 @media (min-width: 768px) {
-  /* line 1253, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1294, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default {
     /*border-color: rgba(255,255,255,.3);*/
     border-color: rgba(255, 255, 255, 0);
@@ -1318,7 +1353,7 @@ aside {
   }
 
   /* instela logo-name*/
-  /* line 1263, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1304, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-header .navbar-brand {
     font-family: 'ArialRoundedMTBold';
     font-size: 40px;
@@ -1331,7 +1366,7 @@ aside {
   }
 
   /* Small size just before collapse of navbar: */
-  /* line 1275, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1316, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo {
     background: url(/assets/instela-white.png) no-repeat 0 -170px;
     background-size: 250px;
@@ -1346,12 +1381,12 @@ aside {
     /* 10px 0 10px -6px; */
   }
 
-  /* line 1284, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1325, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .logo-width-screensize {
     width: 180px;
   }
 
-  /* line 1288, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1329, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo:hover {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 250px;
@@ -1365,7 +1400,7 @@ aside {
     margin: -100px 0 10px -45px;
   }
 
-  /* line 1360, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1401, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-inst-logo {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 220px;
@@ -1375,7 +1410,7 @@ aside {
     margin: -92px 0 10px -20px;
   }
 
-  /* line 1370, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1411, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-inst-logo:hover {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 220px;
@@ -1388,7 +1423,7 @@ aside {
   }
 
   /* swap around for privacy/terms page */
-  /* line 1385, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1426, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-pages {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 400px;
@@ -1403,7 +1438,7 @@ aside {
     /* 10px 0 10px -6px; */
   }
 
-  /* line 1397, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1438, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-inst-pages {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 250px;
@@ -1417,49 +1452,49 @@ aside {
     /*  -13px 0 10px -6px */
   }
 
-  /* line 1410, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1451, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-header .navbar-brand .logo-size {
     max-width: 350px;
   }
 
-  /* line 1414, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1455, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-header .navbar-brand .logo-size {
     max-width: 150px;
   }
 
-  /* line 1420, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1461, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
     color: #fd705c;
   }
 
-  /* line 1425, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1466, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-header .navbar-light:hover,
   .navbar-default .navbar-header .navbar-light:focus {
     color: #ffe7e4;
   }
 
   /*colour buttons nav bar right*/
-  /* line 1432, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1473, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
     color: #fff;
   }
 
-  /* line 1438, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1479, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
     color: #fd705c;
   }
 
-  /* line 1444, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1485, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .nav > li > a > light:hover,
   .navbar-default .nav > li > a > light:focus,
   .navbar-default .nav > li > a:hover > light {
     color: #ffe7e4;
   }
 
-  /* line 1449, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1490, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .nav > li > a > light:hover,
   .navbar-default.affix .nav > li > a > light:focus,
   .navbar-default.affix .nav > li > a:hover > light {
@@ -1467,20 +1502,20 @@ aside {
   }
 
   /* change colour of navbar text to black for white background pages eg terms */
-  /* line 1456, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1497, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .nav aa,
   .navbar-default .nav aa:focus {
     color: black;
   }
 
-  /* line 1461, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1502, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .nav > li > a > aa:hover,
   .navbar-default .nav > li > a > aa:focus:hover {
     color: #fd705c;
   }
 
   /* control nav bar once scroll*/
-  /* line 1467, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1508, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix {
     border-color: rgba(34, 34, 34, 0.05);
     /*background-color: #fff;*/
@@ -1490,7 +1525,7 @@ aside {
   }
 
   /* colour of navbar once scrolled*/
-  /* line 1476, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1517, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-header .navbar-brand {
     /*font-size: 14px;*/
     /*InstantOrder*/
@@ -1502,20 +1537,20 @@ aside {
     max-width: 150px;
   }
 
-  /* line 1488, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1529, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
     color: #fc442a;
     /*text-shadow: 0px 0px 0.1px #000;*/
   }
 
-  /* line 1494, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1535, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
     color: #222;
   }
 
-  /* line 1499, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1540, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #fd705c;
@@ -1523,7 +1558,7 @@ aside {
   }
 }
 @media (min-width: 768px) and (min-width: 812px) {
-  /* line 1299, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1340, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo {
     background: url(/assets/instela-white.png) no-repeat 0 -170px;
     background-size: 300px;
@@ -1538,12 +1573,12 @@ aside {
     /* 10px 0 10px -6px; */
   }
 
-  /* line 1309, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1350, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .logo-width-screensize {
     width: 220px;
   }
 
-  /* line 1315, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1356, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo:hover {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 300px;
@@ -1558,7 +1593,7 @@ aside {
   }
 }
 @media (min-width: 768px) and (min-width: 1020px) {
-  /* line 1329, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1370, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo {
     background: url(/assets/instela-white.png) no-repeat 0 -170px;
     background-size: 400px;
@@ -1573,12 +1608,12 @@ aside {
     /* 10px 0 10px -6px; */
   }
 
-  /* line 1339, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1380, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .logo-width-screensize {
     width: 280px;
   }
 
-  /* line 1344, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1385, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .navbar-default .navbar-inst-logo:hover {
     background: url(/assets/instela-orange.png) no-repeat 0 -170px;
     background-size: 400px;
@@ -1593,7 +1628,7 @@ aside {
     /* 10px 0 10px -6px; */
   }
 }
-/* line 1505, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1546, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 header {
   position: relative;
   width: 100%;
@@ -1608,14 +1643,14 @@ header {
   -o-background-size: cover;
 }
 
-/* line 1519, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1560, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .accounts_header {
   /*background-image: asset-data-url("creative/header.jpg");*/
   background-color: #528BE2;
   height: auto !important;
 }
 
-/* line 1525, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1566, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 header .header-content {
   position: relative;
   width: 100%;
@@ -1623,7 +1658,7 @@ header .header-content {
   text-align: center;
 }
 
-/* line 1532, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1573, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -1631,12 +1666,12 @@ header .header-content .header-content-inner h1 {
   font-weight: 700;
 }
 
-/* line 1539, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1580, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 header .header-content .header-content-inner hr {
   margin: 30px auto;
 }
 
-/* line 1543, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1584, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 header .header-content .header-content-inner p {
   margin-bottom: 50px;
   font-size: 16px;
@@ -1644,23 +1679,23 @@ header .header-content .header-content-inner p {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 1550, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1591, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 #errorExplanation > h2 {
   display: none;
 }
 
-/* line 1554, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1595, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 #errorExplanation {
   color: black;
 }
 
 @media (min-width: 768px) {
-  /* line 1559, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1600, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   header {
     min-height: 100%;
   }
 
-  /* line 1563, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1604, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   header .header-content {
     position: absolute;
     top: 50%;
@@ -1670,14 +1705,14 @@ header .header-content .header-content-inner p {
     transform: translateY(-50%);
   }
 
-  /* line 1572, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1613, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   header .header-content .header-content-inner {
     margin-right: auto;
     margin-left: auto;
     max-width: 1000px;
   }
 
-  /* line 1578, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1619, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   header .header-content .header-content-inner p {
     margin-right: auto;
     margin-left: auto;
@@ -1685,29 +1720,29 @@ header .header-content .header-content-inner p {
     font-size: 18px;
   }
 }
-/* line 1586, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1627, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .section-heading {
   margin-top: 0;
 }
 
-/* line 1590, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1631, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .service-box {
   margin: 50px auto 0;
   max-width: 400px;
 }
 
 @media (min-width: 992px) {
-  /* line 1596, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1637, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .service-box {
     margin: 20px auto 0;
   }
 }
-/* line 1601, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1642, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .service-box p {
   margin-bottom: 0;
 }
 
-/* line 1605, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1646, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box {
   display: block;
   position: relative;
@@ -1715,7 +1750,7 @@ header .header-content .header-content-inner p {
   max-width: 650px;
 }
 
-/* line 1612, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1653, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box .portfolio-box-caption {
   display: block;
   position: absolute;
@@ -1731,7 +1766,7 @@ header .header-content .header-content-inner p {
   transition: all .35s;
 }
 
-/* line 1627, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1668, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
   position: absolute;
   top: 50%;
@@ -1740,58 +1775,58 @@ header .header-content .header-content-inner p {
   transform: translateY(-50%);
 }
 
-/* line 1636, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1677, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   padding: 0 15px;
   font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
-/* line 1641, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1682, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
 }
 
-/* line 1647, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1688, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   font-size: 18px;
 }
 
-/* line 1651, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1692, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
 
 @media (min-width: 768px) {
-  /* line 1656, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1697, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
     font-size: 16px;
   }
 
-  /* line 1660, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+  /* line 1701, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
 }
-/* line 1665, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1706, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
 
-/* line 1670, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1711, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .text-primary {
   color: #fd705c;
 }
 
-/* line 1674, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1715, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .no-gutter > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
 }
 
-/* line 1679, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1720, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-default {
   border-color: #fff;
   color: #222;
@@ -1801,7 +1836,7 @@ header .header-content .header-content-inner p {
   transition: all .35s;
 }
 
-/* line 1693, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1734, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus,
@@ -1813,14 +1848,14 @@ header .header-content .header-content-inner p {
   background-color: #f2f2f2;
 }
 
-/* line 1701, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1742, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   background-image: none;
 }
 
-/* line 1722, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1763, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -1843,13 +1878,13 @@ fieldset[disabled] .btn-default.active {
   background-color: #fff;
 }
 
-/* line 1727, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1768, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-default .badge {
   color: #fff;
   background-color: #222;
 }
 
-/* line 1737, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1778, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary {
   border-color: #fd705c;
   color: #fff;
@@ -1859,7 +1894,7 @@ fieldset[disabled] .btn-default.active {
   transition: all .35s;
 }
 
-/* line 1751, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1792, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus,
@@ -1871,14 +1906,14 @@ fieldset[disabled] .btn-default.active {
   background-color: #fc442a;
 }
 
-/* line 1759, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1800, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   background-image: none;
 }
 
-/* line 1780, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1821, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
@@ -1901,13 +1936,13 @@ fieldset[disabled] .btn-primary.active {
   background-color: #fd705c;
 }
 
-/* line 1785, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1826, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary .badge {
   color: #fd705c;
   background-color: #fff;
 }
 
-/* line 1790, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1831, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn {
   border: 0;
   /*border-radius: 300px;*/
@@ -1916,72 +1951,72 @@ fieldset[disabled] .btn-primary.active {
   font-weight: 700;
 }
 
-/* line 1798, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1839, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-xl {
   padding: 15px 30px;
 }
 
-/* line 1802, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1843, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ::-moz-selection {
   text-shadow: none;
   color: #fff;
   background: #222;
 }
 
-/* line 1808, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1849, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ::selection {
   text-shadow: none;
   color: #fff;
   background: #222;
 }
 
-/* line 1814, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1855, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 img::selection {
   color: #fff;
   background: 0 0;
 }
 
-/* line 1819, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1860, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 img::-moz-selection {
   color: #fff;
   background: 0 0;
 }
 
-/* line 1824, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1865, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 body {
   webkit-tap-highlight-color: #222;
 }
 
 /*InstantOrder Carousel*/
-/* line 1829, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1870, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .carousel-control.left, .carousel-control.right {
   background-image: none;
 }
 
-/* line 1832, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1873, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .carousel-control.left {
   color: #fd705c;
 }
 
-/* line 1835, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1876, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .carousel-control.right {
   color: #fd705c;
 }
 
-/* line 1838, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1879, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .screenshot {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1844, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1885, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 #contact {
   margin-top: 80px;
   padding-bottom: 20px;
 }
 
-/* line 1849, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1890, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1989,7 +2024,7 @@ body {
 }
 
 /*InstantOrder Register*/
-/* line 1857, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1898, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .key_text {
   color: white;
   margin-top: 8%;
@@ -2003,7 +2038,7 @@ body {
 }
 
 /*Video*/
-/* line 1870, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1911, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 #video-background {
   /*  making the video fullscreen  */
   position: absolute;
@@ -2020,76 +2055,76 @@ body {
   padding: 0;
 }
 
-/* line 1887, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1928, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
 }
 
-/* line 1891, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1932, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 ::-webkit-media-controls {
   display: none !important;
 }
 
-/* line 1895, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1936, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 video::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
 /*Improve quality of low resolution video*/
-/* line 1900, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1941, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .overlay-texture:before {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQIW2NkYGCQZGBgeM4ABYxQGi4IEwCJgwWRBcCCAHczAx4qv3vfAAAAAElFTkSuQmCC) repeat;
 }
 
 /*Remove space in video at the top of services section*/
 /*ouline buttons*/
-/* line 1912, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1953, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn.outline {
   background: none;
   padding: 6px 11px;
 }
 
-/* line 1917, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1958, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.outline {
   border: 1px solid #fff;
   color: #fff;
   border-radius: 0;
 }
 
-/* line 1923, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1964, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary-light.outline:hover {
   border: 1px solid #fff;
   color: black;
   border-radius: 0;
 }
 
-/* line 1929, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1970, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .register_button {
   border-radius: 0;
 }
 
-/* line 1933, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1974, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.submit-register {
   border: 1px solid #fd705c;
   color: #fd705c;
   border-radius: 0;
 }
 
-/* line 1939, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1980, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.submit-account {
   border: 1px solid white;
   color: white;
   border-radius: 0;
 }
 
-/* line 1945, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1986, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
   color: #fff !important;
   border-color: #fd705c;
   background-color: #fd705c !important;
 }
 
-/* line 1950, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1991, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .btn-primary.outline:active, .btn-primary.outline.active {
   border-color: #fd705c;
   color: #fff !important;
@@ -2097,12 +2132,12 @@ video::-webkit-media-controls-enclosure {
   box-shadow: none;
 }
 
-/* line 1957, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 1998, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 #register_button {
   margin: 8px;
 }
 
-/* line 1961, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
+/* line 2002, /Users/maxwellfulford/Instela/InstantOrder/app/assets/stylesheets/creative/creative.css.scss */
 .layer {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
   overflow: hidden;

@@ -1,5 +1,5 @@
-<div id="contact">
-    <div class="container text-center">
+<!-- <div id="contact">
+    <div class="container text-center" >
         <div class="call-to-action">
         		<script type="text/javascript" charset="utf-8">
               var openNSLauncher = function() {
@@ -16,4 +16,36 @@
         </div>
     </div>
 </div>
-<br>
+<br> -->
+
+
+<!-- <section class="parallax-window parallax-app-cta" data-parallax="scroll" data-image-src="//img.hailocab.com/images/homepage/lon/receipt.jpg"><div class="cta-container"><a href="#" class="button button-transparent trigger-overlay">Download the App</a></div></section>
+ -->
+ <!-- phone1-trans.png phone1crop.jpg phone-wall.jpg phone1.jpg -->
+
+<br><br>
+<section  id="contact" class="parallax-contact" data-parallax="scroll" data-image-src=<%= image_path("phone-wall.jpg") %> data-naturalWidth="5472px" data-naturalHeight="3648px" data-speed="0.0" data-bleed="10" data-iosFix="false" data-positionY="10000px;">
+<div >
+  <div class="container text-center" >
+
+
+    <div class="call-to-action">
+      <script type="text/javascript" charset="utf-8">
+              var openNSLauncher = function() {
+              var launcher = document.querySelector('.nudgespot-launcher');
+              launcher.click();
+              };
+      </script>
+            <h2 class="section-heading" style="color:white;"><span class="contact_background">Get Started</span></h2>
+            <hr class="primary">
+            <h4 style="color: white;"><span class="contact_background contact-Thinweight">Instela is currently available all across London</span></h4>
+            <h4 style="color: white;"><span class="contact_background contact-Thinweight">Send us a message to get started or email us at <a href="mailto:help@instela.co">help@instela.co</a></span></h4>
+            <br>
+            <%= link_to 'GET INSTANT HELP', '#', class: "btn btn-primary btn-xl page-scroll ", onclick:"event.preventDefault();openNSLauncher();"  %>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
