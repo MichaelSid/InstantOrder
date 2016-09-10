@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=StripeCheckout.configure({key:$("input[name='stripe_key']").val(),image:"/assets/logo-image.png",locale:"auto",token:function(e){$("input[name='payment_token']").val(e.id)}});$("#paymentButton").on("click",function(n){e.open({name:"Instela","panel-label":"Add"}),n.preventDefault()}),$(window).on("popstate",function(){e.close()})});
