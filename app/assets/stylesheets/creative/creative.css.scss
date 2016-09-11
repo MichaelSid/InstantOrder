@@ -80,6 +80,33 @@ $instela-blue: #7f98b1;
 }
 
 
+@media only screen and (max-width: 767px) and (min-width: 605px) { 
+
+    .parallax-redphone {
+    min-height: 400px;
+    background: transparent;
+}
+
+}
+
+@media only screen and (max-width: 604px) and (min-width: 500px) { 
+
+    .parallax-redphone {
+        min-height: 100px;
+        background: transparent;
+    }
+
+}
+@media only screen and (max-width: 499px) and (min-width: 0px) { 
+
+    .parallax-redphone {
+        min-height:50px;
+        background: transparent;
+        background-position: left bottom !important;
+    }
+
+}
+
 
 
 
