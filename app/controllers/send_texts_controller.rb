@@ -92,6 +92,7 @@ class SendTextsController < ApplicationController
           slack_channel = "cleaning"
         elsif slack_channel == nil
           slack_channel = "other_sms"
+        end
           
       end
 
