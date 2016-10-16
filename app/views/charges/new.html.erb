@@ -25,6 +25,10 @@
                     Discount (as a percentage -eg 5 for 5%):
                     <%= number_field_tag :discount, 0, :required => true, :step => 'any', placeholder: 'Discount', class: 'form-control' %>
                   </div>
+                  <div class="form-group">
+                    Quote Fee (in £):
+                    <%= number_field_tag :quote_fee, 0, :required => true, :step => 'any', placeholder: 'Quote Fee', class: 'form-control' %>
+                  </div>
                   <br>
                   <div class="form-group">
                     <%= f.submit 'CHARGE!', class: 'page-scroll btn btn-primary btn-lg outline submit-account' %>

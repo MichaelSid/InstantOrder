@@ -1,0 +1,232 @@
+
+<div class="container">
+	<div class="vc-outer text-centered">
+		<h3> Sender: <%= @sender %> </h3>
+		<h3> Service: <%= @ccc.service_type %> </h3>
+		<h3> Contract Signed: <%= @ccc.signed_contract? %> </h3>
+		<h3> Total Number of Messages: <%= @sms_tot %>
+		<h3>  Messages Inbound: <%= @inbound.count %> </h3>
+		<h3> Messages Outbound: <%= @outbound.count %> </h3>
+		<%  cost = 0.00   %> 
+		<%  cost_unit= " " %> 
+		<% @message.each do |mm| %>
+			<%  cost =  cost + mm.price.to_f %> 
+			<%  cost_unit = mm.price_unit %> 
+		<%  end %>
+		<h3> Total Cost of messages: <%= number_to_currency(cost, :unit => "") %> <%= cost_unit %>  </h3>
+	</div>
+</div>
+
+
+<div class="container">
+
+	<%= form_for @ccc, url: show_id_update_path(@ccc.id) do |f| %>
+
+		<div class="box-regist user-account-section">
+    
+			<div class="title-regist">
+      			<div class="titleline-regist"><h3>Contractor Details</h3></div>
+    		</div>
+    
+    		<div class="innerbox-regist">
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">First Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :first_name, class: 'form-control'%>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Last Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :last_name, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+	      		<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Mobile Number</label>
+          				<div class="form-group">
+            				<%= f.text_field :mobile_number, :required => true, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Company Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :company_name, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-3">
+          				<label class="label-pre">Service Type</label>
+          				<div class="form-group">
+
+          					<%= f.select :service_type, options_for_select(@services, selected_key = f.object.service_type), class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-3">
+          				<label class="label-pre">Check Box if Contract Signed</label>
+          				<div class="form-group">
+          					<%=  f.radio_button :signed_contract?, :checked => true, class: 'form-control' %>			
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Rating</label>
+          				<div class="form-group">
+            				<%= f.text_field :rating, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Date First Job</label>
+          				<div class="form-group">
+          					<%= f.text_field :first_job_at, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Date Last Job</label>
+          				<div class="form-group">
+            				<%= f.text_field :last_job_at, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Number Jobs Done</label>
+          				<div class="form-group">
+          					<%= f.text_field :nunmber_jobs_done, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Gross Pay</label>
+          				<div class="form-group">
+            				<%= f.text_field :gross_paid, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Net Pay</label>
+          				<div class="form-group">
+          					<%= f.text_field :net_pay, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Materials/Expenses</label>
+          				<div class="form-group">
+            				<%= f.text_field :materials_refund, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-12">
+          				<label class="label-pre">Description</label>
+          				<div class="form-group">
+          					<%= f.text_area :description, class: 'form-control' %>
+          				</div>                     
+        			</div>
+      			</div>
+    		</div>
+		</div>
+
+
+
+		<div align="center">
+          <%= f.submit 'Update Details', class: 'page-scroll btn btn-primary btn-lg outline submit-account', style: 'border-color: black; color: black; font-weight: 500;' %>
+        </div>
+	<% end %>
+</div>
+
+<br><br>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+<div class="content container-fluid bootstrap snippets">
+	<div class="row row-broken">
+    	<div class="col-sm-12 col-xs-12 chat" style="overflow: hidden; outline: none;" tabindex="5001">
+          	<div class="col-inside-lg decor-default">
+            		
+          			
+            	<div class="chat-body">
+
+            		<div class="answer-add">
+            			<div class="message_box">
+            				<%= form_tag sms_body_path(:number_phone => @ccc.mobile_number) do %>
+  								<%= text_area_tag :sms_body  %>
+  									<div align="center">
+          								<%= submit_tag 'Send Message', class: 'page-scroll btn btn-primary btn-lg outline submit-account', style: 'border-color: black; color: black; font-weight: 500; width: 50%;' %>
+        							</div>
+							<% end %>
+						</div>	
+	            	</div>
+
+
+            		<!-- <div class="answer-add">
+                		<input placeholder="Write a message">
+	               		<span class="answer-btn answer-btn-1"></span>
+	               		<span class="answer-btn answer-btn-2"></span>
+	            	</div> -->
+
+              		<h6>Mini Chat</h6>
+
+              		<% @message.each do |mm| %>
+
+	           			<% if mm.direction == 'inbound' %>
+
+	              			<div class="answer left">
+	                			<div class="avatar">
+	                				<img src="" alt="User name">
+	                			</div>
+	                			<div class="name"><%=  mm.from %>  <span style="text-align: right;"><%= mm.status %></span></div>
+	                			<div class="text" style="text-align: left;">
+	                				<%=  mm.body %>
+	                			</div>
+	                			<div class="time"><%= mm.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %></div>
+	              			</div>
+
+	           			<% else %>
+
+	           				<% if mm.status == 'sent' || mm.status == 'delivered' %>
+	         				<div class="answer right success">
+	         				<% else %>
+	         				<div class="answer right failure">
+	         				<% end %>
+
+	                			<div class="avatar">
+	                				<img src="/assets/logo-image.png" alt="User name">
+	                			</div>
+	                			<div class="name"> <%=  mm.from %></div>
+	                			<div class="text" style="text-align: left">
+	                				<%=  mm.body %>
+	                			</div>
+	                			<div class="time"><%= mm.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %></div>
+	              			</div>
+
+	           			<% end %>
+	           		<% end %>
+
+	            </div>
+	       	</div>
+	   	</div>
+	</div>
+</div>

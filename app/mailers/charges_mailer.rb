@@ -14,7 +14,7 @@ class ChargesMailer < ActionMailer::Base
   :dpi => '300')
   	)
   	self.instance_variable_set(:@lookup_context, nil)
-  	mail :subject => "Receipt for Order ##{charge.id}", :to => @charge.account.email, bcc: ["help@instela.co"]
+  	mail :subject => "Your invoice from instela", :to => @charge.account.email, bcc: ["help@instela.co"]
 
 
 

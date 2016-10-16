@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  service_type: MyString
+  nunmber_jods_done: 1
+  gross_paid: 1.5
+  materials_refund: 1.5
+  net_pay: 1.5
+  last_job_at: 2016-09-24 10:26:33
+  rating: 1.5
+  company_name: MyString
+  description: MyText
+  first_job_at: 2016-09-24 10:26:33
+  signed_contract: false
+  mobile_number: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  service_type: MyString
+  nunmber_jods_done: 1
+  gross_paid: 1.5
+  materials_refund: 1.5
+  net_pay: 1.5
+  last_job_at: 2016-09-24 10:26:33
+  rating: 1.5
+  company_name: MyString
+  description: MyText
+  first_job_at: 2016-09-24 10:26:33
+  signed_contract: false
+  mobile_number: MyString

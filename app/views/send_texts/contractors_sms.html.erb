@@ -1,0 +1,15 @@
+<div class="chat-body">
+  <div class="answer-add">
+    <div class="message_box">
+      <%= form_tag contractors_send_path do %>
+
+      <%= select_tag :service, options_for_select(@services), class: 'form-control' %>
+
+  		<%= text_area_tag :message_text  %>
+  		  <div align="center">
+          <%= submit_tag 'Send Message', class: 'page-scroll btn btn-primary btn-lg outline submit-account', style: 'border-color: black; color: black; font-weight: 500; width: 50%;' %>
+        </div>
+			<% end %>
+		</div>	
+	</div>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818105353) do
+ActiveRecord::Schema.define(version: 20161016202937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,10 +54,30 @@ ActiveRecord::Schema.define(version: 20160818105353) do
     t.integer  "account_id"
     t.decimal  "materials_total_cost"
     t.decimal  "discount"
+    t.decimal  "quote_fee"
   end
 
   add_index "charges", ["account_id"], name: "index_charges_on_account_id", using: :btree
   add_index "charges", ["order_id"], name: "index_charges_on_order_id", using: :btree
+
+  create_table "contractors", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "service_type"
+    t.integer  "nunmber_jobs_done"
+    t.float    "gross_paid"
+    t.float    "materials_refund"
+    t.float    "net_pay"
+    t.datetime "last_job_at"
+    t.float    "rating"
+    t.string   "company_name"
+    t.text     "description"
+    t.datetime "first_job_at"
+    t.boolean  "signed_contract?"
+    t.string   "mobile_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", force: true do |t|
     t.string   "name"

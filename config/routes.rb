@@ -28,6 +28,30 @@ Rails.application.routes.draw do
   get 'history/:id', to: 'orders#show', as: 'order_id'
   get 'pdf/:id', to: 'orders#pdf', as: 'order_pdf'
 
+
+  
+  post 'reply' => 'send_texts#reply'
+
+
+
+  get 'message', to: 'send_texts#show_all', as: 'sms_home'
+  get 'message/:id', to: 'send_texts#show', as: 'show_id'
+  get 'contractor/new', to: 'send_texts#new'
+  post 'contractor/new', to: 'send_texts#create', as: 'contractor'
+
+
+  patch 'message/:id', to: 'send_texts#update', as: 'show_id_update'
+  post 'message/sms', to: 'send_texts#send_sms', as: 'send_sms'
+  post 'message/sms_body', to: 'send_texts#sms_body', as: 'sms_body'
+
+  get 'sms/contractors', to: 'send_texts#contractors_sms'
+  post 'sms/send', to: 'send_texts#contractors_send', as: 'contractors_send'
+
+
+  get 'import', to: 'send_texts#import_csv'
+  post 'import', to: 'send_texts#import_contractors', as: 'import_csv_contractors'
+
+
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -30,6 +30,14 @@ gem 'heroku-deflater', :group => :production
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
+gem 'twilio-ruby'
+
+gem 'smarter_csv'
+
+gem 'exception_notification'
+
+gem 'slack-notifier'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do
 	gem 'spring'

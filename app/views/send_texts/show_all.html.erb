@@ -1,0 +1,310 @@
+<body style="background: #e8ecf0;"> <!-- #ffe7e4 -->
+
+	<div class="page-header" style="height: auto;">
+		<h2 class="text-centered" style="color: white; font-size: 5.0rem;">SMS Contractors</h2><br><br>
+    	<div class="page-header-inner vc-outer">
+        	<div class="vc-inner text-centered">
+        		<h4><span style="padding-right: 20px;">SMS Received: <%= @sms_inbound %></span> 
+        			<span style="padding-right: 20px;">SMS Sent: <%= @sms_outbound %></span>
+        			<span style="padding-right: 20px;">Total: <%= @num_messages %></span> 
+        		</h4><br>
+            	<h5>
+            		<span style="padding-right: 20px;">Number of SMS Senders: <%= @count_from %></span> 
+            		<span style="padding-right: 20px;"> Total Cost:  <%= number_to_currency(@totalcost, :unit => "") %> <%= @cost_unit %>  </span>
+        		</h5><br><br>
+            	<ul class="user--account-mobile-actions">
+    				<li><a class="btn-account btn-account-small" style="min-width: 200px; margin-bottom: 30px;" href="/contractor/new">Add New Contractor</a></li>
+    				<li><a class="btn-account btn-account-small" style="min-width: 200px; margin-bottom: 30px;" href="/sms/contractors">Message Contractors</a></li>
+    			</ul>
+            	<ul class="user--account-mobile-actions">
+    				<li><%= link_to "Handyman", "#{sms_home_path}#handy", class: "btn-account btn-account-small" %></li>
+   					<li><%= link_to "Tech Support", "#{sms_home_path}#techsupport", class: "btn-account btn-account-small" %></li>
+   					<li><%= link_to "Cleaning", "#{sms_home_path}#cleaners", class: "btn-account btn-account-small" %></li>
+   					<li><%= link_to "Tasks", "#{sms_home_path}#task", class: "btn-account btn-account-small" %></li>
+   					<li><%= link_to "Undefined", "#{sms_home_path}#undefined", class: "btn-account btn-account-small" %></li>
+				</ul>
+            
+        	</div>
+    	</div>
+	</div>
+</body>
+
+
+
+
+
+<div id="handy" class="container">
+	<h2 class="text-center" style="padding-top: 50px;">Handyman (<%= @handy.count %>)</h2>
+	<%  @handy.each do |i| %>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-xs-12">
+				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
+					<div style ="padding-top: 10px;">
+				<%= link_to "#{i.first_name} #{i.last_name} #{i.mobile_number} ID: #{i.id}", show_id_path(i.mobile_number, params[i]) %></div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row chat">
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer left">
+						<% if @client.messages.list(from: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(from: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(from: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Received messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer right">
+						<% if @client.messages.list(to: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(to: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(to: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Sent messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+
+
+<div id="techsupport" class="container">
+	<h2 class="text-center" style="padding-top: 50px;">Tech Support (<%= @techies.count %>)</h2>
+	<%  @techies.each do |i| %>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-xs-12">
+				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
+					<div style ="padding-top: 10px;">
+				<%= link_to "#{i.first_name} #{i.last_name} #{i.mobile_number} ID: #{i.id}", show_id_path(i.mobile_number, params[i]) %></div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row chat">
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer left">
+						<% if @client.messages.list(from: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(from: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(from: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Received messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer right">
+						<% if @client.messages.list(to: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(to: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(to: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Sent messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+
+
+<div id="task" class="container">
+	<h2 class="text-center" style="padding-top: 50px;">Taskers (<%= @taskers.count %>)</h2>
+	<%  @taskers.each do |i| %>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-xs-12">
+				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
+					<div style ="padding-top: 10px;">
+				<%= link_to "#{i.first_name} #{i.last_name} #{i.mobile_number} ID: #{i.id}", show_id_path(i.mobile_number, params[i]) %></div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row chat">
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer left">
+						<% if @client.messages.list(from: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(from: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(from: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Received messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer right">
+						<% if @client.messages.list(to: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(to: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(to: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Sent messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+
+
+<div id="cleaners" class="container">
+	<h2 class="text-center" style="padding-top: 50px;">Cleaners (<%= @cleaners.count %>)</h2>
+	<%  @cleaners.each do |i| %>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-xs-12">
+				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
+					<div style ="padding-top: 10px;">
+				<%= link_to "#{i.first_name} #{i.last_name} #{i.mobile_number} ID: #{i.id}", show_id_path(i.mobile_number, params[i]) %></div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row chat">
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer left">
+						<% if @client.messages.list(from: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(from: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(from: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Received messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer right">
+						<% if @client.messages.list(to: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(to: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(to: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Sent messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+
+
+
+<div id="undefined" class="container">
+	<h2 class="text-center" style="padding-top: 50px;">Undefined (<%= @undefined.count %>)</h2>
+	<%  @undefined.each do |i| %>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-xs-12">
+				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
+					<div style ="padding-top: 10px;">
+				<%= link_to "#{i.first_name} #{i.last_name} #{i.mobile_number} ID: #{i.id}", show_id_path(i.mobile_number, params[i]) %></div>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row chat">
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer left">
+						<% if @client.messages.list(from: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(from: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(from: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Received messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="chat-body">
+					<div class="answer right">
+						<% if @client.messages.list(to: i.mobile_number).present? %>
+							<div class="time"><%= @client.messages.list(to: i.mobile_number).first.date_sent.to_time.strftime('%a %d %b %Y %H:%M') %>
+							</div>
+							<div class="text">
+								<%= @client.messages.list(to: i.mobile_number).first.body %>
+							</div>
+						<% else %>
+							<div class="text" style="margin-top: 35px;">
+								No Sent messages
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+

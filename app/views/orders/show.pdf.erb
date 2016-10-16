@@ -113,6 +113,21 @@
             </div>
             <% end %>
 
+            <% unless @order.quote_fee.nil? || @order.quote_fee == 0 %>
+            <div class="invoice-price">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-4 col-xs-4">
+                    </div>
+                    <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                        Quote
+                    </div>
+                    <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                        <%= number_to_currency(@order.quote_fee, :unit=>'£') %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+
             <div class="invoice-total">
             	<div class="row">
 	            	<div class="col-lg-4 col-sm-4 col-xs-4">	

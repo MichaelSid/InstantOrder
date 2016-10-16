@@ -1,0 +1,147 @@
+<div class="container">
+
+<h2>Import Contractor in CSV Format:</h2><br>
+
+<%= form_tag import_csv_contractors_path, :multipart => true do %>
+  <%= file_field_tag :file %><br>
+  <%= submit_tag "Import" %>
+<% end %>
+</div><br>
+
+<div class="container">
+
+	<%= form_for @contractor, url: contractor_path do |f| %>
+
+		<div class="box-regist user-account-section">
+    
+			<div class="title-regist">
+      			<div class="titleline-regist"><h3>Contractor Details</h3></div>
+    		</div>
+    
+    		<div class="innerbox-regist">
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">First Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :first_name, class: 'form-control'%>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Last Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :last_name, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+	      		<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Mobile Number</label>
+          				<div class="form-group">
+            				<%= f.text_field :mobile_number, :required => true, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Company Name</label>
+          				<div class="form-group">
+            				<%= f.text_field :company_name, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-3">
+          				<label class="label-pre">Service Type</label>
+          				<div class="form-group">
+
+          					<%= f.select :service_type, options_for_select(@services, selected_key = f.object.service_type), class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-3">
+          				<label class="label-pre">Check Box if Contract Signed</label>
+          				<div class="form-group">
+          					<%=  f.radio_button :signed_contract?, :checked => true, class: 'form-control' %>			
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Rating</label>
+          				<div class="form-group">
+            				<%= f.text_field :rating, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Date First Job</label>
+          				<div class="form-group">
+          					<%= f.text_field :first_job_at, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Date Last Job</label>
+          				<div class="form-group">
+            				<%= f.text_field :last_job_at, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Number Jobs Done</label>
+          				<div class="form-group">
+          					<%= f.text_field :nunmber_jobs_done, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Gross Pay</label>
+          				<div class="form-group">
+            				<%= f.text_field :gross_paid, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-6">
+          				<label class="label-pre">Net Pay</label>
+          				<div class="form-group">
+          					<%= f.text_field :net_pay, class: 'form-control' %>
+          				</div>                     
+        			</div>
+
+        			<div class="col-xs-6">
+          				<label class="label-pre">Materials/Expenses</label>
+          				<div class="form-group">
+            				<%= f.text_field :materials_refund, class: 'form-control' %>
+          				</div>
+        			</div>
+      			</div>
+
+      			<div class="row-fluid form-row row">
+        			<div class="col-xs-12">
+          				<label class="label-pre">Description</label>
+          				<div class="form-group">
+          					<%= f.text_area :description, class: 'form-control' %>
+          				</div>                     
+        			</div>
+      			</div>
+    		</div>
+		</div>
+
+
+
+		<div align="center">
+          <%= f.submit 'Create Contractor Entry', class: 'page-scroll btn btn-primary btn-lg outline submit-account', style: 'border-color: black; color: black; font-weight: 500;' %>
+        </div>
+	<% end %>
+</div>
