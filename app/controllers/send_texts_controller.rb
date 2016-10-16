@@ -90,7 +90,9 @@ class SendTextsController < ApplicationController
           slack_channel = "task"
         elsif slack_channel == "Cleaning"
           slack_channel = "cleaning"
-        end
+        elsif slack_channel == nil
+          slack_channel = "other_sms"
+          
       end
 
       
