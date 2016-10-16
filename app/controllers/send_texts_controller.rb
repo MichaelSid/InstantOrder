@@ -71,7 +71,16 @@ class SendTextsController < ApplicationController
         from = from_number + " " + contractornew.id.to_s
         slack_channel = "undefined"
       else
-        from = @sender.first_name + " " + @sender.last_name + " " +  @sender.id.to_s
+        if @sender.first_name == nil 
+          sender_first_name = ""
+        end
+        if @sender.last_name == nil
+          sender_last_name = ""
+        end
+        if (@sender.first_name == nil) && (@sender.last_name == nil)
+          sender_first_name = from_number
+        end
+        from = sender_first_name + " " + sender_last_name + " " +  @sender.id.to_s
         slack_channel = @sender.service_type
         if slack_channel == "Tech Support"
           slack_channel = "tech"
