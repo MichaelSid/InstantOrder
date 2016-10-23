@@ -122,33 +122,46 @@ class SendTextsController < ApplicationController
       @services = ['Tech Support', 'Handyman', 'Tasks', 'Cleaning' ]
   		boot_twilio
       twilio_number = Rails.application.secrets.twilio_number
-  		@num_messages = @client.account.messages.list.count 
   		@phone_number = Array.new
 
-  		@sms_inbound = 0
-  		@sms_outbound = 0
+  		@sms_inbound = @client.messages.list(to: twilio_number).count
+  		@sms_outbound = @client.messages.list(from: twilio_number).count
+      @num_messages = @sms_inbound + @sms_outbound
 
   		@client.messages.list(to: twilio_number).each do |sms|
   			@phone_number.push(sms.from) unless @phone_number.include?(sms.from)
-  			if sms.direction == 'inbound' 
-  				@sms_inbound = @sms_inbound + 1
-  			end
   		end
 
-  		@sms_outbound = @num_messages - @sms_inbound
   		@count_from = @phone_number.count
 
       @totalcost = 0.00
       @cost_unit= " "
-      @client.messages.list.each do |sms|
-        @totalcost =  @totalcost + sms.price.to_f
-        @cost_unit = sms.price_unit
-      end
       
+      @cost_unit = @client.messages.list(to: twilio_number).first.price_unit
+      cost_receive = @client.messages.list(to: twilio_number).first.price.to_f
+      cost_send = @client.messages.list(from: twilio_number).first.price.to_f
+      @totalcost =  (@sms_inbound * cost_receive) + (@sms_outbound * cost_send)
 
+      
   		@phone_number.each { |num|
   			unless Contractor.where(:mobile_number => num).present?
-  				contractornew = Contractor.create(:mobile_number => num)
+          l1 = @client.messages.list(to: twilio_number, from: num).first.date_sent.to_time
+          l2 = @client.messages.list(from: twilio_number, to: num).first.date_sent.to_time
+          last_date = l1
+          if l2 > l1 
+            last_date = l2
+          end
+  				contractornew = Contractor.create(:mobile_number => num, :last_sms_at => last_date)
+        else
+          l1 = @client.messages.list(to: twilio_number, from: num).first.date_sent.to_time
+          l2 = @client.messages.list(from: twilio_number, to: num).first.date_sent.to_time
+          last_date = l1
+          if l2 > l1 
+            last_date = l2
+          end
+          cc = Contractor.find_by_mobile_number(num)
+          cc.last_sms_at = last_date
+          cc.save
   			end
   		}
 
@@ -167,6 +180,8 @@ class SendTextsController < ApplicationController
           # @contractors.find_by_mobile_number(num.mobile_number).save
         end      
       } 
+
+
      
       @taskers = Contractor.where(:service_type => "Tasks")
       @handy = Contractor.where(:service_type => "Handyman")
@@ -276,7 +291,7 @@ class SendTextsController < ApplicationController
 		params.require(:contractor).permit(:mobile_number, :first_name, :last_name, 
 			:company_name, :service_type, :nunmber_jobs_done, :gross_paid, 
 			:materials_refund, :net_pay, :last_job_at, :rating, :description, 
-			:first_job_at, :signed_contract?, :mobile_number)
+			:first_job_at, :mobile_number, :signed_contract)
     end
 
  def admin_user

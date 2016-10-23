@@ -35,7 +35,7 @@
 
 <div id="handy" class="container">
 	<h2 class="text-center" style="padding-top: 50px;">Handyman (<%= @handy.count %>)</h2>
-	<%  @handy.each do |i| %>
+	<%  @handy.order(last_sms_at: :asc).each do |i| %>
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-xs-12">
 				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
@@ -90,7 +90,7 @@
 
 <div id="techsupport" class="container">
 	<h2 class="text-center" style="padding-top: 50px;">Tech Support (<%= @techies.count %>)</h2>
-	<%  @techies.each do |i| %>
+	<%  @techies.order(last_sms_at: :asc).each do |i| %>
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-xs-12">
 				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
@@ -145,7 +145,7 @@
 
 <div id="task" class="container">
 	<h2 class="text-center" style="padding-top: 50px;">Taskers (<%= @taskers.count %>)</h2>
-	<%  @taskers.each do |i| %>
+	<%  @taskers.order(last_sms_at: :asc).each do |i| %>
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-xs-12">
 				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
@@ -200,7 +200,7 @@
 
 <div id="cleaners" class="container">
 	<h2 class="text-center" style="padding-top: 50px;">Cleaners (<%= @cleaners.count %>)</h2>
-	<%  @cleaners.each do |i| %>
+	<%  @cleaners.order(last_sms_at: :asc).each do |i| %>
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-xs-12">
 				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
@@ -256,7 +256,7 @@
 
 <div id="undefined" class="container">
 	<h2 class="text-center" style="padding-top: 50px;">Undefined (<%= @undefined.count %>)</h2>
-	<%  @undefined.each do |i| %>
+	<%  @undefined.order(last_sms_at: :asc).each do |i| %>
 		<div class="row" style="margin-top: 50px;">
 			<div class="col-xs-12">
 				<h2 class="text-center" style="font-size: 2.0rem; border: 1px solid; min-height: 50px;">
