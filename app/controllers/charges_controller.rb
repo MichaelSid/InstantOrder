@@ -31,7 +31,12 @@ class ChargesController < ApplicationController
 
 	  	@charge.amount = (@charge.duration * @charge.hourly_fee)*((100-@charge.discount)/100) + @charge.materials_total_cost + @charge.quote_fee
 	  	
-	  	if (@job_contractor.nunmber_jobs_done == 0) || (@job_contractor.nunmber_jobs_done.nil?)
+
+	  	if @job_contractor.nunmber_jobs_done.nil?
+	  		@job_contractor.nunmber_jobs_done = 0 
+	  	end
+
+	  	if @job_contractor.nunmber_jobs_done == 0
 	  		@job_contractor.first_job_at = Date.parse(job_date) 
 	  	end
 	  	if @job_contractor.net_pay.nil?
