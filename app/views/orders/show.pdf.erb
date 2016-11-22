@@ -11,24 +11,63 @@
 <body style="background-color: white;">
 	<div class="container-small">
 		<div class="box order-invoice" style="border-top: #fd705c;">
-            <div class="invoice-target" style="width=200px;">
-                        <!-- instela.co -->
-                        instela.co
-                       <!--  <img src="instela-white-small.png" style="width: 250px;"> -->
-                      
-            </div>
-            <div class="invoice-meta invoice-date-service row">
-            	<div class="invoice-left col-lg-6 col-sm-6 col-xs-6">
+
+            <br>
+            <tbody class="mcnImageBlockOuter">
+            <tr>
+                <td valign="top" style="padding:9px" class="mcnImageBlockInner">
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
+                        <tbody><tr>
+                            <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                                
+
+                                    <a href="http://instela.co" title="" class="" target="_blank">
+                                        <img align="center" alt="" src="https://gallery.mailchimp.com/08039cc9ee3d448a3a8029b2c/images/19428e90-f92e-47de-85ed-ded0474ef855.png" width="250" style="max-width:700px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                    </a>
+
+                                
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnBoxedTextContentContainer">
+                <tbody><tr>
+                        
+                    <td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">
+                        
+                        <table border="0" cellpadding="18" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #FD705C;">
+                                <tbody><tr>
+                                    <td valign="top" class="mcnTextContent" style="color: #ffffff;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;">
+
+
+                                         <div class="invoice-meta row">
+                <div class="invoice-left col-lg-6 col-sm-6 col-xs-6" style="font-size: 1.8rem;
+    line-height: 0.5em;">
                      <% job_service = @order.service_type %>
                     <% if @order.service_type == 'Handyman' %>
                         <% job_service = "Handyman Services" %>
                     <% end %>
                     <%= job_service  %>
                 </div>
-                <div class="invoice-right col-lg-6 col-sm-6 col-xs-6">
+                <div class="invoice-right col-lg-6 col-sm-6 col-xs-6" style="font-size: 1.8rem;
+    line-height: 0.5em;">
                     <%= @order.created_at.strftime('%d %B %Y') %>
                 </div>
             </div>
+
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+         
 
             <div class="invoice-meta">
             	<div class="invoice-center invoice-amount">
@@ -39,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="invoice-meta invoice-date-service">
+            <div class="invoice-date-service">
             	<div class="invoice-center">
                     Thanks for using instela
                 </div>
@@ -67,59 +106,122 @@
             	</div>
             </div>
 
-            <div class="invoice-price">
-            	<div class="row">
-	            	<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			x <%= @order.duration %> hours
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<% pre_tot = @order.duration*@order.hourly_fee %>
-            			<%= number_to_currency(pre_tot, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
+            
+            <% if @order.minimum_charge.nil? || @order.minimum_charge == 0 %>
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            x <%= @order.duration %> hours
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <% pre_tot = @order.duration*@order.hourly_fee %>
+                            <% charge_onecontractor = pre_tot %>
+                            <%= number_to_currency(pre_tot, :unit=>'£') %>
+                        </div>
+                    </div>
+                </div>
+            <% elsif @order.minimum_charge > 0 %>
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-8 col-xs-8">
+                            First hour minimum charge
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <%= number_to_currency(@order.minimum_charge, :unit=>'£') %>
+                            <% charge_onecontractor = @order.minimum_charge %>
+                        </div>
+                        
+                    </div>
+                </div>
 
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Additional time
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            + <%= (@order.duration-1) %> hours
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <% pre_tot = (@order.duration-1)*@order.hourly_fee %>
+                            <% charge_onecontractor = pre_tot + charge_onecontractor %>
+                            <%= number_to_currency(pre_tot, :unit=>'£') %>
+                        </div>
+                    </div>
+                </div>
 
-            <% unless @order.discount.nil? || @order.discount == 0 %>
-            <div class="invoice-price">
-            	<div class="row">
-            		<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			Discount <%= @order.discount %>%
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<% disc = (@order.discount/100)*@order.duration*@order.hourly_fee %>
-            			- <%= number_to_currency(disc, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
             <% end %>
 
+
+            <% unless @order.number_contractors.nil? || @order.number_contractors == 1 %>
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Team size
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            x<%=@order.number_contractors %>
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            + <%= number_to_currency(charge_onecontractor, :unit=>'£') %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+
+            <% unless @order.discount.nil? || @order.discount == 0 %>
+
+                <% charge_hour_pay = (@order.duration * @order.hourly_fee) %>
+                <% if @order.minimum_charge > 0 %>
+                    <% tmp_duration = @order.duration - 1 %>
+                    <% charge_hour_pay = tmp_duration*@order.hourly_fee + @order.minimum_charge %>
+                <% end  %>
+                <%if @order.number_contractors > 1 %>
+                    <% charge_hour_pay = charge_hour_pay * @order.number_contractors %>
+                <% end %>
+                <% discount_amount = charge_hour_pay*(@order.discount/100)   %>
+
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Discount
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <%= @order.discount %>%
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <% disc = (@order.discount/100)*@order.duration*@order.hourly_fee %>
+                            - <%= number_to_currency(discount_amount, :unit=>'£') %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+
+
             <% unless @order.materials_total_cost.nil? || @order.materials_total_cost == 0 %>
-            <div class="invoice-price">
-            	<div class="row">
-            		<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			Materials
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<%= number_to_currency(@order.materials_total_cost, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
+                <div class="invoice-price-pdf">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Materials
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <%= number_to_currency(@order.materials_total_cost, :unit=>'£') %>
+                        </div>
+                    </div>
+                </div>
             <% end %>
 
             <% unless @order.quote_fee.nil? || @order.quote_fee == 0 %>
-            <div class="invoice-price">
+            <div class="invoice-price-pdf">
                 <div class="row">
                     <div class="col-lg-4 col-sm-4 col-xs-4">
+                        Quote
                     </div>
                     <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-                        Quote
                     </div>
                     <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
                         <%= number_to_currency(@order.quote_fee, :unit=>'£') %>
@@ -142,7 +244,7 @@
             </div>
             
             <br>
-            <div class="invoice-meta invoice-date-service">
+            <div class="invoice-date-service">
                 <div class="invoice-center">
                     <h6>Instela Ltd, 563 Chiswick High Rd, London W4 3AY</h6>
                 </div>

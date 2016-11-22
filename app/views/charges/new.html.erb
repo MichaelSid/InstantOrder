@@ -87,14 +87,40 @@
             </div>
 
             <div class="row-fluid form-row row">
-              <div class="col-xs-6">
-                <label style="text-transform: capitalize;", class="label-pre">Duration (eg 2.5 for 2h30min)</label>
+              <div class="col-xs-12">
+                <label style="text-transform: capitalize;", class="label-pre">Total Duration <span style="text-transform: lowercase;">(eg 2.5 for 2h30min - Add total even if adding minimum charge)</span></label>
                 <div class="form-group">
                   <%= number_field_tag :duration, nil, :required => true, :step => 'any', placeholder: 'Duration', class: 'form-control' %>
                 </div>
               </div>
+            </div>
 
-              <div class="col-xs-6">
+
+            <div class="row-fluid form-row row">
+              <div class="col-xs-12">
+                <label style="text-transform: capitalize;", class="label-pre">Minimum Charge for 1st hour <span style="text-transform: lowercase;">(Can be left empty. Any value inputed will automatically subtract 1h from Duration field)</span></label>
+                <div class="form-group">
+                  <%= number_field_tag :minimum_charge, 0, :required => true, :step => 'any', placeholder: 'Minimum Charge', class: 'form-control' %>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <div class="row-fluid form-row row">
+              <div class="col-xs-12">
+                <label style="text-transform: capitalize;", class="label-pre">Number of contractors <span style="text-transform: lowercase;">(Default is 1. eg 2 will multiply duration and minimum charge by 2)</span></label>
+                <div class="form-group">
+                  <%= number_field_tag :number_contractors, 1, :required => true, :step => 'any', placeholder: 'Number Contractors', class: 'form-control' %>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row-fluid form-row row">
+              <div class="col-xs-12">
                 <label  style="text-transform: capitalize;", class="label-pre">%Discount (eg 5 for 5%) </label>
                 <div class="form-group">
                   <%= number_field_tag :discount, 0, :required => true, :step => 'any', placeholder: 'Discount', class: 'form-control' %>

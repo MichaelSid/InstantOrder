@@ -75,62 +75,126 @@
             	</div>
             </div>
 
-            <div class="invoice-price">
-            	<div class="row">
-	            	<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			x <%= @order.duration %> hours
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<% pre_tot = @order.duration*@order.hourly_fee %>
-            			<%= number_to_currency(pre_tot, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
+            <% if @order.minimum_charge.nil? || @order.minimum_charge == 0 %>
+                <div class="invoice-price">
+                	<div class="row">
+    	            	<div class="col-lg-4 col-sm-4 col-xs-4">
+                		</div>
+                		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                			x <%= @order.duration %> hours
+                		</div>
+                		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                			<% pre_tot = @order.duration*@order.hourly_fee %>
+                            <% charge_onecontractor = pre_tot %>
+                			<%= number_to_currency(pre_tot, :unit=>'£') %>
+                		</div>
+                	</div>
+                </div>
+            <% elsif @order.minimum_charge > 0 %>
+                <div class="invoice-price">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-8 col-xs-8">
+                            First hour minimum charge
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <%= number_to_currency(@order.minimum_charge, :unit=>'£') %>
+                            <% charge_onecontractor = @order.minimum_charge %>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="invoice-price">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Additional time
+                        </div>
+                        
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <% pre_tot = (@order.duration-1)*@order.hourly_fee %>
+                            <% charge_onecontractor = pre_tot + charge_onecontractor %>
+                            <%= number_to_currency(pre_tot, :unit=>'£') %>
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            + <%= (@order.duration-1) %> hours
+                        </div>
+                    </div>
+                </div>
+
+            <% end %>
+                
+
+
+            <% unless @order.number_contractors.nil? || @order.number_contractors == 1 %>
+                <div class="invoice-price">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-4 col-xs-4">
+                            Team size
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            + <%= number_to_currency(charge_onecontractor, :unit=>'£') %>
+                        </div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            x<%=@order.number_contractors %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
 
 
             <% unless @order.discount.nil? || @order.discount == 0 %>
-            <div class="invoice-price">
-            	<div class="row">
-            		<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			Discount <%= @order.discount %>%
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<% disc = (@order.discount/100)*@order.duration*@order.hourly_fee %>
-            			- <%= number_to_currency(disc, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
+
+                <% charge_hour_pay = (@order.duration * @order.hourly_fee) %>
+                <% if @order.minimum_charge > 0 %>
+                    <% tmp_duration = @order.duration - 1 %>
+                    <% charge_hour_pay = tmp_duration*@order.hourly_fee + @order.minimum_charge %>
+                <% end  %>
+                <%if @order.number_contractors > 1 %>
+                    <% charge_hour_pay = charge_hour_pay * @order.number_contractors %>
+                <% end %>
+                <% discount_amount = charge_hour_pay*(@order.discount/100)   %>
+
+                <div class="invoice-price">
+                	<div class="row">
+                		<div class="col-lg-4 col-sm-4 col-xs-4">
+                            Discount
+                		</div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                            <% disc = (@order.discount/100)*@order.duration*@order.hourly_fee %>
+                            - <%= number_to_currency(discount_amount, :unit=>'£') %>
+                        </div>
+    	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                			<%= @order.discount %>%
+                		</div>
+                	</div>
+                </div>
             <% end %>
 
             <% unless @order.materials_total_cost.nil? || @order.materials_total_cost == 0 %>
-            <div class="invoice-price">
-            	<div class="row">
-            		<div class="col-lg-4 col-sm-4 col-xs-4">
-            		</div>
-	            	<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			Materials
-            		</div>
-            		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
-            			<%= number_to_currency(@order.materials_total_cost, :unit=>'£') %>
-            		</div>
-            	</div>
-            </div>
+                <div class="invoice-price">
+                	<div class="row">
+                		<div class="col-lg-4 col-sm-4 col-xs-4">
+                            Materials
+                		</div>
+                		<div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                			<%= number_to_currency(@order.materials_total_cost, :unit=>'£') %>
+                		</div>
+                        <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
+                        </div>
+                	</div>
+                </div>
             <% end %>
 
             <% unless @order.quote_fee.nil? || @order.quote_fee == 0 %>
             <div class="invoice-price">
                 <div class="row">
                     <div class="col-lg-4 col-sm-4 col-xs-4">
-                    </div>
-                    <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
                         Quote
                     </div>
                     <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
                         <%= number_to_currency(@order.quote_fee, :unit=>'£') %>
+                    </div>
+                    <div class="invoice-right col-lg-4 col-sm-4 col-xs-4">
                     </div>
                 </div>
             </div>

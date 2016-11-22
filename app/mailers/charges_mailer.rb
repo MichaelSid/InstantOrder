@@ -27,5 +27,12 @@ class ChargesMailer < ActionMailer::Base
   end
 
 
+  def send_rating(charge)
+    @charge = charge
+
+    mail :subject => "How did we do?", from: "help@instela.co", return_path: "maxwell@instela.co", :to => @charge.account.email, template_path: 'charges_mailer', template_name: 'send_rating'
+
+  end
+
 
 end

@@ -73,9 +73,13 @@ class SendTextsController < ApplicationController
       else
         if @sender.first_name == nil 
           sender_first_name = ""
+        else
+          sender_first_name = @sender.first_name
         end
         if @sender.last_name == nil
           sender_last_name = ""
+        else
+          sender_last_name = @sender.last_name
         end
         if (@sender.first_name == nil) && (@sender.last_name == nil)
           sender_first_name = from_number

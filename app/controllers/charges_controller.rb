@@ -24,13 +24,28 @@ class ChargesController < ApplicationController
 			@charge.service_type = params[:service_type]
 			@charge.duration = params[:duration].to_d
 			@charge.hourly_fee = determine_hourly_fee(@charge.service_type).to_d
-			@charge.materials_total_cost = params[:materials_total_cost]
+			@charge.materials_total_cost = params[:materials_total_cost]		
 			@charge.quote_fee = params[:quote_fee].to_d
+			@charge.minimum_charge = params[:minimum_charge].to_d
+			@charge.number_contractors = params[:number_contractors].to_i
 
 			@charge.discount = params[:discount]
 
-	  	@charge.amount = (@charge.duration * @charge.hourly_fee)*((100-@charge.discount)/100) + @charge.materials_total_cost + @charge.quote_fee
+			charge_hour_pay = (@charge.duration * @charge.hourly_fee)
+			if @charge.minimum_charge > 0
+				tmp_duration = @charge.duration - 1
+				charge_hour_pay = tmp_duration*@charge.hourly_fee + @charge.minimum_charge
+			end
+			if @charge.number_contractors > 1
+				charge_hour_pay = charge_hour_pay * @charge.number_contractors 
+			end
+			charge_hour_pay = charge_hour_pay * ((100-@charge.discount)/100)
+
+	  		@charge.amount = charge_hour_pay + @charge.materials_total_cost + @charge.quote_fee
 	  	
+
+
+
 
 	  	if @job_contractor.nunmber_jobs_done.nil?
 	  		@job_contractor.nunmber_jobs_done = 0 
@@ -68,6 +83,7 @@ class ChargesController < ApplicationController
 			)
 			if (charge && @charge.save)
 				ChargesMailer.send_receipt(@charge).deliver 
+				ChargesMailer.send_rating(@charge).deliver 
 			end
 			flash[:alert] = 'Successful Charge!'
 			return redirect_to root_path
