@@ -174,11 +174,11 @@
             <% unless @order.discount.nil? || @order.discount == 0 %>
 
                 <% charge_hour_pay = (@order.duration * @order.hourly_fee) %>
-                <% if @order.minimum_charge > 0 %>
+                <% unless @order.minimum_charge.nil? || @order.minimum_charge == 0 %>
                     <% tmp_duration = @order.duration - 1 %>
                     <% charge_hour_pay = tmp_duration*@order.hourly_fee + @order.minimum_charge %>
                 <% end  %>
-                <%if @order.number_contractors > 1 %>
+                <% unless @order.number_contractors.nil? || @order.number_contractors < 2 %>
                     <% charge_hour_pay = charge_hour_pay * @order.number_contractors %>
                 <% end %>
                 <% discount_amount = charge_hour_pay*(@order.discount/100)   %>
